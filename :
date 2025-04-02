@@ -1,0 +1,27 @@
+# Imagen base de Node.js
+FROM node:20 AS builder
+WORKDIR /app
+
+# Copiar archivos del proyecto
+COPY package.json package-lock.json ./
+
+# Instalar dependencias
+RUN npm install --verbose
+
+#Install xsel
+RUN apt-get update && apt-get install -y xsel
+
+# Copiar el resto del código
+COPY . .
+
+# Construir el proyecto
+RUN npm run build --verbose
+
+# Segunda etapa para servir la aplicación
+FROM node:20
+WORKDIR /app
+RUN npm install -g serve
+COPY --from=builder /app/build ./build
+EXPOSE 3000
+CMD ["serve", "-s", "build", "-l", "3000"]
+
