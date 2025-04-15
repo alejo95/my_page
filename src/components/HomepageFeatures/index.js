@@ -4,32 +4,33 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Hola de Puerto 80',
+    title: 'Programación',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Aqui hablaremos un poco sobre programación, lenguajes, 
+        frameworks y buenas practicas, que te ayudaran ala hora 
+        de programar.
       </>
     ),
   },
   {
-    title: 'ICodeMachine',
+    title: 'AWS, GCP y Azure',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        En esta sección hablaremos sobre los principales proveedores
+        de servicios en la nube, como AWS, GCP y Azure.
       </>
     ),
   },
   {
-    title: 'Taxis Ya',
+    title: 'Infraestructura',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        En esta sección hablaremos sobre infraestructura, como 
+        servidores, redes y almacenamient
       </>
     ),
   },
@@ -54,6 +55,9 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+      <h1 className="text--center" style={{ fontSize: '3rem', marginBottom: '2rem' }}>
+        Aqui hablaremos sobre
+        </h1>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
