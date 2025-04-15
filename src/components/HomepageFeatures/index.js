@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Programación',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/python.svg').default,
     description: (
       <>
         Aqui hablaremos un poco sobre programación, lenguajes, 
@@ -26,7 +26,7 @@ const FeatureList = [
   },
   {
     title: 'Infraestructura',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/alejo_explica_la_infraestructura_en_nube.svg').default,
     description: (
       <>
         En esta sección hablaremos sobre infraestructura, como 

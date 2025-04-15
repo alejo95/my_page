@@ -117,7 +117,7 @@ const config = {
               },
               {
                 label: 'Blog',
-                href: 'https://alejo95.github.io/my_page/blog',
+                href: '/blog',
               },
             ],
           },
