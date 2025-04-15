@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Page',
-  tagline: 'Documentación y portafolio',
+  title: 'Alejo | DevOps Portfolio',
+  tagline: 'Mi sitio personal de tecnología, cloud y desarrollo',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here

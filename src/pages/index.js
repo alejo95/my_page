@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <Layout
     title={`Hello there! - DevOps, seguridad y programación`}
-    description="DevOps, seguridad, programación, docker, kubernetes, sre y mucho más">
+    description="DevOps, AWS, GCP, Azure, Infraestructura, Programación, Blog, Portafolio">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
