@@ -7,20 +7,37 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
+import { Carousel } from 'react-responsive-carousel';
+import React from 'react';
+
+
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          Hola, Bienvenido
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__conten">En esta pagina encontraras documentación
+          y contenido útil en el caso que quieras conocer temas sobre DevOps
+          o desarrollo de software en general.
+        </p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className="button button--secondary button--lg margin--sm"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            Tutorial
+          </Link>
+          <Link
+            className="button button--secondary button--lg margin--sm"
+            to="/blog">
+            Sobre Mi
+          </Link>
+          <Link
+            className="button button--secondary button--lg margin--sm"
+            to="/blog">
+            Blog
           </Link>
         </div>
       </div>
@@ -32,8 +49,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+    title={`Hello there! - DevOps, seguridad y programación`}
+    description="DevOps, seguridad, programación, docker, kubernetes, sre y mucho más">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
