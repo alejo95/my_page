@@ -16,7 +16,7 @@ const FeatureList = [
   },
   {
     title: 'AWS, GCP y Azure',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/alejo_explicado_cloiud.svg').default,
     description: (
       <>
         En esta sección hablaremos sobre los principales proveedores

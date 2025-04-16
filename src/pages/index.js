@@ -27,7 +27,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg margin--sm"
             to="/docs/intro">
-            Tutorial
+            Docs
           </Link>
           <Link
             className="button button--secondary button--lg margin--sm"
@@ -49,7 +49,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-    title={`Hello there! - DevOps, seguridad y programación`}
+    title={`Hola a todos! - DevOps, seguridad y programación`}
     description="DevOps, AWS, GCP, Azure, Infraestructura, Programación, Blog, Portafolio">
       <HomepageHeader />
       <main>
