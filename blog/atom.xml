@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://alejo95.github.io/my_page/blog</id>
-    <title>My Page Blog</title>
+    <title>Alejo | DevOps Portfolio Blog</title>
     <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://alejo95.github.io/my_page/blog"/>
-    <subtitle>My Page Blog</subtitle>
+    <subtitle>Alejo | DevOps Portfolio Blog</subtitle>
     <icon>https://alejo95.github.io/my_page/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
