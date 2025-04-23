@@ -1,0 +1,194 @@
+.carouselWrapper {
+    padding: 2rem;
+    text-align: center;
+}
+
+.heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 2rem;
+    padding-right: 3rem;
+    /* ✅ Ajuste para evitar que la última tarjeta se corte */
+}
+
+.carouselTrackContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.carouselTrack {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin-right: 1rem;
+}
+
+.card {
+    flex: 0 0 33.33%;
+    padding: 0.5rem;
+    perspective: 1000px;
+}
+
+.cardInner {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card:hover .cardInner {
+    transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cardFront {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardFront img {
+    max-width: 80%;
+    height: auto;
+}
+
+.cardBack {
+    background: #f5f5f5;
+    transform: rotateY(180deg);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* ✅ Tipografía ajustada */
+.cardBack h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: #222;
+}
+
+.cardBack h5 {
+    font-size: 0.85rem;     /* Subtítulo más pequeño */
+    color: #666;
+    margin-bottom: 0.6rem;
+}
+
+.cardBack h4 {
+    font-size: 1rem; 
+    color:#444      ; /* Color más oscuro */
+    margin-bottom: 0.3rem;
+  }
+
+.cardBack p {
+    font-size: 0.85rem;     /* Texto descriptivo más compacto */
+    line-height: 1.4;       /* Menos separación vertical */
+    margin-bottom: 0.8rem;
+}
+
+.cardBack .dateText {
+    font-size: 0.8rem;      /* Fecha aún más pequeña */
+    font-style: italic;
+    color: #444;
+  }
+
+.arrowLeft,
+.arrowRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #444;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.arrowLeft:hover,
+.arrowRight:hover {
+    opacity: 1;
+}
+
+.arrowLeft {
+    left: 0;
+}
+
+.arrowRight {
+    right: 0;
+}
+
+/* ✅ Responsive design */
+@media (max-width: 1024px) {
+    .card {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 0 0 100%;
+        height: 310px;
+    }
+
+    .carousel {
+        padding: 0 1rem;
+    }
+
+    .arrowLeft,
+    .arrowRight {
+        font-size: 1.2rem;
+    }
+
+    .cardBack h5 {
+        font-size: 0.85rem;
+        /* Subtítulo más pequeño */
+        color: #666;
+        margin-bottom: 0.6rem;
+    }
+
+
+    .cardBack h3 {
+        font-size: 1rem;
+    }
+
+    .cardBack h5 {
+        font-size: 0.9rem;
+    }
+
+    .cardBack p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+    }
+
+    .cardBack .dateText {
+        font-size: 0.8rem;
+        font-style: italic;
+        color: #444;
+    }
+}
