@@ -3,6 +3,22 @@ import styles from './about_me.module.css';
 import Layout from '@theme/Layout';
 import { format, parse } from 'date-fns';
 import { es } from 'date-fns/locale';
+import perfilImage from '@site/static/img/photo_me.jpg';
+
+
+const ProfileHeader = () => (
+  <div className={styles.profileHeader}>
+    <div className={styles.profileText}>
+      <h2>Hola soy Alejandro Ramirez</h2>
+      <p>
+        Como estan bienvenidos a pagina web, diras quien es este man, soy Alejandro 
+        Ramirez Un entusiasta por el mundo de la tecnologia, amante al mundo del cloud y 
+        principalmente back-end de profesion
+      </p>
+    </div>
+    <img src={perfilImage} alt="Foto de perfil" className={styles.profileImage} />
+  </div>
+);
 
 const cardsData = [
   {
@@ -95,22 +111,9 @@ export default function AboutMe() {
 
   return (
     <Layout title="Sobre mí">
-      <header>
-        <div className={styles.row}>
-          <div className={styles.col4}>
-            <img src="img/perfil-2024-transparent.png" alt="sample"></img>
-          </div>
-          <div className={styles.col8}>
-            <h2>Alejandro Ramirez Cobos</h2>
-            <h3>Eterno aprendiz</h3>
-            <p>Hola como estan bienvenidos a pagina web, diras quien es este man, soy Alejandro Ramirez Un entusiasta por el mundo de la tecnologia, amante al mundo del cloud y principalmente back-end de profesion</p>
-
-            <p>Actualmente trabajo en el equipo CISO del Banco Santander (concretamente en CIB). Si quieres conocer con más detalle mi carrera profesional te recomiendo visitar mi <a href='https://www.linkedin.com/in/pabpereza/' target="_blank" >LinkedIN.</a></p>
-          </div>
-        </div>
-      </header>
+      <ProfileHeader />
       <div className={styles.carouselWrapper}>
-        <h1 className={styles.heading}>En donde he trabajado</h1>
+        <h4 className={styles.heading}>En donde he trabajado</h4>
         <div className={styles.carousel}>
           <button className={styles.arrowLeft} onClick={scrollLeft}>&#8592;</button>
           <div className={styles.carouselTrackContainer}>
