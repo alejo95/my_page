@@ -83,6 +83,11 @@ const config = {
         },
         items: [
           {
+            to: '/about_me',
+            label: 'Sobre mí',
+            position: 'left',
+          },
+          {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
