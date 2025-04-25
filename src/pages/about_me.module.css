@@ -1,37 +1,108 @@
-.profileHeader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  flex-wrap: wrap;
-  text-align: left;
-}
-
-.profileImage {
-  width: 250px;         /* 📏 Tamaño más grande */
-  height: 250px;
-  object-fit: cover;
-  border-radius: 60%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.profileText {
-  max-width: 600px;
-}
-
-.profileText h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  margin-top: 0.20rem;
-}
-
-.profileText p {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.5;
-}
-
+:root {
+    --bg-light: linear-gradient(to right, #f5f7fa, #e4ecf7);
+    --bg-dark: linear-gradient(to right, #1f1f1f, #2b2b2b);
+    --text-light: #222;
+    --text-dark: #eee;
+    --subtitle-light: #444;
+    --subtitle-dark: #bbb;
+    --shadow-light: rgba(0, 0, 0, 0.08);
+    --shadow-dark: rgba(0, 0, 0, 0.4);
+    --border-light: white;
+    --border-dark: #333;
+  }
+  
+  [data-theme='light'] .profileHeader {
+    background: var(--bg-light);
+    color: var(--text-light);
+    box-shadow: 0 12px 30px var(--shadow-light);
+  }
+  
+  [data-theme='dark'] .profileHeader {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+    box-shadow: 0 12px 30px var(--shadow-dark);
+  }
+  
+  .profileHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 3rem 2rem 2rem;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .profileImage {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--border-light);
+    box-shadow: 0 8px 20px var(--shadow-light);
+    transition: transform 0.3s ease;
+  }
+  
+  [data-theme='dark'] .profileImage {
+    border-color: var(--border-dark);
+    box-shadow: 0 8px 20px var(--shadow-dark);
+  }
+  
+  .profileImage:hover {
+    transform: scale(1.03);
+  }
+  
+  .profileText {
+    max-width: 600px;
+  }
+  
+  .profileText h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  [data-theme='light'] .profileText p {
+    color: var(--subtitle-light);
+  }
+  
+  [data-theme='dark'] .profileText p {
+    color: var(--subtitle-dark);
+  }
+  
+  .profileText p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .profileHeader {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+  
+    .profileImage {
+      width: 160px;
+      height: 160px;
+    }
+  
+    .profileText {
+      max-width: 100%;
+    }
+  
+    .profileText h2 {
+      font-size: 1.5rem;
+    }
+  
+    .profileText p {
+      font-size: 1rem;
+    }
+  }
+  
   
 .carouselWrapper {
     padding: 2rem;
@@ -193,3 +264,159 @@
         font-size: 1.2rem;
     }
 }
+
+/* about_me.module.css */
+
+.knowledgeSection {
+    margin-top: 4rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--ifm-background-surface-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .knowledgeTitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--ifm-heading-color);
+  }
+  .knowledgeGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(2, auto);
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  .knowledgeBlock {
+    background-color: var(--ifm-card-background);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--ifm-color-emphasis-200);
+  }
+  
+  .knowledgeBlock:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .iconTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .icon {
+    font-size: 1.8rem;
+    color: var(--ifm-color-primary);
+  }
+  
+  .knowledgeList {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .knowledgeList li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--ifm-font-color-base);
+  }
+  
+  .bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+
+/* Educación: Timeline refinado y tarjetas limpias */
+.educationSection {
+    margin-top: 4rem;
+    padding: 2rem 1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--ifm-heading-color);
+  }
+  
+  /* Grid limpio de tarjetas */
+  .educationGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* Tarjeta */
+  .educationCard {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--ifm-card-background);
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+    box-shadow: var(--ifm-global-shadow-lw);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .educationCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  }
+  
+  /* Logo */
+  .educationLogo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  
+  /* Texto */
+  .educationInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .institution {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--ifm-font-color-base);
+  }
+  
+  .title {
+    font-size: 0.95rem;
+    color: var(--ifm-color-primary);
+  }
+  
+  .date {
+    font-size: 0.85rem;
+    color: var(--ifm-color-emphasis-600);
+  }
+  
+  /* Responsive: apila en móvil */
+  @media (max-width: 600px) {
+    .educationCard {
+      flex-direction: column;
+      text-align: center;
+    }
+    .educationLogo {
+      margin-bottom: 0.75rem;
+    }
+  }
+  
