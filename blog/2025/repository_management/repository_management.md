@@ -9,9 +9,14 @@ date: 2025-04-27
 
 <!-- truncate -->
 
-## 1 Manejo de commits
+Hola y bienvenidos a este blog, el cual está orientado hacia el entendimiento de como podemos manejar nuestros
+repositorios de una forma que nos permita entender que es lo que estamos subiendo en nuestros commits.
 
-Para un buen uso y fácil lectura de los mismos, estos han de contener:
+## 1. Manejo de commits
+
+Al momento que generamos un commit es muy normal agregar el comentario sin una referencia las cuales nos
+indiquen que estamos realizando en nuestro commit, para esto es recomendable usar banderas que nos permitan
+entender que hicimos en nuestros commits para esto hacemos uso de las siguientes **Acciones** o **banderas**:
 
 - **[Acción]**: identifica el tipo de commit
   - `feature` -  a new feature is introduced with the changes
@@ -35,7 +40,11 @@ Para un buen uso y fácil lectura de los mismos, estos han de contener:
 
 ## 1.2. Nomenclatura de ramas (branch)
 
-Siguiendo Git Flow:
+Con la nomenclatura la idea es siempre buscar identificar las ramas donde estamos trabajando y así llevar
+un flujo de versiones saludable, que sea fácil de entender, en este ejemplo usaremos una nomenclatura basada
+en el flujo de trabajo de Git Flow.
+
+Siguiendo Git Flow te encontrarás con las siguientes ramas:
 
 - **master**: versiones estables en producción (`vX.Y.Z`).  
 - **develop**: integración de nuevas features.  
