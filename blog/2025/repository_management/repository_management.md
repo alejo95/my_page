@@ -9,11 +9,11 @@ date: 2025-04-27
 
 <!-- truncate -->
 
-## 1. Manejo de commits
+## 1 Manejo de commits
 
 Para un buen uso y fácil lectura de los mismos, estos han de contener:
 
-- **Acción**: identifica el tipo de commit
+- **[Acción]**: identifica el tipo de commit
   - `feature` -  a new feature is introduced with the changes
   - `refactor` – refactored code that neither fixes a bug nor adds a feature  
   - `docs` – updates to documentation such as a the README or other markdown files
@@ -45,38 +45,9 @@ Siguiendo Git Flow:
 
 ![Git Flow Diagram](/img/blog/Deploymentflow.png)
 
-## 1. Manejo de commits
-
-Para un buen uso y fácil lectura de los mismos, estos han de contener:
-
-- **[Acción]**: identifica el tipo de commit
-  - `Fix: problem in function update_picture`  
-  - `Add: agregar una feature nueva`  
-  - `Change: logic in module init`  
-  - `Remove: obsolete function`
-
-- **Cuerpo**: Entre 50 y 150 caracteres resaltando **¿qué?** y **¿por qué?**.  
-- **Idioma**: Inglés.
-
-> **Ejemplo**  
-> `[Added] validation so that the accounting information in the vendor once audited cannot be modified`  
-> *(Comienza con mayúscula y sin punto final.)*
-
 ---
 
-## 1.2. Nomenclatura de ramas (branch)
-
-Siguiendo Git Flow:
-
-- **master**: versiones estables en producción (`vX.Y.Z`).  
-- **develop**: integración de nuevas features.  
-- **feature/***: desarrollo de características (desde `develop`).  
-- **release/***: preparación de la próxima versión (desde `develop`).  
-- **hotfix/***: correcciones urgentes (desde `master`).
-
----
-
-## Hoja de trucos
+### Hoja de trucos (Comandos)
 
 | Operación                                    | Comando                                                |
 |----------------------------------------------|--------------------------------------------------------|
