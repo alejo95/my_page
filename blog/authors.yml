@@ -1,23 +1,10 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
-  page: true
-  socials:
-    x: yangshunz
-    github: yangshun
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+# blog/authors.yml
+alejandro-ramirez:
+  name: Alejandro Ramírez
+  title: Software Engineer | DevOps | Back-end Developer
+  url: https://alejo95.github.io/my_page/about_me
+  image_url: https://avatars.githubusercontent.com/u/30883786?s=96&v=4
+  description: |
+    Alejandro Ramírez is a back-end developer with a passion for creating efficient and scalable applications. He has a strong background in software development and is always eager to learn new technologies.
+  social:
+    linkedin: https://www.linkedin.com/in/alejandro-ramirez-95/
