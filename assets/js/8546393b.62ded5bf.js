@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_page=self.webpackChunkmy_page||[]).push([[715],{5698:a=>{a.exports=JSON.parse('{"tags":[{"label":"Git","permalink":"/my_page/blog/tags/tags/git","count":1},{"label":"Workflow","permalink":"/my_page/blog/tags/tags/workflow","count":1},{"label":"Buenas Pr\xe1cticas","permalink":"/my_page/blog/tags/tags/buenas-practicas","count":1}]}')}}]);
