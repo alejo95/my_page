@@ -9,8 +9,9 @@ date: 2025-04-27
 
 <!-- truncate -->
 
-Hola y bienvenidos a este blog, el cual está orientado hacia el entendimiento de como podemos manejar nuestros
-repositorios de una forma que nos permita entender que es lo que estamos subiendo en nuestros commits.
+Hola y bienvenidos a este blog, el cual está orientado a entender como podemos manejar nuestros flujo
+de trabajo en git, haciendolo un poco mas claro y facil de entender en caso de tener algun problema
+en **producción** 💣 que es lo que no queremos que pase.
 
 ## 1. Manejo de commits
 
@@ -19,15 +20,15 @@ indiquen que estamos realizando en nuestro commit, para esto es recomendable usa
 entender que hicimos en nuestros commits para esto hacemos uso de las siguientes **Acciones** o **banderas**:
 
 - **[Acción]**: identifica el tipo de commit
-  - `feature` -  a new feature is introduced with the changes
-  - `refactor` – refactored code that neither fixes a bug nor adds a feature  
-  - `docs` – updates to documentation such as a the README or other markdown files
-  - `style` – changes that do not affect the meaning of the code, likely related to code formatting such as white-space, missing semi-colons, and so on.
-  - `test` – including new or correcting previous tests
-  - `perf` – performance improvements
-  - `ci` – continuous integration related
-  - `build` – changes that affect the build system or external dependencies
-  - `revert` – reverts a previous commit
+  - `feature` -  Se introduce una nueva característica con los cambios
+  - `refactor` – Código refactorizado que no corrige un error ni agrega una característica  
+  - `docs` – Actualizaciones de la documentación, como el README u otros archivos de rebajas
+  - `style` – Cambios que no afectan el significado del código, probablemente relacionados con el formato del código, como espacios en blanco, punto y coma faltantes, etc.
+  - `test` – Incluyendo pruebas nuevas o corrigiendo pruebas anteriores
+  - `perf` – Mejoras de rendimiento
+  - `ci` – Relacionados con la integración continua
+  - `build` – Cambios que afectan al sistema de compilación o dependencias externas
+  - `revert` – revierte una confirmación anterior
 
 - **Cuerpo**: Entre 50 y 150 caracteres resaltando **¿qué?** y **¿por qué?**.  
 - **Idioma**: Inglés.
@@ -57,6 +58,13 @@ Siguiendo Git Flow te encontrarás con las siguientes ramas:
 ---
 
 ### Hoja de trucos (Comandos)
+
+Esta hoja de trucos tiene los **comandos** mas utilizados dentro del flujo de trabajo 🧑🏼‍💻, dentro de mi
+consideración son los que mas usaras durante tu carrera como programor o algunas de sus ramas.
+
+aqui les dejo 👌
+
+---
 
 | Operación                                    | Comando                                                |
 |----------------------------------------------|--------------------------------------------------------|
