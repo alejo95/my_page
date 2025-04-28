@@ -40,14 +40,14 @@ const config = {
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      ( {/*
         docs: {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            ' http://iamdevops.site/my_page/edit/main/',
-        },
+            '',
+        },*/
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -104,7 +104,7 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-         {
+          /*  {
             title: 'Documentation',
             items: [
               {
@@ -112,7 +112,7 @@ const config = {
                 to: '/docs/intro',
               },
             ],
-          },
+           },*/
           {
             title: 'Community',
             items: [
