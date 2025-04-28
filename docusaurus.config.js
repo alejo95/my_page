@@ -87,12 +87,12 @@ const config = {
             label: 'Sobre mí',
             position: 'left',
           },
-          {
+/*          {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Docs',
-          },
+          },*/
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/alejo95',
@@ -104,7 +104,7 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          {
+         {
             title: 'Documentation',
             items: [
               {

@@ -24,12 +24,7 @@ function HomepageHeader() {
           o desarrollo de software en general.
         </p>
         <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg margin--sm"
-            to="/docs/intro">
-            Docs
-          </Link>
-          <Link
+         <Link
             className="button button--secondary button--lg margin--sm"
             to="/blog">
             Sobre Mi
