@@ -21,7 +21,8 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__conten">En esta pagina encontraras documentación
           y contenido útil en el caso que quieras conocer temas sobre DevOps
-          o desarrollo de software en general.
+          o desarrollo de software en general y algunas cosas mas de un joven entusiasta
+          de la tecnología.
         </p>
         <div className={styles.buttons}>
          <Link

@@ -28,9 +28,10 @@ function ProfileHeader() {
       <div className={styles.profileText}>
         <h2>Hola, soy Alejandro Ramírez</h2>
         <p>
-          Soy un entusiasta de la tecnología, apasionado por el cloud y el
-          back-end. Bienvenido a mi portafolio donde te muestro mi experiencia
-          profesional y académica.
+          Soy Alejandro Ramirez un joven entusiasta de la tecnologia, el cual 
+          busca aprender y crear un mundo donde el conocimiento sea libre y accesible para todos
+          al igual que la tecnologia, por esa razón nace iamdevops, un espacio donde comparto mis conocimientos y 
+          experiencias en el mundo de la tecnología, bueno en espacial de DevOps.
         </p>
       </div>
       <img
