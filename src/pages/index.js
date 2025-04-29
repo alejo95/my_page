@@ -27,12 +27,12 @@ function HomepageHeader() {
         <div className={styles.buttons}>
          <Link
             className="button button--secondary button--lg margin--sm"
-            to="/blog">
+            to="/about_me">
             Sobre Mi
           </Link>
           <Link
             className="button button--secondary button--lg margin--sm"
-            to="/about_me">
+            to="/blog">
             Blog
           </Link>
         </div>
