@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Alejo | DevOps Portfolio Blog</title>
-        <link>http://iamdevops.site/my_page/blog</link>
+        <link>http://iamdevops.site/blog</link>
         <description>Alejo | DevOps Portfolio Blog</description>
         <lastBuildDate>Sun, 27 Apr 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,14 +10,14 @@
         <language>en</language>
         <item>
             <title><![CDATA[Manejo del repositorio]]></title>
-            <link>http://iamdevops.site/my_page/blog/manejo-del-repositorio</link>
-            <guid>http://iamdevops.site/my_page/blog/manejo-del-repositorio</guid>
+            <link>http://iamdevops.site/blog/manejo-del-repositorio</link>
+            <guid>http://iamdevops.site/blog/manejo-del-repositorio</guid>
             <pubDate>Sun, 27 Apr 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Hola y bienvenidos a este blog, el cual está orientado a entender como podemos manejar nuestros flujo]]></description>
             <content:encoded><![CDATA[<p>Hola y bienvenidos a este blog, el cual está orientado a entender como podemos manejar nuestros flujo
 de trabajo en git, haciendolo un poco mas claro y facil de entender en caso de tener algun problema
 en <strong>producción</strong> 💣 que es lo que no queremos que pase.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-manejo-de-commits">1. Manejo de commits<a href="http://iamdevops.site/my_page/blog/manejo-del-repositorio#1-manejo-de-commits" class="hash-link" aria-label="Direct link to 1. Manejo de commits" title="Direct link to 1. Manejo de commits">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-manejo-de-commits">1. Manejo de commits<a href="http://iamdevops.site/blog/manejo-del-repositorio#1-manejo-de-commits" class="hash-link" aria-label="Direct link to 1. Manejo de commits" title="Direct link to 1. Manejo de commits">​</a></h2>
 <p>Al momento que generamos un commit es muy normal agregar el comentario sin una referencia las cuales nos
 indiquen que estamos realizando en nuestro commit, para esto es recomendable usar banderas que nos permitan
 entender que hicimos en nuestros commits para esto hacemos uso de las siguientes <strong>Acciones</strong> o <strong>banderas</strong>:</p>
@@ -49,7 +49,7 @@ entender que hicimos en nuestros commits para esto hacemos uso de las siguientes
 <em>(Comienza con mayúscula y sin punto final.)</em></p>
 </blockquote>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="12-nomenclatura-de-ramas-branch">1.2. Nomenclatura de ramas (branch)<a href="http://iamdevops.site/my_page/blog/manejo-del-repositorio#12-nomenclatura-de-ramas-branch" class="hash-link" aria-label="Direct link to 1.2. Nomenclatura de ramas (branch)" title="Direct link to 1.2. Nomenclatura de ramas (branch)">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="12-nomenclatura-de-ramas-branch">1.2. Nomenclatura de ramas (branch)<a href="http://iamdevops.site/blog/manejo-del-repositorio#12-nomenclatura-de-ramas-branch" class="hash-link" aria-label="Direct link to 1.2. Nomenclatura de ramas (branch)" title="Direct link to 1.2. Nomenclatura de ramas (branch)">​</a></h2>
 <p>Con la nomenclatura la idea es siempre buscar identificar las ramas donde estamos trabajando y así llevar
 un flujo de versiones saludable, que sea fácil de entender, en este ejemplo usaremos una nomenclatura basada
 en el flujo de trabajo de Git Flow.</p>
@@ -61,25 +61,25 @@ en el flujo de trabajo de Git Flow.</p>
 <li><strong>release/</strong>*: preparación de la próxima versión (desde <code>develop</code>).</li>
 <li><strong>hotfix/</strong>*: correcciones urgentes (desde <code>master</code>).</li>
 </ul>
-<p><img decoding="async" loading="lazy" alt="Git Flow Diagram" src="http://iamdevops.site/my_page/assets/images/Deploymentflow-156ebe264a91c435f1b109b0cadae3d2.png" width="1901" height="1575" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Git Flow Diagram" src="http://iamdevops.site/assets/images/Deploymentflow-156ebe264a91c435f1b109b0cadae3d2.png" width="1901" height="1575" class="img_ev3q"></p>
 <hr>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hoja-de-trucos-comandos">Hoja de trucos (Comandos)<a href="http://iamdevops.site/my_page/blog/manejo-del-repositorio#hoja-de-trucos-comandos" class="hash-link" aria-label="Direct link to Hoja de trucos (Comandos)" title="Direct link to Hoja de trucos (Comandos)">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hoja-de-trucos-comandos">Hoja de trucos (Comandos)<a href="http://iamdevops.site/blog/manejo-del-repositorio#hoja-de-trucos-comandos" class="hash-link" aria-label="Direct link to Hoja de trucos (Comandos)" title="Direct link to Hoja de trucos (Comandos)">​</a></h3>
 <p>Esta hoja de trucos tiene los <strong>comandos</strong> mas utilizados dentro del flujo de trabajo 🧑🏼‍💻, dentro de mi
 consideración son los que mas usaras durante tu carrera como programor o algunas de sus ramas.</p>
 <p>aqui les dejo 👌</p>
 <hr>
 <table><thead><tr><th>Operación</th><th>Comando</th></tr></thead><tbody><tr><td>Clonar repositorio</td><td><code>git clone ssh://usuario@dominio.com/repo.git</code></td></tr><tr><td>Crear repo local</td><td><code>git init</code></td></tr><tr><td>Estado de archivos</td><td><code>git status</code></td></tr><tr><td>Ver diferencias</td><td><code>git diff</code></td></tr><tr><td>Añadir todos los cambios</td><td><code>git add .</code></td></tr><tr><td>Commit con mensaje</td><td><code>git commit -m "Mensaje descriptivo"</code></td></tr><tr><td>Modificar último commit</td><td><code>git commit --amend</code></td></tr></tbody></table>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ramas-y-etiquetas">Ramas y etiquetas<a href="http://iamdevops.site/my_page/blog/manejo-del-repositorio#ramas-y-etiquetas" class="hash-link" aria-label="Direct link to Ramas y etiquetas" title="Direct link to Ramas y etiquetas">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ramas-y-etiquetas">Ramas y etiquetas<a href="http://iamdevops.site/blog/manejo-del-repositorio#ramas-y-etiquetas" class="hash-link" aria-label="Direct link to Ramas y etiquetas" title="Direct link to Ramas y etiquetas">​</a></h2>
 <table><thead><tr><th>Operación</th><th>Comando</th></tr></thead><tbody><tr><td>Listar ramas</td><td><code>git branch</code></td></tr><tr><td>Crear nueva rama</td><td><code>git branch &lt;nombre&gt;</code></td></tr><tr><td>Cambiar de rama</td><td><code>git checkout &lt;nombre&gt;</code></td></tr><tr><td>Etiquetar versión</td><td><code>git tag v1.2.3</code></td></tr></tbody></table>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="actualizar-y-publicar">Actualizar y publicar<a href="http://iamdevops.site/my_page/blog/manejo-del-repositorio#actualizar-y-publicar" class="hash-link" aria-label="Direct link to Actualizar y publicar" title="Direct link to Actualizar y publicar">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="actualizar-y-publicar">Actualizar y publicar<a href="http://iamdevops.site/blog/manejo-del-repositorio#actualizar-y-publicar" class="hash-link" aria-label="Direct link to Actualizar y publicar" title="Direct link to Actualizar y publicar">​</a></h2>
 <table><thead><tr><th>Operación</th><th>Comando</th></tr></thead><tbody><tr><td>Descargar cambios sin merge</td><td><code>git fetch</code></td></tr><tr><td>Descargar y merge</td><td><code>git pull origin &lt;branch&gt;</code></td></tr><tr><td>Enviar cambios a remoto</td><td><code>git push origin &lt;branch&gt;</code></td></tr><tr><td>Enviar etiquetas</td><td><code>git push --tags</code></td></tr></tbody></table>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fusionar-y-rebase">Fusionar y rebase<a href="http://iamdevops.site/my_page/blog/manejo-del-repositorio#fusionar-y-rebase" class="hash-link" aria-label="Direct link to Fusionar y rebase" title="Direct link to Fusionar y rebase">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fusionar-y-rebase">Fusionar y rebase<a href="http://iamdevops.site/blog/manejo-del-repositorio#fusionar-y-rebase" class="hash-link" aria-label="Direct link to Fusionar y rebase" title="Direct link to Fusionar y rebase">​</a></h2>
 <table><thead><tr><th>Operación</th><th>Comando</th></tr></thead><tbody><tr><td>Merge</td><td><code>git merge &lt;branch&gt;</code></td></tr><tr><td>Rebase</td><td><code>git rebase &lt;branch&gt;</code></td></tr><tr><td>Abortar rebase</td><td><code>git rebase --abort</code></td></tr><tr><td>Continuar rebase</td><td><code>git rebase --continue</code></td></tr></tbody></table>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="deshacer">Deshacer<a href="http://iamdevops.site/my_page/blog/manejo-del-repositorio#deshacer" class="hash-link" aria-label="Direct link to Deshacer" title="Direct link to Deshacer">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="deshacer">Deshacer<a href="http://iamdevops.site/blog/manejo-del-repositorio#deshacer" class="hash-link" aria-label="Direct link to Deshacer" title="Direct link to Deshacer">​</a></h2>
 <table><thead><tr><th>Operación</th><th>Comando</th></tr></thead><tbody><tr><td>Reset total (descarta todo)</td><td><code>git reset --hard HEAD</code></td></tr><tr><td>Descartar cambios en un archivo</td><td><code>git checkout HEAD &lt;file&gt;</code></td></tr><tr><td>Revertir un commit</td><td><code>git revert &lt;commit&gt;</code></td></tr><tr><td>Reset suave (preserva cambios staged)</td><td><code>git reset &lt;commit&gt;</code></td></tr></tbody></table>
 <hr>]]></content:encoded>
             <category>Git</category>

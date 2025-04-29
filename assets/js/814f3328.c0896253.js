@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_page=self.webpackChunkmy_page||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Manejo del repositorio","permalink":"/blog/manejo-del-repositorio","unlisted":false,"date":"2025-04-27T00:00:00.000Z"}]}')}}]);
