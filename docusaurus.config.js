@@ -76,7 +76,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/social-card.jpg',
       navbar: {
-        title: 'I am DevOps',
+        title: "I Am DevOps",
         logo: {
           alt: 'My page Logo',
           src: 'img/logo.svg',
@@ -87,12 +87,12 @@ const config = {
             label: 'Sobre mí',
             position: 'left',
           },
-/*          {
+          {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'defaultSidebar',
             position: 'left',
-            label: 'Docs',
-          },*/
+            label: 'Tutoriales',
+          },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/alejo95',
@@ -104,7 +104,7 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          /*  {
+            {
             title: 'Documentation',
             items: [
               {
@@ -112,7 +112,7 @@ const config = {
                 to: '/docs/intro',
               },
             ],
-           },*/
+           },
           {
             title: 'Community',
             items: [
