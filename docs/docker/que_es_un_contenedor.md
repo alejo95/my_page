@@ -7,25 +7,26 @@ sidebar_label: ¿Que es un Contenero?
 tags: [docker]
 ---
 
-Los contendores son paquetes de software ligeros que contiene todos los elementos necesarios para ejecutar en cualquier producto.
-Normalmente los usamos en los equipos de desarrollo para lograr más velocidad al momento de desarrollar, desplegar software.
+Los contendores son paquetes de software ligeros que contiene todos los elementos necesarios para ejecutar en
+cualquier tipo de sistema operativo como Linux, Windos y Mac. Normalmente los usamos en los equipos de Ti para
+lograr más velocidad al momento desarrollar, desplegar y implementar software.
 
-El usar contenedores nos permite compartirlos recursos de CPU, memoria almacenamiento, redes y opciones de sistema. Esto nos permite
-abstraer las aplicaciones del entorno de trabajo o de ejecución.
+El usar contenedores nos permite compartir los recursos de CPU, memoria almacenamiento, redes y opciones de sistema.
+permitiendonos abstraer las aplicaciones del entorno de ejecución.
 
 ## Ventajas de los contenedores
 
-1. Separacion de responsabilidades: permite que el quipo de desarrollo se centre en la logica y las dependencias necesarias para
-que aplicacion funcione, mientra que el equipo de operaciones se puede centrar en el despligue y gestione sin preocuparse de detalles
-de nivel de codigo y versiones de software o configuraciones.
+1. Separacion de responsabilidades: permite que el quipo de desarrollo se centre en la logica y las dependencias necesarias para que aplicacion funcione, mientra que el equipo de operaciones se puede centrar en el despligue y gestion del software sin preocuparse de detalles a nivel de codigo, versiones de software y configuraciones.
 
-2. Portabilidad: debido a que los contenedores se pueden ejecutar en cualquier lugar, resulta facil desarollarlos y desplegarlos.
+2. Portabilidad: debido a que los contenedores se pueden ejecutar en cualquier lugar, resulta facil desarollarlos, desplegarlos y compartilos con el equipo de una forma rapida ya que estan desarrollados para ser lijeros.
 
-3. Aislamiento de aplicaciones: Nos permite tener entornos totalmente aislado de nuestro sistema operativo, lo que nos permite tener varias
-aplicaciones dentro de un mismo sistema operativo.
+3. Aislamiento de aplicaciones: Nos permite tener entornos totalmente aislado de nuestro sistema operativo, lo que
+nos ayuda a tener varias aplicaciones dentro de un mismo sistema operativo sin que se crucen una de la otra ya que
+cada aplicación va a estar contenerizada aparte.
 
-4. Despliegue en la nube rapido: debido a que el contenedor lleva una sistema ligero y facil de implementar, nos permite realizar despligues
-de una forma más rapida y simple.
+4. Despliegue en la nube rapido: debido a que el contenedor lleva una sistema ligero y facil de implementar, nos
+permite realizar despligues de una forma más rapida y simple, tanto asi que podemos usar sistemas complejos usando
+contenedores.
 
-5. Uso de nube hibirda: los contenedores nos permite desplegar en diferentes entornos debido a su flexibilidad esto permite implementar
-en entorno on-premis y al mismo tiempo usar servicios de cloud computing.
+5. Uso de nube hibirda: los contenedores nos permite desplegar en diferentes entornos debido a su flexibilidad esto
+permite implementar en entorno on-premis y al mismo tiempo usar servicios de cloud computing.
