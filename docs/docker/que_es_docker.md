@@ -16,10 +16,10 @@ de una forma ágil y moderna entre otros beneficios.
 
 ## 👨‍💻 Como funciona Docker
 
-Docker funciona de forma similar a una máquina virtual, pero elimina gran parte de las cosas que no necesitamos
-para ejecutar nuestro software, en este caso nos llevamos solamente las dependencias necesarias que requiere nuestros
-productos para funcionar, dándonos una gran ventaja ala hora de compartirla con nuestros compañeros o desplegarla a 
-producción.
+Docker funciona de forma similar a una máquina virtual, pero elimina gran parte de las cosas que no son necesarias
+para ejecutar **Cualquier** aplicacion de software, en esté caso en Docker se busca llevar solamente las dependencias
+necesarias que requieren los productos para funcionar, dándonos grandes ventajas a la hora de compartir con
+nuestros compañeros o en otros ocaciones hasta desplegar a producción de una forma facilmente.
 
 <img src="/img/tutorial/docker/virtualmachinediagram.png" alt="contenedor" width="500" />
 
