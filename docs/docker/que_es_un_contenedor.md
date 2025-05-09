@@ -2,10 +2,12 @@
 sidebar_position: 1
 title: ¿Que es un Contenero?
 description: en este tutorial entenderas lo basico de contendores
-keywords: [contendor, curso contendores, contenedores, devops, historia de contendor, ventajas de contendores, casos de uso de contendor, contendor tutorial, contendor desde cero, contendor para principiantes, contendor avanzado, contendor en producción]
+keywords: [contenedor, curso contendores, contenedores, devops, historia de contenedor, ventajas de contendores, casos de uso de contenedor, contenedor tutorial, contenedor desde cero, contenedor para principiantes, contenedor avanzado, contenedor en producción]
 sidebar_label: ¿Que es un Contenero?
 tags: [docker]
 ---
+
+<img src="/img/tutorial/containers.png" alt="contenedor" width="500" />
 
 Los contendores son paquetes de software ligeros que contiene todos los elementos necesarios para ejecutar en
 cualquier tipo de sistema operativo como Linux, Windos y Mac. Normalmente los usamos en los equipos de Ti para
