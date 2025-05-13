@@ -7,7 +7,7 @@ sidebar_label: ¿Que es un Contenero?
 tags: [docker]
 ---
 
-<img src="/img/tutorial/containers.png" alt="contenedor" width="500" />
+    <img src="/img/tutorial/containers.png" alt="contenedor" width="500" />
 
 Los contendores son paquetes de software ligeros que contiene todos los elementos necesarios para ejecutar en
 cualquier tipo de sistema operativo como Linux, Windos y Mac. Normalmente los usamos en los equipos de Ti para

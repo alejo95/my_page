@@ -26,7 +26,29 @@ muchos peticiones.
 
 Nginx es un servidor web que puede acturar como:
 
-- Servidor web startico: sirve para manejar archivos como html, css y imagenes.
-- Poxy inverso: reenvia peticiones a otros setvidores (como Node Js, Python).
-- Balancedor de cargas: distribuye el trafico entre los servidores para evitar sobre cargas.
-- servidor de cache: guarda copias temporales para acelear las respuestas.
+    - Servidor web startico: sirve para manejar archivos como html, css y imagenes.
+    - Poxy inverso: reenvia peticiones a otros setvidores (como Node Js, Python).
+    - Balancedor de cargas: distribuye el trafico entre los servidores para evitar sobre cargas.
+    - servidor de cache: guarda copias temporales para acelear las respuestas.
+
+### Instalación en Ubuntu 👨‍💻
+
+En este caso realizaremos la instalación en Bubuntu, para que puedas realizar algunas pruebas tambien
+tendras el codigo disponible para que puedas utilizarlo en tu.
+
+    ``` bash title=" Bash"
+    sudo apt update           -->  actualizat linux
+    sudo apt install nginx    -->  instalar nginx
+    ```
+una vez instalado podremos probar si nginx esta corriendo adecuadamente usando
+
+    ``` bash title=" Bash"
+    sudo systemctl status nginx
+    ```
+
+lo cual mostra algo asi si todo sale correctamente 🥳
+
+    <img src="/img/blog/nginx/nginx_status.png" alt="contenedor" width="800" />
+
+de esta forma podremos saber si nuestro servido nginx fue instalado de una forma correcta y esta funcionando
+desde este punto podremos las diferente carracteristicas de nginx
