@@ -10,9 +10,12 @@ date: 2025-05-12
 
 <!-- truncate -->
 
-Durante algún tiempo me he topado con el problema de entender qué es Nginx y cómo funciona, debido a que es un poco confuso. Muchas personas hablan de que es un servidor web, un balanceador de cargas, también un Proxy inverso y más, claro es porque tiene todas estas funcionalidades, así que en este blog exploraremos juntos cómo funciona y sus diferentes usos.
+Durante algún tiempo me he topado con el problema de entender qué es Nginx y cómo funciona, debido a que es un
+poco confuso, ya que muchas personas hablan de que es un servidor web, un balanceador de cargas, también un Proxy
+inverso y más, claro es porque tiene todas estas funcionalidades, así que en este blog exploraremos juntos cómo
+funciona y sus diferentes usos.
 
-<img src="/img/blog/nginx/nginx.png" alt="contenedor" width="600" />
+    <img src="/img/blog/nginx/nginx.png" alt="contenedor" width="600" />
 
 ## ¿Qué es Nginx? 🫣
 
