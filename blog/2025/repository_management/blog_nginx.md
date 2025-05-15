@@ -4,7 +4,7 @@ sidebar_position: 1
 title: Nginx
 tags: ["nginx", "redes"]
 authors: alejandro-ramirez
-date: 2025-05-13
+date: 2025-05-15
 ---
 
 <!-- truncate -->
@@ -174,3 +174,5 @@ tu primer servidor web con Nginx en un servidor de linux.
     sudo rm -rf /etc/nginx /var/www/miweb               # Eliminamos los archivos creados
     ```
     de aqui solo queda volver a instalar *Ngnx* y volver a inciar nuestra configuración de cero.
+
+## Novemos en la 2 parte de este blog 🧐
