@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_page=self.webpackChunkmy_page||[]).push([[67],{9187:e=>{e.exports=JSON.parse('{"tags":[{"label":"docker","permalink":"/docs/tags/docker","count":3},{"label":"devops","permalink":"/docs/tags/devops","count":1},{"label":"contenedores","permalink":"/docs/tags/contenedores","count":1}]}')}}]);
