@@ -8,3 +8,9 @@ workflow:
 buenas-practicas:
   label: Buenas Prácticas
   permalink: /tags/buenas-practicas
+nginx:
+  label: Nginx
+  permalink: /tags/nginx
+redes:
+  label: Redes
+  permalink: /tags/redes

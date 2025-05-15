@@ -21,7 +21,7 @@ para ejecutar **Cualquier** aplicacion de software, en esté caso en Docker se b
 necesarias que requieren los productos para funcionar, dándonos grandes ventajas a la hora de compartir con
 nuestros compañeros o en otros ocaciones hasta desplegar a producción de una forma facilmente.
 
-<img src="/img/tutorial/docker/virtualmachinediagram.png" alt="contenedor" width="500" />
+      <img src="/img/tutorial/docker/virtualmachinediagram.png" alt="contenedor" width="500" />
 
 ## ⚙️ Docker Engine
 

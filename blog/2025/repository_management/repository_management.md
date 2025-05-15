@@ -1,5 +1,6 @@
 ---
 slug: manejo-del-repositorio
+sidebar_position: 0
 title: Manejo del repositorio
 tags: ["git","workflow","buenas-practicas"]
 authors: alejandro-ramirez
