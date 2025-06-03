@@ -14,3 +14,10 @@ nginx:
 redes:
   label: Redes
   permalink: /tags/redes
+linux:
+  label: Linux
+  permalink: /tags/linux
+docker:
+  label: Docker
+  permalink: /tags/docker
+  
