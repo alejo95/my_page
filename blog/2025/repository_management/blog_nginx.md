@@ -14,7 +14,7 @@ date: 2025-05-15
     inverso y más, claro es porque tiene todas estas funcionalidades, así que en este blog exploraremos juntos cómo
     funciona y realizaremos algunas pruebas para ver sus diferentes usos.
 
-        <img src="/img/blog/nginx/nginx.png" alt="contenedor" width="600" />
+        <img src="/img/blog/devops/databasedevops.png" alt="contenedor" width="600" />
 
 ## ¿Qué es Nginx? 🫣
 
