@@ -31,7 +31,7 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     puede presentar al momento de generar los cambios en el código de la base de datos ya que en muchos de los casos estos cambios tienen que ser validados por un **DBA**(data base adaministrator) y facilitandole el trabajo ya que ellos se encargaran de 
     enfocarse en temas respecto ala base datos.
 
-### ¿Porque surge esta problematica? 😧
+## ¿Porque surge esta problematica? 😧
 
     Esta problematica se da debido a que muchas veces los programadores realizan actualizaciones en el código fuente de las
     aplicaciones que algunas ocaciones implementa cambios en el código de la base de datos, estos cambios tenemos que llevalos 
@@ -47,7 +47,7 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     generando problemas pues la validación y revisión no son eficientes. Todo proceso de cambio en la base de datos es simplemente
     un obstaculo.
 
-### Una solución entre muchas 🔧
+## Una solución entre muchas 🔧
 
     En este caso como hemos hablado desde un princio aqui es donde entra nuestra solucion **Liquidbase** como una herramienta echa
     para quitar esas paradas inecesarias, donde el **DBA** debe revisar los cambios hasta la fase final, sin la necesidad de hacer
@@ -70,7 +70,7 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     encontras la implementación de liquibase donde el objetivo es aprender como liquibase gestiona cambios en las bases de datos de
     forma controlada usando archivos de tipo chagelog( YAML, XML, JSON o SQL). **Vamos! 🥳**
 
-### ⚙️ Paso 1: requisitos previos
+### ⚙️ Requisitos previos
 
     antes de comenzar debemos tener los siguiente recursos instalados en nuestro equipo 💻 en este caso realizamos la configuración
     en macOs, dejare una referencia para que instales en Linux.
@@ -78,6 +78,14 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     2. **Liquibase(CLI)** Herramienta a usar
     3. **Docker**: lo usaremos para levantar nuestra base de datos de prueba
     4. **Editor de codigo**: En mi caso usare VS Code
+
+#### Instalar Homebrew (si no lo tienes)
+
+    Si no tienes Homebrew, instala con:
+
+    ```bash title="Bash"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
 
 #### JAVA JDK
 
@@ -105,7 +113,7 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     source ~/.zshrc
     ```
 
-#### Volvemos a repetir la verficación JDK
+#### Volvemos a repetir la verficación del JDK
 
     Verificamos si tenemos instalado Java.
 
@@ -114,4 +122,17 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     ```
     Si está instalado, verás una salida similar a la siguiente imagen:
 
-    <img src="/img/blog/devops/databasedevops.png" alt="Terminal mostrando la versión de Java instalada, texto visible: openjdk version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
+    <img src="/img/blog/devops/terminal_susses_jdk.png" alt="Terminal mostrando la versión de Java instalada, texto visible: openjdk version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
+
+#### Instalemos el CLI de liquibase
+
+    La forma mas facil de inplementarlo es unsado brew en el caso de mac
+
+    ```bash title="Bash"
+    brew install liquibase
+    ```
+    verifica la instalación 
+
+    ```bash title="Bash"
+    liquibase --version
+    ```
