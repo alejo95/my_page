@@ -136,3 +136,28 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     ```bash title="Bash"
     liquibase --version
     ```
+    una vez instalado si lo realizaste des de tu terminal en mac si puebas el comando de version si sale algo
+    como la siguiente imagen todo estara correctamente y podremos seguir sin problema 😃.
+
+        <img src="/img/blog/devops/liquibase_install.png" alt="Terminal mostrando la versión de liquibase instalada, texto 
+        visible: openjdk version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
+
+#### Instalar Docker (opcional pero recomendado)
+
+    Para crear bases de datos de prueba sin instalar nada más en tu Mac Ve a https://docs.docker.com/desktop/mac/install/
+    Descarga e instala Docker Desktop para Mac.
+
+    Abre Docker Desktop y asegúrate que esté corriendo.
+
+    Verifica desde Terminal:
+
+    ```bash title="Bash"
+    docker --version
+    docker compose version
+    ```
+
+    <img src="/img/blog/devops/dockerinstall.png" alt="Terminal mostrando la versión de docker instalada, texto 
+    visible: docker version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
+
+Si todo sale bien hasta este punto ya deberiamos trener instalados todo lo necesario para para poder iniciar hacer nuestro 
+laboratio 🥳.
