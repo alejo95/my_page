@@ -2,7 +2,7 @@
 slug: liquibase
 sidebar_position: 3
 title: Database DevOps con Liquibase 
-tags: ["liquibase", "database","devops"]
+tags: ["liquibase", "database","devops","databasedevops"]
 authors: alejandro-ramirez
 date: 2025-06-06
 ---
@@ -56,7 +56,62 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     <img src="/img/blog/devops/databasedevops.png" alt="contenedor" width="600" />
 
     Una solución DevOps de bases de datos como [Liquibase](https://www.liquibase.com/how-liquibase-works).  permite a los equipos 
-    automatizar y gestionar la gestión de cambios para optimizar este cuello de botella y acelerar los procesos de las aplicaciones. Esto es lo que hace que esta solución sea tan valiosa.
+    automatizar y gestionar la gestión de cambios para optimizar este cuello de botella y acelerar los procesos de las 
+    aplicaciones. Esto es lo que hace que esta solución sea tan valiosa.
 
-### Laboratorio Liquibase 🧪
-    
+    **Liquibase** Nos permite gestionar estas actualizaciónes de una forma facil y que igual forma nos permite realizar un rollback
+    de una forma facil y rapida, ayudandonos a mantener la consistencia en la base datos, ademas nos permite llevar un controlo de
+    versiones, la cual realizar de una forma inicial manualmente y en el futuro tambien nos permite autimatizar este proceso.
+
+## Laboratorio Liquibase 🧪
+
+    Hoy realizare la implemntación de liquibase, si quieres implemntarlo dejare los paso para que lo sigas y tambien puedas
+    implementarlo en tu maquina, si quieres implementarlo a un **CI/CD** debemos realizar otros paso, en esta primer guia,
+    encontras la implementación de liquibase donde el objetivo es aprender como liquibase gestiona cambios en las bases de datos de
+    forma controlada usando archivos de tipo chagelog( YAML, XML, JSON o SQL). **Vamos! 🥳**
+
+### ⚙️ Paso 1: requisitos previos
+
+    antes de comenzar debemos tener los siguiente recursos instalados en nuestro equipo 💻 en este caso realizamos la configuración
+    en macOs, dejare una referencia para que instales en Linux.
+    1. **Java JDK** 11 o Superior
+    2. **Liquibase(CLI)** Herramienta a usar
+    3. **Docker**: lo usaremos para levantar nuestra base de datos de prueba
+    4. **Editor de codigo**: En mi caso usare VS Code
+
+#### JAVA JDK
+
+    Verificamos si tenemos intalado java 
+
+    ```bash title="Bash"
+    java -version
+    ```
+
+    En caso de que lo tengas instalado continua al siguiente paso de instalación de liquibase
+
+#### Instalación
+
+    Para instalarlo tendremos que usar el siguiente comando en caso de usar hombrew
+
+    ```bash title="Bash"
+    brew install openjdk@17
+    ```
+
+#### Añade a tu PATH (varia segun la versión estalada)
+
+    ```bash title="Bash"
+    sudo ln -sfn $(brew --prefix openjdk@17)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
+    echo 'export PATH="/usr/local/opt/openjdk@17/bin:$PATH"' >> ~/.zshrc
+    source ~/.zshrc
+    ```
+
+#### Volvemos a repetir la verficación JDK
+
+    Verificamos si tenemos instalado Java.
+
+    ```bash title="Bash"
+    java -version
+    ```
+    Si está instalado, verás una salida similar a la siguiente imagen:
+
+    <img src="/img/blog/devops/databasedevops.png" alt="Terminal mostrando la versión de Java instalada, texto visible: openjdk version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />

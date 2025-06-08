@@ -23,3 +23,6 @@ liquibase:
 devops:
   label: DevOps
   permalink: /tags/devops
+databasedevops:
+  label: Database DevOps
+  permalink: /tags/databasedevops
