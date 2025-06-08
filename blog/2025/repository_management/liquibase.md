@@ -142,7 +142,7 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
             <img src="/img/blog/devops/liquibase_install.png" alt="Terminal mostrando la versión de liquibase instalada, texto 
             visible: openjdk version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
 
-    #### Instalar Docker (opcional pero recomendado)
+    #### Instalar Docker
 
         Para crear bases de datos de prueba sin instalar nada más en tu Mac Ve a https://docs.docker.com/desktop/mac/install/
         Descarga e instala Docker Desktop para Mac.
@@ -164,3 +164,53 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
 
     Genial!!, Si todo te salio bien, en este punto ya deberiamos trener instalados todo lo necesario para poder iniciar 
     a colocar las primeralas lineas de codigo para implementart nuestro laboratio 🥳.
+
+    para realizar nuestra prueba inicial implementaremos la siguiente estructura de carpetas
+
+    ### 🗂️ estructura del proyecto
+        
+        esta estructrua es una estructura basica solamente realizada para la prueba, para realizar un proyecto a un nivel
+        mas producción deberas realizar algunos cambios que tal vez dejare en otro apartado ya que lo que buscamos en este
+        laboratorio es experimentar y entender como funciona **liquibase**.
+
+        ```bash title="Bash"
+        liquibase-lab/
+        ├── changelogs/
+        │   ├── db.changelog-master.yaml
+        │   ├── 001-create-persona.yaml
+        │   └── 002-add-column-edad.yaml
+        ├── docker-compose.yml
+        ├── liquibase.properties
+        ├── README.md
+        └── .gitignore (opcional)
+        ```
+
+    
+    ### 📝 Descripción de Archivos y Carpetas
+
+    | Archivo/Carpeta              | Descripción                                                                 |
+    |-----------------------------|-----------------------------------------------------------------------------|
+    | `changelogs/`               | Carpeta que contiene todos los archivos de cambios (changelogs).           |
+    | `db.changelog-master.yaml`  | Changelog principal que actúa como punto de entrada e incluye otros.       |
+    | `001-*.yaml`, `002-*.yaml`  | Archivos con cambios individuales, ordenados por prefijo numérico.         |
+    | `docker-compose.yml`        | Archivo para levantar la base de datos PostgreSQL con Docker.              |
+    | `liquibase.properties`      | Archivo de configuración de Liquibase: conexión, changelog, credenciales. |
+    | `README.md`                 | Documentación y notas del laboratorio.                                     |
+    | `.gitignore`                | Opcional. Ignora archivos temporales, logs, etc., si usas Git.            |
+
+    ### Crea rapidamente la estructura desde cero
+
+    con el siguiente comando podras crear toda la estructra sin ningun problema desde tu terminal, estos tambien sirven en
+    linux
+
+    ```bash title="Bash"
+    mkdir liquibase-lab
+    cd liquibase-lab
+    mkdir changelogs
+    touch docker-compose.yml liquibase.properties changelogs/db.changelog-master.yaml README.md
+    ```
+    
+    una vez ya tengas la estructura creada puedes abrir tu VS Code y utilizarlo para seguir con el siguiente paso
+
+    <img src="/img/blog/devops/liquibasevscode.png" width="600" />
+    
