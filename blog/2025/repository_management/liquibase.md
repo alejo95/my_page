@@ -79,85 +79,88 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     3. **Docker**: lo usaremos para levantar nuestra base de datos de prueba
     4. **Editor de codigo**: En mi caso usare VS Code
 
-#### Instalar Homebrew (si no lo tienes)
+    #### Instalar Homebrew (si no lo tienes)
 
-    Si no tienes Homebrew, instala con:
+        Si no tienes Homebrew, instala con:
 
-    ```bash title="Bash"
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    ```
+        ```bash title="Bash"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        ```
 
-#### JAVA JDK
+    #### JAVA JDK
 
-    Verificamos si tenemos intalado java 
+        Verificamos si tenemos intalado java 
 
-    ```bash title="Bash"
-    java -version
-    ```
+        ```bash title="Bash"
+        java -version
+        ```
 
-    En caso de que lo tengas instalado continua al siguiente paso de instalación de liquibase
+        En caso de que lo tengas instalado continua al siguiente paso de instalación de liquibase
 
-#### Instalación
+    #### Instalación
 
-    Para instalarlo tendremos que usar el siguiente comando en caso de usar hombrew
+        Para instalarlo tendremos que usar el siguiente comando en caso de usar hombrew
 
-    ```bash title="Bash"
-    brew install openjdk@17
-    ```
+        ```bash title="Bash"
+        brew install openjdk@17
+        ```
 
-#### Añade a tu PATH (varia segun la versión estalada)
+    #### Añade a tu PATH (varia segun la versión estalada)
 
-    ```bash title="Bash"
-    sudo ln -sfn $(brew --prefix openjdk@17)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
-    echo 'export PATH="/usr/local/opt/openjdk@17/bin:$PATH"' >> ~/.zshrc
-    source ~/.zshrc
-    ```
+        ```bash title="Bash"
+        sudo ln -sfn $(brew --prefix openjdk@17)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
+        echo 'export PATH="/usr/local/opt/openjdk@17/bin:$PATH"' >> ~/.zshrc
+        source ~/.zshrc
+        ```
 
-#### Volvemos a repetir la verficación del JDK
+    #### Volvemos a repetir la verficación del JDK
 
-    Verificamos si tenemos instalado Java.
+        Verificamos si tenemos instalado Java.
 
-    ```bash title="Bash"
-    java -version
-    ```
-    Si está instalado, verás una salida similar a la siguiente imagen:
+        ```bash title="Bash"
+        java -version
+        ```
+        Si está instalado, verás una salida similar a la siguiente imagen:
 
-    <img src="/img/blog/devops/terminal_susses_jdk.png" alt="Terminal mostrando la versión de Java instalada, texto visible: openjdk version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
+        <img src="/img/blog/devops/terminal_susses_jdk.png" alt="Terminal mostrando la versión de Java instalada, texto visible: openjdk version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
 
-#### Instalemos el CLI de liquibase
+    #### Instalemos el CLI de liquibase
 
-    La forma mas facil de inplementarlo es unsado brew en el caso de mac
+        La forma mas facil de inplementarlo es unsado brew en el caso de mac
 
-    ```bash title="Bash"
-    brew install liquibase
-    ```
-    verifica la instalación 
+        ```bash title="Bash"
+        brew install liquibase
+        ```
+        verifica la instalación 
 
-    ```bash title="Bash"
-    liquibase --version
-    ```
-    una vez instalado si lo realizaste des de tu terminal en mac si puebas el comando de version si sale algo
-    como la siguiente imagen todo estara correctamente y podremos seguir sin problema 😃.
+        ```bash title="Bash"
+        liquibase --version
+        ```
+        una vez instalado si lo realizaste des de tu terminal en mac si puebas el comando de version si sale algo
+        como la siguiente imagen todo estara correctamente y podremos seguir sin problema 😃.
 
-        <img src="/img/blog/devops/liquibase_install.png" alt="Terminal mostrando la versión de liquibase instalada, texto 
-        visible: openjdk version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
+            <img src="/img/blog/devops/liquibase_install.png" alt="Terminal mostrando la versión de liquibase instalada, texto 
+            visible: openjdk version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
 
-#### Instalar Docker (opcional pero recomendado)
+    #### Instalar Docker (opcional pero recomendado)
 
-    Para crear bases de datos de prueba sin instalar nada más en tu Mac Ve a https://docs.docker.com/desktop/mac/install/
-    Descarga e instala Docker Desktop para Mac.
+        Para crear bases de datos de prueba sin instalar nada más en tu Mac Ve a https://docs.docker.com/desktop/mac/install/
+        Descarga e instala Docker Desktop para Mac.
 
-    Abre Docker Desktop y asegúrate que esté corriendo.
+        Abre Docker Desktop y asegúrate que esté corriendo.
 
-    Verifica desde Terminal:
+        Verifica desde Terminal:
 
-    ```bash title="Bash"
-    docker --version
-    docker compose version
-    ```
+        ```bash title="Bash"
+        docker --version
+        docker compose version
+        ```
 
-    <img src="/img/blog/devops/dockerinstall.png" alt="Terminal mostrando la versión de docker instalada, texto 
-    visible: docker version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
+        <img src="/img/blog/devops/dockerinstall.png" alt="Terminal mostrando la versión de docker instalada, texto 
+        visible: docker version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
+---
 
-Si todo sale bien hasta este punto ya deberiamos trener instalados todo lo necesario para para poder iniciar hacer nuestro 
-laboratio 🥳.
+### Iniciemos con nuestro laboratorio 😃
+
+    Genial!!, Si todo te salio bien, en este punto ya deberiamos trener instalados todo lo necesario para poder iniciar 
+    a colocar las primeralas lineas de codigo para implementart nuestro laboratio 🥳.
