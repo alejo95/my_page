@@ -4,7 +4,7 @@ sidebar_position: 3
 title: Database DevOps con Liquibase 
 tags: ["liquibase", "database","devops","databasedevops"]
 authors: alejandro-ramirez
-date: 2025-06-06
+date: 2025-06-09
 ---
 
 <!-- truncate -->
@@ -74,12 +74,31 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
 
     antes de comenzar debemos tener los siguiente recursos instalados en nuestro equipo 💻 en este caso realizamos la configuración
     en macOs, dejare una referencia para que instales en Linux.
-    1. **Java JDK** 11 o Superior
-    2. **Liquibase(CLI)** Herramienta a usar
-    3. **Docker**: lo usaremos para levantar nuestra base de datos de prueba
-    4. **Editor de codigo**: En mi caso usare VS Code
+    1. **Docker**: lo usaremos para levantar nuestra base de datos de prueba y nuestro liquibase
+    2. **Editor de codigo**: En mi caso usare VS Code
+    3. **Java JDK** 11 o Superior  (opcional)
+    4. **Liquibase(CLI)** Herramienta a usar (opcional)
 
-    #### Instalar Homebrew (si no lo tienes)
+   
+    ### Instalar Docker (Necesario)
+
+        Para crear bases de datos de prueba sin instalar nada más en tu Mac Ve a https://docs.docker.com/desktop/mac/install/
+        Descarga e instala Docker Desktop para Mac.
+
+        Abre Docker Desktop y asegúrate que esté corriendo.
+
+        Verifica desde Terminal:
+
+        ```bash title="Bash"
+        docker --version
+        docker compose version
+        ```
+
+        <img src="/img/blog/devops/dockerinstall.png" alt="Terminal mostrando la versión de docker instalada, texto 
+        visible: docker version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
+        
+
+    ### Instalar Homebrew (si no lo tienes)
 
         Si no tienes Homebrew, instala con:
 
@@ -87,7 +106,7 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         ```
 
-    #### JAVA JDK
+    ### JAVA JDK (opcional)
 
         Verificamos si tenemos intalado java 
 
@@ -97,7 +116,7 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
 
         En caso de que lo tengas instalado continua al siguiente paso de instalación de liquibase
 
-    #### Instalación
+    -  Instalación
 
         Para instalarlo tendremos que usar el siguiente comando en caso de usar hombrew
 
@@ -105,7 +124,7 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
         brew install openjdk@17
         ```
 
-    #### Añade a tu PATH (varia segun la versión estalada)
+    -  Añade a tu PATH (varia segun la versión estalada)
 
         ```bash title="Bash"
         sudo ln -sfn $(brew --prefix openjdk@17)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk
@@ -113,7 +132,7 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
         source ~/.zshrc
         ```
 
-    #### Volvemos a repetir la verficación del JDK
+    -  Volvemos a repetir la verficación del JDK
 
         Verificamos si tenemos instalado Java.
 
@@ -124,7 +143,7 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
 
         <img src="/img/blog/devops/terminal_susses_jdk.png" alt="Terminal mostrando la versión de Java instalada, texto visible: openjdk version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
 
-    #### Instalemos el CLI de liquibase (Opcional)
+    ### Instalemos el CLI de liquibase (Opcional)
 
         La forma mas facil de inplementarlo es unsado brew en el caso de mac
 
@@ -141,23 +160,6 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
 
             <img src="/img/blog/devops/liquibase_install.png" alt="Terminal mostrando la versión de liquibase instalada, texto 
             visible: openjdk version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
-
-    #### Instalar Docker
-
-        Para crear bases de datos de prueba sin instalar nada más en tu Mac Ve a https://docs.docker.com/desktop/mac/install/
-        Descarga e instala Docker Desktop para Mac.
-
-        Abre Docker Desktop y asegúrate que esté corriendo.
-
-        Verifica desde Terminal:
-
-        ```bash title="Bash"
-        docker --version
-        docker compose version
-        ```
-
-        <img src="/img/blog/devops/dockerinstall.png" alt="Terminal mostrando la versión de docker instalada, texto 
-        visible: docker version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
     
     ### Instalar cliente PostgreSQL (opcional)
     
@@ -170,16 +172,17 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     
     prueba conectarte una vez este levantes el **docker-compose**:
 
-         ```bash
+        ```bash
         psql -h localhost -U liquibase -d liquibase_demo
         Contraseña: liquibase
-         ```
-        | Opción             | Significado                                                                 |
-        |--------------------|------------------------------------------------------------------------------|
-        | `psql`             | Cliente de línea de comandos de PostgreSQL                                  |
-        | `-h localhost`     | Host de la base de datos (en este caso, `localhost`)                        |
-        | `-U liquibase`     | Usuario con el que se conecta (`liquibase`)                                 |
-        | `-d liquibase_demo`| Base de datos a la que se conecta (`liquibase_demo`)                        |
+        ```
+
+        | Opción              | Significado                                          |
+        | ------------------- | ---------------------------------------------------- |
+        | `psql`              | Cliente de línea de comandos de PostgreSQL           |
+        | `-h localhost`      | Host de la base de datos (en este caso, `localhost`) |
+        | `-U liquibase`      | Usuario con el que se conecta (`liquibase`)          |
+        | `-d liquibase_demo` | Base de datos a la que se conecta (`liquibase_demo`) |
 
 ---
 
@@ -196,53 +199,50 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
         mas producción deberas realizar algunos cambios que tal vez dejare en otro apartado ya que lo que buscamos en este
         laboratorio es experimentar y entender como funciona **liquibase**.
 
-        ```bash title="Bash"
+        ```bash title="Tree"
         liquibase-lab/
         ├── changelogs/
         │   ├── db.changelog-master.yaml
-        │   ├── 001-create-persona.yaml
-        │   └── 002-add-column-edad.yaml
         ├── docker-compose.yml
         ├── liquibase.properties
         ├── README.md
         └── .gitignore (opcional)
         ```
 
+        #### 📝 Descripción de Archivos y Carpetas
+
+        | Archivo/Carpeta            | Descripción                                                               |
+        | -------------------------- | ------------------------------------------------------------------------- |
+        | `changelogs/`              | Carpeta que contiene todos los archivos de cambios (changelogs).          |
+        | `db.changelog-master.yaml` | Changelog principal que actúa como punto de entrada e incluye otros.      |
+        | `001-*.yaml`, `002-*.yaml` | Archivos con cambios individuales, ordenados por prefijo numérico.        |
+        | `docker-compose.yml`       | Archivo para levantar la base de datos PostgreSQL con Docker.             |
+        | `liquibase.properties`     | Archivo de configuración de Liquibase: conexión, changelog, credenciales. |
+        | `README.md`                | Documentación y notas del laboratorio.                                    |
+        | `.gitignore`               | Opcional. Ignora archivos temporales, logs, etc., si usas Git.            |
+
+        #### 🪄 Crea rapidamente la estructura desde cero
+
+        con el siguiente comando podras crear toda la estructra sin ningun problema desde tu terminal, estos tambien sirven en
+        linux
+
+        ```bash title="Bash"
+        > $ mkdir liquibase-lab
+        > $ cd liquibase-lab
+        > $ mkdir changelogs
+        > $ touch docker-compose.yml liquibase.properties changelogs/db.changelog-master.yaml README.md
+        ```
     
-    ### 📝 Descripción de Archivos y Carpetas
+        una vez ya tengas la estructura creada puedes abrir tu VS Code y utilizarlo para seguir con el siguiente paso
 
-    | Archivo/Carpeta              | Descripción                                                                 |
-    |-----------------------------|-----------------------------------------------------------------------------|
-    | `changelogs/`               | Carpeta que contiene todos los archivos de cambios (changelogs).           |
-    | `db.changelog-master.yaml`  | Changelog principal que actúa como punto de entrada e incluye otros.       |
-    | `001-*.yaml`, `002-*.yaml`  | Archivos con cambios individuales, ordenados por prefijo numérico.         |
-    | `docker-compose.yml`        | Archivo para levantar la base de datos PostgreSQL con Docker.              |
-    | `liquibase.properties`      | Archivo de configuración de Liquibase: conexión, changelog, credenciales. |
-    | `README.md`                 | Documentación y notas del laboratorio.                                     |
-    | `.gitignore`                | Opcional. Ignora archivos temporales, logs, etc., si usas Git.            |
+        <img src="/img/blog/devops/liquibasevscode.png" width="600" />
 
-    ### 🪄 Crea rapidamente la estructura desde cero
-
-    con el siguiente comando podras crear toda la estructra sin ningun problema desde tu terminal, estos tambien sirven en
-    linux
-
-    ```bash title="Bash"
-    mkdir liquibase-lab
-    cd liquibase-lab
-    mkdir changelogs
-    touch docker-compose.yml liquibase.properties changelogs/db.changelog-master.yaml README.md
-    ```
-    
-    una vez ya tengas la estructura creada puedes abrir tu VS Code y utilizarlo para seguir con el siguiente paso
-
-    <img src="/img/blog/devops/liquibasevscode.png" width="600" />
-
-    ### 🏗️ Cremos nuestro Docker-compose
+    ## 🏗️ Cremos nuestro Docker-compose
 
     ahora escribiremos el siguiente codigo que lleva la configuración de nuestro compose, junto con los diferentes
     volumenes que nos ayudaran a mantener que persista nuestra data
 
-    ```bash title="Bash"
+    ```bash title="Docker-Compose"
         services:
         db:  # Servicio de base de datos PostgreSQL
             image: postgres:14  # Imagen oficial de PostgreSQL, versión 14
@@ -279,3 +279,44 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
         liquibase-net:  # Red personalizada para que los servicios se comuniquen por nombre
 
     ```
+    ## Creemos nuestro liquibase.properties
+
+    Si seguiste la guia, hasta este punto en los archivos necesarios que creamos encontraras el ***liquibase.properties***
+    el cual es el archivo que contendra la configuración de nuestro liquibase, es el encargado de decirle a liquibase **como
+    conectarse ala base de datos** y donde encontrar los archivos de cambios(changelogs).
+
+
+        ```bash title="liquibase.properties"
+        # liquibase.properties
+        changeLogFile: changelogs/db.changelog-master.yaml
+        url: jdbc:postgresql://db:5432/liquibase_demo
+        username: liquibase
+        password: liquibase
+        driver: org.postgresql.Driver
+        logLevel: info
+        ```
+
+    | OJO: en el url, el host es db, el nombre del servicio del contenedor.
+    
+    | Propiedad       | Descripción                                                                                 | Ejemplo                                    |
+    | --------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------ |
+    | `changeLogFile` | Ruta al archivo principal de cambios de base de datos (changelog).                          | `changelogs/db.changelog.yaml`             |
+    | `url`           | URL de conexión JDBC que indica el tipo de base de datos, host, puerto y nombre de la base. | `jdbc:postgresql://db:5432/liquibase_demo` |
+    | `username`      | Usuario con permisos para ejecutar cambios en la base de datos.                             | `liquibase`                                |
+    | `password`      | Contraseña del usuario de la base de datos.                                                 | `liquibase`                                |
+    | `driver`        | Clase del driver JDBC correspondiente al motor de base de datos.                            | `org.postgresql.Driver`                    |
+
+
+    ## Vamos a crear nuestro changelog
+
+## Errores
+
+    Como siempre cometemos errores, durante la primera configuración implente mal la conexción a la base de datos
+    debido a que estaba apuntando a local host, el cual hace que apunte dentro de su propio contenedor por eso no lo encontraba 
+    entonces esto se lo corregui teniendo enconta el parametro url.
+
+    ```bash title="Error"
+    # liquibase.properties
+    Connection could not be created to jdbc:postgresql://localhost:5432/liquibase_demo
+    ```
+     | Estás diciendo que se conecte a localhost (jdbc:postgresql://localhost:5432)
