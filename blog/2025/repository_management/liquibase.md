@@ -124,7 +124,7 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
 
         <img src="/img/blog/devops/terminal_susses_jdk.png" alt="Terminal mostrando la versión de Java instalada, texto visible: openjdk version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
 
-    #### Instalemos el CLI de liquibase
+    #### Instalemos el CLI de liquibase (Opcional)
 
         La forma mas facil de inplementarlo es unsado brew en el caso de mac
 
@@ -158,6 +158,29 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
 
         <img src="/img/blog/devops/dockerinstall.png" alt="Terminal mostrando la versión de docker instalada, texto 
         visible: docker version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600" />
+    
+    ### Instalar cliente PostgreSQL (opcional)
+    
+    Para interactuar con la base de datos de uba forna más facil puede usar al igual que yo el cliente des Postgres:
+
+         ```bash
+        brew install postgresql
+        Luego 
+         ```
+    
+    prueba conectarte una vez este levantes el **docker-compose**:
+
+         ```bash
+        psql -h localhost -U liquibase -d liquibase_demo
+        Contraseña: liquibase
+         ```
+        | Opción             | Significado                                                                 |
+        |--------------------|------------------------------------------------------------------------------|
+        | `psql`             | Cliente de línea de comandos de PostgreSQL                                  |
+        | `-h localhost`     | Host de la base de datos (en este caso, `localhost`)                        |
+        | `-U liquibase`     | Usuario con el que se conecta (`liquibase`)                                 |
+        | `-d liquibase_demo`| Base de datos a la que se conecta (`liquibase_demo`)                        |
+
 ---
 
 ### Iniciemos con nuestro laboratorio 😃
@@ -198,7 +221,7 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     | `README.md`                 | Documentación y notas del laboratorio.                                     |
     | `.gitignore`                | Opcional. Ignora archivos temporales, logs, etc., si usas Git.            |
 
-    ### Crea rapidamente la estructura desde cero
+    ### 🪄 Crea rapidamente la estructura desde cero
 
     con el siguiente comando podras crear toda la estructra sin ningun problema desde tu terminal, estos tambien sirven en
     linux
@@ -213,4 +236,46 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     una vez ya tengas la estructura creada puedes abrir tu VS Code y utilizarlo para seguir con el siguiente paso
 
     <img src="/img/blog/devops/liquibasevscode.png" width="600" />
-    
+
+    ### 🏗️ Cremos nuestro Docker-compose
+
+    ahora escribiremos el siguiente codigo que lleva la configuración de nuestro compose, junto con los diferentes
+    volumenes que nos ayudaran a mantener que persista nuestra data
+
+    ```bash title="Bash"
+        services:
+        db:  # Servicio de base de datos PostgreSQL
+            image: postgres:14  # Imagen oficial de PostgreSQL, versión 14
+            container_name: liquibase_db  # Nombre del contenedor para referencia fácil
+            environment:  # Variables de entorno para crear la base de datos inicial
+            POSTGRES_USER: liquibase      # Usuario con permisos
+            POSTGRES_PASSWORD: liquibase  # Contraseña del usuario
+            POSTGRES_DB: liquibase_demo   # Nombre de la base de datos a crear
+            ports:
+            - "5432:5432"  # Expone el puerto de PostgreSQL al host local
+            networks:
+            - liquibase-net  # Conecta este servicio a una red personalizada
+            healthcheck:  # Verifica que PostgreSQL esté listo antes de continuar
+            test: ["CMD", "pg_isready", "-U", "liquibase"]
+            interval: 5s
+            timeout: 5s
+            retries: 5
+
+        liquibase:  # Servicio para ejecutar comandos de Liquibase CLI
+            image: liquibase/liquibase:latest  # Imagen oficial de Liquibase
+            container_name: liquibase_cli  # Nombre del contenedor de Liquibase
+            depends_on:
+            db:
+                condition: service_healthy  # Espera a que la base de datos esté lista
+            volumes:  # Mapea archivos locales al contenedor
+            - ./changelogs:/liquibase/changelogs  # Cambios en la BD
+            - ./liquibase.properties:/liquibase/liquibase.properties  # Configuración
+            working_dir: /liquibase  # Carpeta por defecto donde ejecuta comandos
+            entrypoint: ["tail", "-f", "/dev/null"]  # Mantiene el contenedor en ejecución para uso interactivo
+            networks:
+            - liquibase-net  # Se conecta a la misma red que la BD
+
+        networks:
+        liquibase-net:  # Red personalizada para que los servicios se comuniquen por nombre
+
+    ```

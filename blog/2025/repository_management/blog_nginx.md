@@ -159,7 +159,8 @@ tu primer servidor web con Nginx en un servidor de linux.
         ```bash title="Bash"
         sudo nginx -t
         ```
-        si todo esta corercto te saldra un mensaje parecido al siguiente
+    si todo esta corercto te saldra un mensaje parecido al siguiente
+
         <img src="/img/blog/nginx/nginx_config.png" alt="contenedor" width="600" />
 
 ## Los errores 😅
