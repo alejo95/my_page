@@ -4,7 +4,7 @@ sidebar_position: 3
 title: Database DevOps con Liquibase 
 tags: ["liquibase", "database","devops","databasedevops"]
 authors: alejandro-ramirez
-date: 2025-06-09
+date: 2025-06-10
 ---
 
 <!-- truncate -->
@@ -307,7 +307,182 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     | `driver`        | Clase del driver JDBC correspondiente al motor de base de datos.                            | `org.postgresql.Driver`                    |
 
 
-    ## Vamos a crear nuestro changelog
+    ## 🧠 Vamos a crear nuestro changelog
+
+    ¿Qué hace db.changelog-master.yaml?Es un archivo maestro que organiza los cambios en la base de datos. Su función principal es referenciar otros archivos de 
+    cambios (por orden y modularidad), o contener directamente las instrucciones (changeSets) que Liquibase aplicará.
+
+    En este caso tenemos dos formas para poder crear nuestro **changelog** en este ejemplos dejare las referencias a las dos formas, para que entiendas que podemos
+    hacer.
+
+    - opción 1
+        En este caso se implementa un solo archivo maestro que contendra todos los **changeSets**
+
+        ```bash title="databaseChangeLog"
+        databaseChangeLog:
+        - changeSet:
+            id: 001
+            author: alejo
+            changes:
+                - createTable:
+                    tableName: users
+                    columns:
+                    - column:
+                        name: id
+                        type: UUID
+                        constraints:
+                            primaryKey: true
+                    - column:
+                        name: name
+                        type: VARCHAR(100)
+        ```
+        
+        de esta forma tendras que tener el proyecto si utilizas esta opción.
+
+        <img src="/img/blog/devops/changelogmaster.png" width="600" />
+        | ⚠️ Esto es útil en proyectos pequeños o cuando prefieres tener todo en un solo archivo lo cual puede generar al gunos problemas a largo plazo
+    
+    - opción 2
+        En este caso se implementa un archivo que contendra todos los modolus de (changeSets),en el que tendremos las rutas de los **changeSets**
+
+        ```bash title="databaseChangeLog-master"
+        # changelogs/db.changelog-master.yaml
+        databaseChangeLog:
+        - include:
+            file: changelogs/001-init-schema.yaml
+        ```
+        | Cada changeSet es único por id + author. No repitas estos valores.
+
+
+        ```bash title="changelogs/001-init-schema.yaml"
+            databaseChangeLog:
+            - changeSet:
+                id: 001
+                author: alejo
+                changes:
+                    - createTable:
+                        tableName: users
+                        columns:
+                        - column:
+                            name: id
+                            type: UUID
+                            constraints:
+                                primaryKey: true
+                        - column:
+                            name: name
+                            type: VARCHAR(100)
+                        - column:
+                            name: email
+                            type: VARCHAR(150)
+        ```
+
+       <img src="/img/blog/devops/liquivasetreeprod.png" width="600" />
+
+        ✅ Este modelo de carpetas te permitira escalar de una forma mas facil y poder versiónar todos tus cambios de una forma eficiente, en caso de que quieras
+        realizar algun
+
+### Vamos a correr nuestro poyecto
+
+    Perfecto si llegaste hasta aqui ya podemos correr los comandos de nuestro 🐳 **docker-compose** para correr el proyecto
+
+    ✅ 1. Levantar los servicios en segundo plano
+    Esto crea y arranca los contenedores:
+
+    ```bash title="Bash"
+    docker compose up -d
+    ```
+    | 🔍 Esto arrancará el contenedor de PostgreSQL y lo dejará corriendo en segundo plano ya que usamos **-d**.
+
+    ✅ 2. Verificar que la base de datos está lista
+    Liquibase depende de que la base de datos esté lista. Asegúrate de que el servicio db esté healthy:
+
+    ```bash title="Bash"
+    docker compose ps
+    ```
+    veras algo como esto
+    
+    <img src="/img/blog/devops/liquivasetreeprod.png" width="600" />
+
+    ### 🧠 ¿Cómo sabe Liquibase qué ya corrió?
+
+    Liquibase registra los changeSets ejecutados en una tabla llamada DATABASECHANGELOG. Así evita repetir cambios y permite auditar qué se aplicó, cuándo y por quién.
+
+    <img src="/img/blog/devops/liquibaserun.png" width="600" />
+
+    En este punto ya tenemos nuestros servicios corriendo, y con ya podremos ejectar
+
+    ```bash title="Bash"
+    docker exec -it liquibase_cli liquibase update
+    ```
+    Si todo te sale bien, deberas ver algo como se ve en la imagen.
+
+    <img src="/img/blog/devops/primerejecucion.png" width="600" />
+    | Esto ejecutará todos los changeSets del archivo db.changelog-master.yaml y aplicará los cambios en la base de datos PostgreSQL.
+
+    ### 🧠 ¿Por qué se crea automáticamente?
+    La base de datos se crea automáticamente porque se lo estás indicando al contenedor de PostgreSQL con POSTGRES_DB al inicio.
+
+    <img src="/img/blog/devops/conectiondb.png" width="600" />
+
+    y en nuestra base de datos postgres podremos ver lo siguiente
+
+    <img src="/img/blog/devops/basededatos.png" width="600" />
+
+    Cuando corremos este comando **liquibase** se crearan dos tablas `databasechangelog` y `databasechangeloglock`
+    
+    | Tabla                             | ¿Para qué sirve?                          |
+    |-----------------------------------|-------------------------------------------|
+    | `databasechangelog`               | Historial de cambios ya aplicados         |
+    | `databasechangeloglock`           | Evita conflictos por ejecución simultánea |
+
+    genial hasta este punto ya tenemos nuestro proyecto creado y corriendo, ahora realizaremos una actualización a la tabla usuario que creamos
+    domde crearemos un `changeSet`
+
+    - Creemos otro archivo dentro de nuestra carpeta `changelogs` con el nombre `002-create-users-table.yaml`
+
+    ```bash title="Bash"
+    databaseChangeLog:
+    - changeSet:
+        id: 002
+        author: alejo
+        changes:
+            - addColumn:
+                tableName: users
+                columns:
+                - column:
+                    name: birthdate
+                    type: DATE
+    ```
+    |Cada changeSet es único por id + author. No repitas estos valores.
+
+    en este caso aremos un cambio ala tabla usuarios donde agregaremos la columna de **birthdate**
+
+    Ya creado nuestro archivo ejecutaremos nuevamente nuestro comando, que generara los cambios en la base de datos.
+
+    ```bash title="Bash"
+    docker exec -it liquibase_cli liquibase update
+    ```
+    al ejecturar debera salir lo que se ve en la siguiente imagen
+
+    <img src="/img/blog/devops/runliquibasechange.png" width="600" />
+
+    Para comprobar el cambio te puedes conectar ala base de datos y validar que se crearon los campos como los finimos
+
+### Tabla comandos 🎮
+
+    Aqui encontras una serie de comandos que puedes ejecutar para que sigas probando como funciona liquibase y todas sus cuidades, te invito a
+    probar y testear todo lo que quieras.
+
+    | Comando                                           | ¿Para qué sirve?                                                                 |
+    |--------------------------------------------------|----------------------------------------------------------------------------------|
+    | `docker compose run liquibase update`            | Aplica todos los `changeSet` pendientes definidos en el changelog maestro.      |
+    | `docker compose run liquibase status`            | Muestra qué cambios (changeSets) aún no se han aplicado a la base de datos.     |
+    | `docker compose run liquibase history`           | Lista todos los `changeSets` ya aplicados con detalles (fecha, autor, id).      |
+    | `docker compose run liquibase rollbackCount 1`   | Revierte el último cambio aplicado (puedes cambiar `1` por otro número).        |
+    | `docker compose run liquibase rollbackToDate 2024-01-01` | Revierte todos los cambios hechos después de una fecha específica.     |
+    | `docker compose run liquibase validate`          | Valida el archivo changelog, revisa errores de sintaxis o duplicados.           |
+    | `docker compose run liquibase clearCheckSums`    | Limpia los checksums para forzar revalidación de cambios. Útil si editaste sets.|
+    | `docker compose run liquibase changelogSync`     | Marca todos los cambios como aplicados sin ejecutarlos (¡útil en producción!).   |
 
 ## Errores
 
