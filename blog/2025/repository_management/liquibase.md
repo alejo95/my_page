@@ -4,7 +4,7 @@ sidebar_position: 3
 title: Database DevOps con Liquibase 
 tags: ["liquibase", "database","devops","databasedevops"]
 authors: alejandro-ramirez
-date: 2025-06-10
+date: 2025-06-11
 ---
 
 <!-- truncate -->
@@ -468,10 +468,95 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
 
     Para comprobar el cambio te puedes conectar ala base de datos y validar que se crearon los campos como los finimos
 
+    ### ¿Cómo funciona el rollback?
+
+    Liquibase puede revertir cambios de varias maneras, pero solo si sabe cómo hacerlo. Esto es posible si:
+    
+    El changeSet tiene rollback automático (por ejemplo, createTable se puede revertir con dropTable).
+    Tú defines explícitamente el rollback en tu changeSet.
+
+    ### Como podemos rollback
+
+    Liquibase permite revertir usando distintos comandos:
+    
+
+    #### 🔁 Ejemplo de rollback
+
+    - Agregamos a nuestro changelog nuestra actualización
+
+    ```bash title="Bash"
+    databaseChangeLog:
+    - changeSet:
+        id: 003
+        author: alejo
+        changes:
+            - addColumn:
+                tableName: users
+                columns:
+                - column:
+                    name: age
+                    type: INT
+        rollback:
+            - dropColumn:
+                columnName: age
+                tableName: users
+    ```
+    Este archivo:
+
+      - Agrega una columna age a la tabla users.
+      - Define que el rollback elimina esa columna.
+
+    - Actualizamos nuestr archivo 📘 `db.changelog-master.yaml`
+
+        ```bash title="Bash"
+        databaseChangeLog:
+            - include:
+                file: changelogs/001-create-table-user.yaml
+            - include:
+                file: changelogs/002-insert-users.yaml
+            - include:
+                file: changelogs/003-add-column-age.yaml
+        ```
+    
+    Deberas tener algo asi, como se ve en la siguiente imagen
+
+     <img src="/img/blog/devops/rollbackliquibase.png" width="600" />
+
+    Hora vamos a ejectarlo, En este caso crorremos primeros nuestra actualización, donde se agregar `ege`.
+    
+    ```bash title="Bash"
+        docker exec -it liquibase_cli liquibase update
+    ```
+    como se que todo te salio bien debera salirte en tu consola algo como esto y en tu tabla debio aparecer la columna `ege`
+
+    <img src="/img/blog/devops/addege.png" width="600" />
+
+    para realizar el rollback tienes varias opciones, aqui dejare dos que puedes usar sin problema
+
+    #### 🔁 1. Rollback de un changeSet específico (desde 003)
+
+    ```bash title="Bash"
+    docker compose exec liquibase liquibase rollbackCount 1
+    ```
+    Este revierte el último cambio (003), usando el bloque rollback.
+
+    #### 🔁 2. Rollback por ID
+
+    ```bash title="Bash"
+        docker compose exec liquibase liquibase liquibase rollbackToDate "2025-06-11T20:00:00"
+    ```
+    Este revierte todos los cambios hasta (pero no incluyendo) el changeSet con id: 002.
+
+    Si se aplica el rollback volveremos a la versión 002 de una forma facil.
+
+    <img src="/img/blog/devops/rollbacksucces.png" width="600" />
+
 ### Tabla comandos 🎮
 
     Aqui encontras una serie de comandos que puedes ejecutar para que sigas probando como funciona liquibase y todas sus cuidades, te invito a
     probar y testear todo lo que quieras.
+
+    Puedes agregar `exec -it` para ver hacer la terminal interactiva 
 
     | Comando                                           | ¿Para qué sirve?                                                                 |
     |--------------------------------------------------|----------------------------------------------------------------------------------|
@@ -495,3 +580,8 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     Connection could not be created to jdbc:postgresql://localhost:5432/liquibase_demo
     ```
      | Estás diciendo que se conecte a localhost (jdbc:postgresql://localhost:5432)
+
+### Gracias 🤩 por llegar hasta este punto
+
+aun queda muchas cosas por explorar de **liquibase**, pero te agradezco por tomarte el tiempo de entrar a este blog, el codigo implemtado
+lo pudes encontrar mio git-hub [alejo95/Liquibase-lab](https://github.com/alejo95/liquibase-lab)
