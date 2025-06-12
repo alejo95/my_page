@@ -4,7 +4,7 @@ sidebar_position: 3
 title: Database DevOps con Liquibase 
 tags: ["liquibase", "database","devops","databasedevops"]
 authors: alejandro-ramirez
-date: 2025-06-11
+date: 2025-06-12
 ---
 
 <!-- truncate -->
@@ -41,7 +41,7 @@ trabajo y de esta forma mantener nuestra base de datos de una forma consistente.
     Para entender esto de una forma más fácil dejaré un diagrama que muestra el flujo manual que se suele llevar por un equipo
     convencional de DBA generando pausa entre cada paso (generando un cuello de botella).
     
-        <img src="/img/blog/devops/databasedevops.png" alt="contenedor" width="600" />
+        <img src="/img/blog/devops/vidadeldesarollo.png" alt="contenedor" width="700" />
 
     debido a que estos procesos funcionan de una forma manual, deben llevarse a cabo las revisiones del código de base datos
     suele ser lo ultimo en realizarse suele generar un retraso en el lanzamiento. Esto genera un problema, pues genera un retraso
@@ -54,7 +54,7 @@ trabajo y de esta forma mantener nuestra base de datos de una forma consistente.
     para quitar esas paradas innecesarias, donde el **DBA** debe revisar los cambios hasta la fase final, sin la necesidad de hacer
     las revisiones en etapas tempranas del proceso y así empaquetar todo el código.
 
-    <img src="/img/blog/devops/databasedevops.png" alt="contenedor" width="600" />
+    <img src="/img/blog/devops/unficacionvidadelsoftware.png" alt="contenedor" width="700" />
 
     Una solución DevOps de bases de datos como [Liquibase](https://www.liquibase.com/how-liquibase-works). Permite a los equipos 
     automatizar y gestionar la gestión de cambios para optimizar este cuello de botella y acelerar los procesos de las 
