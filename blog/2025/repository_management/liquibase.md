@@ -12,62 +12,63 @@ date: 2025-06-11
 Hola, amigos 😃 DevOps. Hoy hablaremos sobre **Database DevOps**.
 
 Como bien sabemos, DevOps ha sido clave en el desarrollo de aplicaciones, especialmente al facilitar los procesos de entrega
-continua e integrar a los equipos de desarrollo y operaciones en flujos de trabajo ágiles y optimizados.
+continúa e integrando a los equipos de desarrollo y operaciones en flujos de trabajo ágiles y optimizados.
 
 Sin embargo, muchas veces durante el desarrollo de una aplicación omitimos la importancia de las bases de datos. Nos enfocamos en
-escribir código y en contar con herramientas que permitan hacer rollback de nuestro codigo de forma rápida en caso de algun error.
-Pero hacer rollback en una base de datos puede ser mucho más delicado y perjudicial si no se maneja correctamente.
+escribir código y en contar con herramientas que permitan hacer Rollback de nuestro código de forma rápida en caso de algún error.
+Pero hacer Rollback en una base de datos puede ser mucho más delicado y perjudicial si no se maneja correctamente.
 
 Por eso, dentro de DevOps se han implementado herramientas y prácticas que nos permiten gestionar los cambios en bases de datos 📈
 de manera segura y eficiente. En este blog veremos cómo usar **Liquibase** y cómo puede ayudarnos a mejorar nuestro flujo de
-trabajo y de esta forma manter nuestra base datos de una forma consistente.
+trabajo y de esta forma mantener nuestra base de datos de una forma consistente.
 
     <img src="/img/blog/devops/databasedevops.png" alt="contenedor" width="600" />
 
 ## ¿Ques Database DevOps? 👨‍💻
 
-    Es traer las practivas y principios implementados en el mundo del **DevOps** buscando garantizar que el código de las bases de
-    datos se incluya en el mismo proceso que el código de desarrollo. Con esto buscamos solucionar el cuello de botella que se 
-    puede presentar al momento de generar los cambios en el código de la base de datos ya que en muchos de los casos estos cambios tienen que ser validados por un **DBA**(data base adaministrator) y facilitandole el trabajo ya que ellos se encargaran de 
-    enfocarse en temas respecto ala base datos.
+    Es traer las prácticas y principios implementados en el mundo del **DevOps** buscando garantizar que el código de las bases de
+    los datos se incluyen en el mismo proceso que el código de desarrollo. Con esto buscamos solucionar el cuello de botella que se 
+    puede presentar al momento de generar los cambios en el código de la base de datos, ya que en muchos de los casos estos cambios 
+    tienen que ser validados por un **DBA**(data base administrador) y facilitándole el trabajo, ya que ellos se encargaran de 
+    enfocarse en temas respecto a la base de datos.
 
 ## ¿Porque surge esta problematica? 😧
 
-    Esta problematica se da debido a que muchas veces los programadores realizan actualizaciones en el código fuente de las
-    aplicaciones que algunas ocaciones implementa cambios en el código de la base de datos, estos cambios tenemos que llevalos 
-    acabo haciendo uso de SQL.
+    Esta problemática se da debido a que muchas veces los programadores realizan actualizaciones en el código fuente de las
+    aplicaciones que algunas ocasiones implementa cambios en el código de la base de datos, estos cambios tenemos que llevarlos 
+    a cabo haciendo uso de SQL.
 
-    para entender esto de una forma mas facil dejare un diagrama que muestra el flujo manual que se suele llevar por un equipo
+    Para entender esto de una forma más fácil dejaré un diagrama que muestra el flujo manual que se suele llevar por un equipo
     convencional de DBA generando pausa entre cada paso (generando un cuello de botella).
     
-    <img src="/img/blog/devops/databasedevops.png" alt="contenedor" width="600" />
+        <img src="/img/blog/devops/databasedevops.png" alt="contenedor" width="600" />
 
-    debido a que estos procesos funcionana de una forma manual, deben llevarse a acabo las reviciones del codigo de base datos
+    debido a que estos procesos funcionan de una forma manual, deben llevarse a cabo las revisiones del código de base datos
     suele ser lo ultimo en realizarse suele generar un retraso en el lanzamiento. Esto genera un problema, pues genera un retraso
     generando problemas pues la validación y revisión no son eficientes. Todo proceso de cambio en la base de datos es simplemente
-    un obstaculo.
+    un obstáculo.
 
 ## Una solución entre muchas 🔧
 
-    En este caso como hemos hablado desde un princio aqui es donde entra nuestra solucion **Liquidbase** como una herramienta echa
-    para quitar esas paradas inecesarias, donde el **DBA** debe revisar los cambios hasta la fase final, sin la necesidad de hacer
-    las revisiones en etapas tempranas del proceso y asi empaquetar todo el codigo.
+    En este caso como hemos hablado desde un principio aquí es donde entra nuestra solución **Liquidbase** como una herramienta echa
+    para quitar esas paradas innecesarias, donde el **DBA** debe revisar los cambios hasta la fase final, sin la necesidad de hacer
+    las revisiones en etapas tempranas del proceso y así empaquetar todo el código.
 
     <img src="/img/blog/devops/databasedevops.png" alt="contenedor" width="600" />
 
-    Una solución DevOps de bases de datos como [Liquibase](https://www.liquibase.com/how-liquibase-works).  permite a los equipos 
+    Una solución DevOps de bases de datos como [Liquibase](https://www.liquibase.com/how-liquibase-works). Permite a los equipos 
     automatizar y gestionar la gestión de cambios para optimizar este cuello de botella y acelerar los procesos de las 
     aplicaciones. Esto es lo que hace que esta solución sea tan valiosa.
-
-    **Liquibase** Nos permite gestionar estas actualizaciónes de una forma facil y que igual forma nos permite realizar un rollback
-    de una forma facil y rapida, ayudandonos a mantener la consistencia en la base datos, ademas nos permite llevar un controlo de
-    versiones, la cual realizar de una forma inicial manualmente y en el futuro tambien nos permite autimatizar este proceso.
+    
+    **Liquibase** Nos permite gestionar estas actualizaciones de una forma fácil y que igual forma nos permite realizar un Rollback
+    de una forma fácil y rápida, ayudándonos a mantener la consistencia en la base datos, además nos permite llevar un controlo de
+    versiones, la cual realizar de una forma inicial manualmente y en el futuro también nos permite automatizar este proceso.
 
 ## Laboratorio Liquibase 🧪
 
-    Hoy realizare la implemntación de liquibase, si quieres implemntarlo dejare los paso para que lo sigas y tambien puedas
-    implementarlo en tu maquina, si quieres implementarlo a un **CI/CD** debemos realizar otros paso, en esta primer guia,
-    encontras la implementación de liquibase donde el objetivo es aprender como liquibase gestiona cambios en las bases de datos de
+    Hoy realizare la implementaciónde liquidase si quieres implementarlodejare los paso para que lo sigas y tambiénpuedas
+    implementarlo en tú máquina si quieres implementarlo a un **CI/CD** debemos realizar otros paso, en esta primer guia,
+    encuentrasla implementación de liquibase donde el objetivo es aprender como liquibase gestiona cambios en las bases de datos de
     forma controlada usando archivos de tipo chagelog( YAML, XML, JSON o SQL). **Vamos! 🥳**
 
 ### ⚙️ Requisitos previos
@@ -188,15 +189,16 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
 
 ### Iniciemos con nuestro laboratorio 😃
 
-    Genial!!, Si todo te salio bien, en este punto ya deberiamos trener instalados todo lo necesario para poder iniciar 
-    a colocar las primeralas lineas de codigo para implementart nuestro laboratio 🥳.
+    Genial!!, Si todo té salió bien, en este punto ya deberíamos tener instalados todo lo necesario para poder iniciar 
+    a colocar las primeras líneas de código para implementar nuestro laboratorio 🥳.
+
 
     para realizar nuestra prueba inicial implementaremos la siguiente estructura de carpetas
 
     ### 🗂️ estructura del proyecto
         
-        esta estructrua es una estructura basica solamente realizada para la prueba, para realizar un proyecto a un nivel
-        mas producción deberas realizar algunos cambios que tal vez dejare en otro apartado ya que lo que buscamos en este
+        esta estructuras es una estructura básica solamente realizada para la prueba, para realizar un proyecto a un nivel
+        mas producción deberás realizar algunos cambios que tal vez dejaré en otro apartado, ya que lo que buscamos en este
         laboratorio es experimentar y entender como funciona **liquibase**.
 
         ```bash title="Tree"
@@ -223,7 +225,7 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
 
         #### 🪄 Crea rapidamente la estructura desde cero
 
-        con el siguiente comando podras crear toda la estructra sin ningun problema desde tu terminal, estos tambien sirven en
+        Con el siguiente comando podrás crear toda la estructurá sin ningún problema desde tu terminal, estos también sirven en
         linux
 
         ```bash title="Bash"
@@ -233,14 +235,14 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
         > $ touch docker-compose.yml liquibase.properties changelogs/db.changelog-master.yaml README.md
         ```
     
-        una vez ya tengas la estructura creada puedes abrir tu VS Code y utilizarlo para seguir con el siguiente paso
+        Una vez ya tengas la estructura creada puedes abrir tu VS Code y utilizarlo para seguir con el siguiente paso
 
         <img src="/img/blog/devops/liquibasevscode.png" width="600" />
 
     ## 🏗️ Cremos nuestro Docker-compose
-
-    ahora escribiremos el siguiente codigo que lleva la configuración de nuestro compose, junto con los diferentes
-    volumenes que nos ayudaran a mantener que persista nuestra data
+    
+    Ahora escribiremos el siguiente código que lleva la configuración de nuestro compose, junto con los diferentes
+    volúmenes que nos ayudaran a mantener que persista nuestra data
 
     ```bash title="Docker-Compose"
         services:
@@ -281,8 +283,8 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     ```
     ## Creemos nuestro liquibase.properties
 
-    Si seguiste la guia, hasta este punto en los archivos necesarios que creamos encontraras el ***liquibase.properties***
-    el cual es el archivo que contendra la configuración de nuestro liquibase, es el encargado de decirle a liquibase **como
+    Si seguiste la guía, hasta este punto en los archivos necesarios que creamos encontraras el ***liquibase.properties***
+    el cual es el archivo que contendrá la configuración de nuestro liquibase, es el encargado de decirle a liquibase **como
     conectarse ala base de datos** y donde encontrar los archivos de cambios(changelogs).
 
 
@@ -312,7 +314,7 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     ¿Qué hace db.changelog-master.yaml?Es un archivo maestro que organiza los cambios en la base de datos. Su función principal es referenciar otros archivos de 
     cambios (por orden y modularidad), o contener directamente las instrucciones (changeSets) que Liquibase aplicará.
 
-    En este caso tenemos dos formas para poder crear nuestro **changelog** en este ejemplos dejare las referencias a las dos formas, para que entiendas que podemos
+    En este caso tenemos dos formas para poder crear nuestro **changelog** en este ejemplo dejaré las referencias a las dos formas, para que entiendas que podemos
     hacer.
 
     - opción 1
@@ -337,13 +339,13 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
                         type: VARCHAR(100)
         ```
         
-        de esta forma tendras que tener el proyecto si utilizas esta opción.
+        De esta forma tendrás que tener el proyecto si utilizas esta opción.
 
         <img src="/img/blog/devops/changelogmaster.png" width="600" />
         | ⚠️ Esto es útil en proyectos pequeños o cuando prefieres tener todo en un solo archivo lo cual puede generar al gunos problemas a largo plazo
     
     - opción 2
-        En este caso se implementa un archivo que contendra todos los modolus de (changeSets),en el que tendremos las rutas de los **changeSets**
+        En este caso se implementa un archivo que contendrá todos los modelos de (changeSets), en el que tendremos las rutas de los **changeSets**
 
         ```bash title="databaseChangeLog-master"
         # changelogs/db.changelog-master.yaml
@@ -377,13 +379,13 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
         ```
 
        <img src="/img/blog/devops/liquivasetreeprod.png" width="600" />
-
-        ✅ Este modelo de carpetas te permitira escalar de una forma mas facil y poder versiónar todos tus cambios de una forma eficiente, en caso de que quieras
-        realizar algun
+        
+        ✅ Este modelo de carpetas te permitirá escalar de una forma más fácil y poder versionar todos tus cambios de una forma eficiente, en caso de que quieras
+        realizar algún cambio
 
 ### Vamos a correr nuestro poyecto
 
-    Perfecto si llegaste hasta aqui ya podemos correr los comandos de nuestro 🐳 **docker-compose** para correr el proyecto
+    Perfecto si llegaste hasta aquí ya podemos correr los comandos de nuestro 🐳 **docker-compose** para correr el proyecto
 
     ✅ 1. Levantar los servicios en segundo plano
     Esto crea y arranca los contenedores:
@@ -409,12 +411,12 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
 
     <img src="/img/blog/devops/liquibaserun.png" width="600" />
 
-    En este punto ya tenemos nuestros servicios corriendo, y con ya podremos ejectar
+    En este punto ya tenemos nuestros servicios corriendo, y con ya podremos ejecutar
 
     ```bash title="Bash"
     docker exec -it liquibase_cli liquibase update
     ```
-    Si todo te sale bien, deberas ver algo como se ve en la imagen.
+    Si todo te sale bien, deberás ver algo como se ve en la imagen.
 
     <img src="/img/blog/devops/primerejecucion.png" width="600" />
     | Esto ejecutará todos los changeSets del archivo db.changelog-master.yaml y aplicará los cambios en la base de datos PostgreSQL.
@@ -424,7 +426,7 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
 
     <img src="/img/blog/devops/conectiondb.png" width="600" />
 
-    y en nuestra base de datos postgres podremos ver lo siguiente
+    y en nuestra base de datos **Postgres** podremos ver lo siguiente
 
     <img src="/img/blog/devops/basededatos.png" width="600" />
 
@@ -435,8 +437,8 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     | `databasechangelog`               | Historial de cambios ya aplicados         |
     | `databasechangeloglock`           | Evita conflictos por ejecución simultánea |
 
-    genial hasta este punto ya tenemos nuestro proyecto creado y corriendo, ahora realizaremos una actualización a la tabla usuario que creamos
-    domde crearemos un `changeSet`
+    Genial hasta este punto ya tenemos nuestro proyecto creado y corriendo, ahora realizaremos una actualización a la tabla `users` que creamos
+    donde crearemos un `changeSet`
 
     - Creemos otro archivo dentro de nuestra carpeta `changelogs` con el nombre `002-create-users-table.yaml`
 
@@ -455,18 +457,18 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     ```
     |Cada changeSet es único por id + author. No repitas estos valores.
 
-    en este caso aremos un cambio ala tabla usuarios donde agregaremos la columna de **birthdate**
+    En este caso aremos un cambio ala tabla `users` donde agregaremos la columna de **birthdate**
 
     Ya creado nuestro archivo ejecutaremos nuevamente nuestro comando, que generara los cambios en la base de datos.
 
     ```bash title="Bash"
     docker exec -it liquibase_cli liquibase update
     ```
-    al ejecturar debera salir lo que se ve en la siguiente imagen
+    al ejecutar deberá salir lo que se ve en la siguiente imagen
 
     <img src="/img/blog/devops/runliquibasechange.png" width="600" />
 
-    Para comprobar el cambio te puedes conectar ala base de datos y validar que se crearon los campos como los finimos
+    Para comprobar el cambio te puedes conectar ala base de datos y validar que se crearon los campos como los definimos
 
     ### ¿Cómo funciona el rollback?
 
@@ -522,16 +524,16 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
 
      <img src="/img/blog/devops/rollbackliquibase.png" width="600" />
 
-    Hora vamos a ejectarlo, En este caso crorremos primeros nuestra actualización, donde se agregar `ege`.
+    Hora vamos a ejecutarlo, En este caso corremos primeros nuestra actualización, donde se agregará `ege`.
     
     ```bash title="Bash"
         docker exec -it liquibase_cli liquibase update
     ```
-    como se que todo te salio bien debera salirte en tu consola algo como esto y en tu tabla debio aparecer la columna `ege`
+    Como sé que todo té salió bien deberá salirte en tu consola algo como esto y en tu tabla debió aparecer la columna `ege`
 
     <img src="/img/blog/devops/addege.png" width="600" />
 
-    para realizar el rollback tienes varias opciones, aqui dejare dos que puedes usar sin problema
+    Para realizar el rollback tienes varias opciones, aquí dejaré dos que puedes usar sin problema
 
     #### 🔁 1. Rollback de un changeSet específico (desde 003)
 
@@ -547,16 +549,16 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
     ```
     Este revierte todos los cambios hasta (pero no incluyendo) el changeSet con id: 002.
 
-    Si se aplica el rollback volveremos a la versión 002 de una forma facil.
+    Si se aplica el rollback volveremos a la versión 002 de una forma fácil.
 
     <img src="/img/blog/devops/rollbacksucces.png" width="600" />
 
 ### Tabla comandos 🎮
 
-    Aqui encontras una serie de comandos que puedes ejecutar para que sigas probando como funciona liquibase y todas sus cuidades, te invito a
-    probar y testear todo lo que quieras.
+    Aquí encontrarás una serie de comandos que puedes ejecutar para que sigas probando las otras funcionalidades que tiene liquibase. 
+    Te invito a probar y testear todo lo que quieras.
 
-    Puedes agregar `exec -it` para ver hacer la terminal interactiva 
+    Puedes agregar `exec -it` para ver hacer la terminal interactiva
 
     | Comando                                           | ¿Para qué sirve?                                                                 |
     |--------------------------------------------------|----------------------------------------------------------------------------------|
@@ -571,9 +573,9 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
 
 ## Errores
 
-    Como siempre cometemos errores, durante la primera configuración implente mal la conexción a la base de datos
-    debido a que estaba apuntando a local host, el cual hace que apunte dentro de su propio contenedor por eso no lo encontraba 
-    entonces esto se lo corregui teniendo enconta el parametro url.
+    Como siempre cometemos errores, durante la primera configuración implementan mal la conexión a la base de datos
+    debido a que estaba apuntando al local host, el cual hace que apunte dentro de su propio contenedor, por eso no lo encontraba 
+    entonces esto se lo corregí  el parámetro url.
 
     ```bash title="Error"
     # liquibase.properties
@@ -583,5 +585,27 @@ trabajo y de esta forma manter nuestra base datos de una forma consistente.
 
 ### Gracias 🤩 por llegar hasta este punto
 
-aun queda muchas cosas por explorar de **liquibase**, pero te agradezco por tomarte el tiempo de entrar a este blog, el codigo implemtado
-lo pudes encontrar mio git-hub [alejo95/Liquibase-lab](https://github.com/alejo95/liquibase-lab)
+Aún quedan muchas cosas por explorar de **liquibase**, pero te agradezco por tomarte el tiempo de entrar a este blog. El código implementado
+lo puedes encontrar en mí git-hub [alejo95/Liquibase-lab](https://github.com/alejo95/liquibase-lab)
+
+### Mi punto de vista
+
+En realidad, es genial este tipo de herramientas que facilitan la actualización de las bases de datos usando prácticas
+del mundo **DevOps**, para mí fue una experiencia genial, ya que me permite entender de una forma fácil la implementación
+de actualizaciones rápidas a la base de datos, aparte de eso, cuenta con muchas cualidades que ayudan a esta herramienta mejore
+el flujo de trabajo es un **100%**, ya que logramos romper esa barra entre el equipo.
+
+Dejaré una lista de 10 ventajas que tiene liquibase
+
+| Nº | Ventaja                              | Descripción                                                                                  |
+|----|--------------------------------------|----------------------------------------------------------------------------------------------|
+| 1  | **Control de versiones**            | Lleva historial detallado de los cambios en la base de datos, como Git para el código.      |
+| 2  | **Rollback automático**             | Permite revertir cambios fácilmente usando tags, fechas o número de cambiosets.             |
+| 3  | **Seguridad y consistencia**        | Asegura que los cambios se apliquen una sola vez y en el orden correcto.                    |
+| 4  | **Integración con CI/CD**           | Se puede integrar en pipelines para aplicar cambios automáticamente.                        |
+| 5  | **Soporte multiplataforma**         | Compatible con PostgreSQL, MySQL, Oracle, SQL Server, H2, entre otros.                      |
+| 6  | **Soporte para múltiples formatos** | Cambios escritos en XML, YAML, JSON o SQL, según la preferencia del equipo.                 |
+| 7  | **Ejecución simulada (dry run)**    | Permite previsualizar cambios sin aplicarlos realmente (`updateSQL`, `rollbackSQL`).        |
+| 8  | **Gestión de bloqueos**             | Usa locking para evitar conflictos cuando varios procesos intentan modificar la DB.         |
+| 9  | **Historial centralizado**          | Registra todos los cambios aplicados en tablas internas (`databasechangelog`).              |
+| 10 | **Comparación de esquemas**         | `liquibase diff` compara dos bases de datos y genera un changelog automáticamente.          |
