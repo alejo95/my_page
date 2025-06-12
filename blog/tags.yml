@@ -14,3 +14,15 @@ nginx:
 redes:
   label: Redes
   permalink: /tags/redes
+database:
+  label: Database
+  permalink: /tags/database
+liquibase:
+  label: Liquibase
+  permalink: /tags/liquibase
+devops:
+  label: DevOps
+  permalink: /tags/devops
+databasedevops:
+  label: Database DevOps
+  permalink: /tags/databasedevops
