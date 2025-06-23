@@ -4,10 +4,97 @@
         <title>Alejo | DevOps Portfolio Blog</title>
         <link>http://iamdevops.site/blog</link>
         <description>Alejo | DevOps Portfolio Blog</description>
-        <lastBuildDate>Thu, 12 Jun 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 22 Jun 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>es</language>
+        <item>
+            <title><![CDATA[Aprendiendo iaC con Vagrant]]></title>
+            <link>http://iamdevops.site/blog/vagrant</link>
+            <guid>http://iamdevops.site/blog/vagrant</guid>
+            <pubDate>Sun, 22 Jun 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[En este corto blog hablare sobre lo bueno y lo malo de Vagran como proveedor iaC(infraestruc como codigo)]]></description>
+            <content:encoded><![CDATA[<p>En este corto blog hablare sobre lo bueno y lo malo de Vagran como proveedor <strong>iaC</strong>(infraestruc como codigo)
+pero antes definiremos ques <strong>iaC</strong></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ques-es-la-infraesctructra-como-codigo-o-iac">¿Ques es la infraesctructra como codigo o iaC?<a href="http://iamdevops.site/blog/vagrant#ques-es-la-infraesctructra-como-codigo-o-iac" class="hash-link" aria-label="Enlace directo al ¿Ques es la infraesctructra como codigo o iaC?" title="Enlace directo al ¿Ques es la infraesctructra como codigo o iaC?">​</a></h2>
+<p>La <em><strong>infraestructura como codigo</strong></em> o como se conoce con sus siglas en ingles <strong>iaC</strong> es una practica que utiliza archivos de
+configuración para autimatizar procesos que se pueden realizar de forma manual, pero esto en su practica puede traer inconvenientes
+ya que estos procesos tienen a ser repetitivos 🔁.</p>
+<p>La evolución y la necesidad de atomatizar los procesos de gestion de la infeaestructra llevo ala ceación de este paradicma y al dia
+de hoy se consolido como una practica fundamneta deltro del moviento DevOps, buscando tratar la infraestructra de manera simila al
+codigo, utlizando herramientas como lo es en este caso <strong>Vagrant</strong>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="que-es-vagrant">¿Que es vagrant?<a href="http://iamdevops.site/blog/vagrant#que-es-vagrant" class="hash-link" aria-label="Enlace directo al ¿Que es vagrant?" title="Enlace directo al ¿Que es vagrant?">​</a></h3>
+<p>Vagran es una solución creada por HashiCorp, es una heramienta de codigo abierto que facilita la gestion del ciclo de vida
+de maquinas virtuales, la cual nos permite definir y configurar nuestro entornos de desarollo reproducibles y configurables,
+utilizando archivos de configuración para especificar desde el sistema operativo, la red, los usiarios, entre otras configuraciones.
+Vagrant esta diseñado para facilitar el flujo de trabajo de desarollo y pruebas.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lo-bueno-y-lo-malo">¿Lo Bueno y lo Malo?<a href="http://iamdevops.site/blog/vagrant#lo-bueno-y-lo-malo" class="hash-link" aria-label="Enlace directo al ¿Lo Bueno y lo Malo?" title="Enlace directo al ¿Lo Bueno y lo Malo?">​</a></h3>
+<table><thead><tr><th>Lo bueno</th><th>Lo Malo</th></tr></thead><tbody><tr><td>Muy ligero</td><td>Las configuraciones avanzada depende del proveedor de VM.</td></tr><tr><td>Facil de modficiar y distribuir</td><td>No esta adapatado para esenario complejos.</td></tr><tr><td>Facil de integran en entorno DevOps</td><td>Mas lentonto que un contenedor.</td></tr><tr><td>Es de codigo abierto</td><td>Consume demaciada memoria</td></tr><tr><td>Distribuye imagenes limpias con configuraciones completas</td><td>Entornos limitados</td></tr></tbody></table>
+<p>Ya que tenemos tantas limitaciones dejare algunos de los esearios en que puede ser util vagran ya que esta solucion la podemos
+implementar mas facil haciendo uso de herramientas como <strong>docker</strong> y <strong>docker-compose</strong>.</p>
+<ol>
+<li>Al tener entornos replicables en produción</li>
+<li>Cuando vamos a trabajar con varios sitemas operativos (Implementar laboratorios)</li>
+<li>En caso de no querer depender de la infraestrucra del host dond estas alojando tu software</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-comandos-clave-de-vagrant">🚀 Comandos Clave de Vagrant<a href="http://iamdevops.site/blog/vagrant#-comandos-clave-de-vagrant" class="hash-link" aria-label="Enlace directo al 🚀 Comandos Clave de Vagrant" title="Enlace directo al 🚀 Comandos Clave de Vagrant">​</a></h3>
+<table><thead><tr><th>Comando</th><th>Descripción</th></tr></thead><tbody><tr><td>vagrant init</td><td>Crea un Vagrantfile básico</td></tr><tr><td>vagrant up</td><td>Inicia la VM (+ provisionamiento)</td></tr><tr><td>vagrant ssh</td><td>Conéctate a la VM por SSH</td></tr><tr><td>vagrant halt</td><td>Apaga la VM</td></tr><tr><td>vagrant destroy</td><td>Elimina la VM (¡cuidado!)</td></tr><tr><td>vagrant provision</td><td>Re-ejecuta el provisionamiento</td></tr></tbody></table>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="️-laboratorio">👨‍⚕️ Laboratorio<a href="http://iamdevops.site/blog/vagrant#%EF%B8%8F-laboratorio" class="hash-link" aria-label="Enlace directo al 👨‍⚕️ Laboratorio" title="Enlace directo al 👨‍⚕️ Laboratorio">​</a></h2>
+<p>Vamos a iniciar a crear nuestra estructura la cual es la siguiente
+Esta es una estrucrura que puedes generar con vagrant para que puedas tener
+mas organizado tu proyecto de vagrant</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">vagrant-nginx-lab/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── html</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│&nbsp;&nbsp; └── index.html</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── README.md</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└── Vagrantfile</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-instalar-vagrant">💻 Instalar Vagrant<a href="http://iamdevops.site/blog/vagrant#-instalar-vagrant" class="hash-link" aria-label="Enlace directo al 💻 Instalar Vagrant" title="Enlace directo al 💻 Instalar Vagrant">​</a></h3>
+<p>Descargar desde vagrantup.com y ejecutar el .msi</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-qué-contiene-este-laboratorio">🧪 ¿Qué contiene este laboratorio?<a href="http://iamdevops.site/blog/vagrant#-qu%C3%A9-contiene-este-laboratorio" class="hash-link" aria-label="Enlace directo al 🧪 ¿Qué contiene este laboratorio?" title="Enlace directo al 🧪 ¿Qué contiene este laboratorio?">​</a></h3>
+<ul>
+<li><code>Vagrantfile</code>: define el entorno, el contenedor, el volumen y los puertos.</li>
+<li><code>html/index.html</code>: una página simple que dice “¡Hola, soy Alejandro!” con estilo.</li>
+<li>Permisos adecuados (<code>755</code> para la carpeta, <code>644</code> para el archivo).</li>
+<li>Puerto 8080 expuesto para ver el sitio desde el navegador.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-creemos-nuestro-vagrantfile">📝 Creemos nuestro Vagrantfile<a href="http://iamdevops.site/blog/vagrant#-creemos-nuestro-vagrantfile" class="hash-link" aria-label="Enlace directo al 📝 Creemos nuestro Vagrantfile" title="Enlace directo al 📝 Creemos nuestro Vagrantfile">​</a></h3>
+<p>El vagrantfile es nuestro archivo de configuración el cual levantara las infraestrucras que le solicitemos, en este caso
+realizaremos un laboratorio haciendo uso de <strong>docker</strong> y <strong>nginx</strong> para levantar una pagina estatica</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Vagrant.configure("2") do |config|</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Crear el archivo HTML antes de levantar el contenedor</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">unless File.exist?("html/index.html")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Dir.mkdir("html") unless Dir.exist?("html")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    File.write("html/index.html", "&lt;h1&gt;Hola, soy Alejandro&lt;/h1&gt;\n")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    File.chmod(0755, "html")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    File.chmod(0644, "html/index.html")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">end</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">config.vm.box_version = "~&gt; 2025.06"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">config.vm.define "nginx_container" do |nginx|</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        nginx.vm.provider "docker" do |d|</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        d.image = "nginx:latest"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        d.name = "nginx-dev"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        d.ports = ["8080:80"] # Acceso vía localhost:8080</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        d.remains_running = true</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        d.volumes = ["#{Dir.pwd}/html:/usr/share/nginx/html:ro"]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        end</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    end</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">end</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-cómo-lo-pruebo">🌐 ¿Cómo lo pruebo?<a href="http://iamdevops.site/blog/vagrant#-c%C3%B3mo-lo-pruebo" class="hash-link" aria-label="Enlace directo al 🌐 ¿Cómo lo pruebo?" title="Enlace directo al 🌐 ¿Cómo lo pruebo?">​</a></h3>
+<ol>
+<li>
+<p>Asegúrate de tener <strong>Docker Desktop</strong> instalado y corriendo.</p>
+</li>
+<li>
+<p>Clona este repositorio o copia los archivos en una carpeta.</p>
+</li>
+<li>
+<p>Ejecuta:</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">vagrant up --provider=docker</span><br></span></code></pre></div></div>
+</li>
+<li>
+<p>Si quieres detener el docker puedes usar el siguiente comando</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">vagrant halt</span><br></span></code></pre></div></div>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-qué-aprendí-y-configuré">🔧 ¿Qué aprendí y configuré?<a href="http://iamdevops.site/blog/vagrant#-qu%C3%A9-aprend%C3%AD-y-configur%C3%A9" class="hash-link" aria-label="Enlace directo al 🔧 ¿Qué aprendí y configuré?" title="Enlace directo al 🔧 ¿Qué aprendí y configuré?">​</a></h3>
+<p>✅ Usé Vagrant para definir y gestionar el entorno.<br>
+<!-- -->✅ utilice Docker (ideal para Macs con Apple Silicon).<br>
+<!-- -->✅ Automatizé la creación de un archivo <code>index.html</code> con un diseño sencillo y bonito.<br>
+<!-- -->✅ Monté ese archivo como volumen dentro de un contenedor NGINX.<br>
+<!-- -->✅ Configuré correctamente los permisos de archivos para evitar errores como <code>403 Forbidden</code>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-mi-error">😫 Mi error<a href="http://iamdevops.site/blog/vagrant#-mi-error" class="hash-link" aria-label="Enlace directo al 😫 Mi error" title="Enlace directo al 😫 Mi error">​</a></h2>
+<p>Ten encuenta que para manejar vagrant en Mac con chip con arquitectura ARM necesitas crear utilizar una confurtación difetente
+por esta razón tuve el siguiente erro.</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">    alejo@alejos-MacBook-Pro ubuntu-jummy64 % vagrant up</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Bringing machine 'default' up with 'virtualbox' provider...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Command: ["startvm", "54267685-348f-4553-8915-acbcd4a560b0", "--type", "headless"]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Stderr: VBoxManage: error: The VM session was aborted</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component SessionMachine, interface ISession</span><br></span></code></pre></div></div>
+<p>Este erro es devido a que como comente aterior mente vagrant tiene un error de compatividad con la arquitectura ARM,
+para solucionarlo solo deves  instalar <strong>paralles</strong> como proveedor VM.</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">    vagrant plugin install vagrant-parallels</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    config.vm.box = "generic/ubuntu2204-arm64"</span><br></span></code></pre></div></div>
+<p>Tambien tuve que usar una imagen que vieniera para la arquitectura <strong>ARM</strong></p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">    config.vm.box = "generic/ubuntu2204-arm64"</span><br></span></code></pre></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="gracias--por-llegar-hasta-este-punto">Gracias 🤩 por llegar hasta este punto<a href="http://iamdevops.site/blog/vagrant#gracias--por-llegar-hasta-este-punto" class="hash-link" aria-label="Enlace directo al Gracias 🤩 por llegar hasta este punto" title="Enlace directo al Gracias 🤩 por llegar hasta este punto">​</a></h3>
+<p>Aún quedan muchas cosas por explorar de <strong>vagrant</strong>, pero te agradezco por tomarte el tiempo de entrar a este blog. El código implementado
+lo puedes encontrar en mí git-hub <a href="https://github.com/alejo95/vagrant-nginx-lab" target="_blank" rel="noopener noreferrer">alejo95/vagrant-nginx-lab</a></p>]]></content:encoded>
+            <category>Vagrant</category>
+            <category>Automation</category>
+        </item>
         <item>
             <title><![CDATA[Database DevOps con Liquibase]]></title>
             <link>http://iamdevops.site/blog/liquibase</link>
