@@ -26,3 +26,12 @@ devops:
 databasedevops:
   label: Database DevOps
   permalink: /tags/databasedevops
+automation:
+  label: Automation
+  permalink: /tags/automation
+vagrant:
+  label: Vagrant
+  permalink: /tags/vagrant
+linux:
+  label: Linux
+  permalink: /tags/linux
