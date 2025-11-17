@@ -35,3 +35,12 @@ vagrant:
 linux:
   label: Linux
   permalink: /tags/linux
+infrastructure:
+  label: Infrastructure
+  permalink: /tags/infrastructure
+infraestructura:
+  label: Infraestructura
+  permalink: /tags/infraestructura
+automatzacion:
+  label: Automatización
+  permalink: /tags/automatizacion
