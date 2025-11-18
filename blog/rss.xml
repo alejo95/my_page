@@ -16,71 +16,71 @@
             <description><![CDATA[En este corto blog hablare sobre lo bueno y lo malo de Vagran como proveedor iaC(infraestruc como codigo)]]></description>
             <content:encoded><![CDATA[<p>En este corto blog hablare sobre lo bueno y lo malo de Vagran como proveedor <strong>iaC</strong>(infraestruc como codigo)
 pero antes definiremos ques <strong>iaC</strong></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ques-es-la-infraesctructra-como-codigo-o-iac">¿Ques es la infraesctructra como codigo o iaC?<a href="http://iamdevops.site/blog/vagrant#ques-es-la-infraesctructra-como-codigo-o-iac" class="hash-link" aria-label="Enlace directo al ¿Ques es la infraesctructra como codigo o iaC?" title="Enlace directo al ¿Ques es la infraesctructra como codigo o iaC?">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ques-es-la-infraesctructra-como-codigo-o-iac">¿Ques es la infraesctructra como codigo o iaC?<a href="http://iamdevops.site/blog/vagrant#ques-es-la-infraesctructra-como-codigo-o-iac" class="hash-link" aria-label="Enlace directo al ¿Ques es la infraesctructra como codigo o iaC?" title="Enlace directo al ¿Ques es la infraesctructra como codigo o iaC?" translate="no">​</a></h2>
 <p>La <em><strong>infraestructura como codigo</strong></em> o como se conoce con sus siglas en ingles <strong>iaC</strong> es una practica que utiliza archivos de
 configuración para autimatizar procesos que se pueden realizar de forma manual, pero esto en su practica puede traer inconvenientes
 ya que estos procesos tienen a ser repetitivos 🔁.</p>
 <p>La evolución y la necesidad de atomatizar los procesos de gestion de la infeaestructra llevo ala ceación de este paradicma y al dia
 de hoy se consolido como una practica fundamneta deltro del moviento DevOps, buscando tratar la infraestructra de manera simila al
 codigo, utlizando herramientas como lo es en este caso <strong>Vagrant</strong>.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="que-es-vagrant">¿Que es vagrant?<a href="http://iamdevops.site/blog/vagrant#que-es-vagrant" class="hash-link" aria-label="Enlace directo al ¿Que es vagrant?" title="Enlace directo al ¿Que es vagrant?">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="que-es-vagrant">¿Que es vagrant?<a href="http://iamdevops.site/blog/vagrant#que-es-vagrant" class="hash-link" aria-label="Enlace directo al ¿Que es vagrant?" title="Enlace directo al ¿Que es vagrant?" translate="no">​</a></h3>
 <p>Vagran es una solución creada por HashiCorp, es una heramienta de codigo abierto que facilita la gestion del ciclo de vida
 de maquinas virtuales, la cual nos permite definir y configurar nuestro entornos de desarollo reproducibles y configurables,
 utilizando archivos de configuración para especificar desde el sistema operativo, la red, los usiarios, entre otras configuraciones.
 Vagrant esta diseñado para facilitar el flujo de trabajo de desarollo y pruebas.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lo-bueno-y-lo-malo">¿Lo Bueno y lo Malo?<a href="http://iamdevops.site/blog/vagrant#lo-bueno-y-lo-malo" class="hash-link" aria-label="Enlace directo al ¿Lo Bueno y lo Malo?" title="Enlace directo al ¿Lo Bueno y lo Malo?">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="lo-bueno-y-lo-malo">¿Lo Bueno y lo Malo?<a href="http://iamdevops.site/blog/vagrant#lo-bueno-y-lo-malo" class="hash-link" aria-label="Enlace directo al ¿Lo Bueno y lo Malo?" title="Enlace directo al ¿Lo Bueno y lo Malo?" translate="no">​</a></h3>
 <table><thead><tr><th>Lo bueno</th><th>Lo Malo</th></tr></thead><tbody><tr><td>Muy ligero</td><td>Las configuraciones avanzada depende del proveedor de VM.</td></tr><tr><td>Facil de modficiar y distribuir</td><td>No esta adapatado para esenario complejos.</td></tr><tr><td>Facil de integran en entorno DevOps</td><td>Mas lentonto que un contenedor.</td></tr><tr><td>Es de codigo abierto</td><td>Consume demaciada memoria</td></tr><tr><td>Distribuye imagenes limpias con configuraciones completas</td><td>Entornos limitados</td></tr></tbody></table>
 <p>Ya que tenemos tantas limitaciones dejare algunos de los esearios en que puede ser util vagran ya que esta solucion la podemos
 implementar mas facil haciendo uso de herramientas como <strong>docker</strong> y <strong>docker-compose</strong>.</p>
 <ol>
-<li>Al tener entornos replicables en produción</li>
-<li>Cuando vamos a trabajar con varios sitemas operativos (Implementar laboratorios)</li>
-<li>En caso de no querer depender de la infraestrucra del host dond estas alojando tu software</li>
+<li class="">Al tener entornos replicables en produción</li>
+<li class="">Cuando vamos a trabajar con varios sitemas operativos (Implementar laboratorios)</li>
+<li class="">En caso de no querer depender de la infraestrucra del host dond estas alojando tu software</li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-comandos-clave-de-vagrant">🚀 Comandos Clave de Vagrant<a href="http://iamdevops.site/blog/vagrant#-comandos-clave-de-vagrant" class="hash-link" aria-label="Enlace directo al 🚀 Comandos Clave de Vagrant" title="Enlace directo al 🚀 Comandos Clave de Vagrant">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-comandos-clave-de-vagrant">🚀 Comandos Clave de Vagrant<a href="http://iamdevops.site/blog/vagrant#-comandos-clave-de-vagrant" class="hash-link" aria-label="Enlace directo al 🚀 Comandos Clave de Vagrant" title="Enlace directo al 🚀 Comandos Clave de Vagrant" translate="no">​</a></h3>
 <table><thead><tr><th>Comando</th><th>Descripción</th></tr></thead><tbody><tr><td>vagrant init</td><td>Crea un Vagrantfile básico</td></tr><tr><td>vagrant up</td><td>Inicia la VM (+ provisionamiento)</td></tr><tr><td>vagrant ssh</td><td>Conéctate a la VM por SSH</td></tr><tr><td>vagrant halt</td><td>Apaga la VM</td></tr><tr><td>vagrant destroy</td><td>Elimina la VM (¡cuidado!)</td></tr><tr><td>vagrant provision</td><td>Re-ejecuta el provisionamiento</td></tr></tbody></table>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="️-laboratorio">👨‍⚕️ Laboratorio<a href="http://iamdevops.site/blog/vagrant#%EF%B8%8F-laboratorio" class="hash-link" aria-label="Enlace directo al 👨‍⚕️ Laboratorio" title="Enlace directo al 👨‍⚕️ Laboratorio">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-laboratorio">👨‍⚕️ Laboratorio<a href="http://iamdevops.site/blog/vagrant#%EF%B8%8F-laboratorio" class="hash-link" aria-label="Enlace directo al 👨‍⚕️ Laboratorio" title="Enlace directo al 👨‍⚕️ Laboratorio" translate="no">​</a></h2>
 <p>Vamos a iniciar a crear nuestra estructura la cual es la siguiente
 Esta es una estrucrura que puedes generar con vagrant para que puedas tener
 mas organizado tu proyecto de vagrant</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">vagrant-nginx-lab/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── html</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│&nbsp;&nbsp; └── index.html</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── README.md</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└── Vagrantfile</span><br></span></code></pre></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-instalar-vagrant">💻 Instalar Vagrant<a href="http://iamdevops.site/blog/vagrant#-instalar-vagrant" class="hash-link" aria-label="Enlace directo al 💻 Instalar Vagrant" title="Enlace directo al 💻 Instalar Vagrant">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-instalar-vagrant">💻 Instalar Vagrant<a href="http://iamdevops.site/blog/vagrant#-instalar-vagrant" class="hash-link" aria-label="Enlace directo al 💻 Instalar Vagrant" title="Enlace directo al 💻 Instalar Vagrant" translate="no">​</a></h3>
 <p>Descargar desde vagrantup.com y ejecutar el .msi</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-qué-contiene-este-laboratorio">🧪 ¿Qué contiene este laboratorio?<a href="http://iamdevops.site/blog/vagrant#-qu%C3%A9-contiene-este-laboratorio" class="hash-link" aria-label="Enlace directo al 🧪 ¿Qué contiene este laboratorio?" title="Enlace directo al 🧪 ¿Qué contiene este laboratorio?">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-qué-contiene-este-laboratorio">🧪 ¿Qué contiene este laboratorio?<a href="http://iamdevops.site/blog/vagrant#-qu%C3%A9-contiene-este-laboratorio" class="hash-link" aria-label="Enlace directo al 🧪 ¿Qué contiene este laboratorio?" title="Enlace directo al 🧪 ¿Qué contiene este laboratorio?" translate="no">​</a></h3>
 <ul>
-<li><code>Vagrantfile</code>: define el entorno, el contenedor, el volumen y los puertos.</li>
-<li><code>html/index.html</code>: una página simple que dice “¡Hola, soy Alejandro!” con estilo.</li>
-<li>Permisos adecuados (<code>755</code> para la carpeta, <code>644</code> para el archivo).</li>
-<li>Puerto 8080 expuesto para ver el sitio desde el navegador.</li>
+<li class=""><code>Vagrantfile</code>: define el entorno, el contenedor, el volumen y los puertos.</li>
+<li class=""><code>html/index.html</code>: una página simple que dice “¡Hola, soy Alejandro!” con estilo.</li>
+<li class="">Permisos adecuados (<code>755</code> para la carpeta, <code>644</code> para el archivo).</li>
+<li class="">Puerto 8080 expuesto para ver el sitio desde el navegador.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-creemos-nuestro-vagrantfile">📝 Creemos nuestro Vagrantfile<a href="http://iamdevops.site/blog/vagrant#-creemos-nuestro-vagrantfile" class="hash-link" aria-label="Enlace directo al 📝 Creemos nuestro Vagrantfile" title="Enlace directo al 📝 Creemos nuestro Vagrantfile">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-creemos-nuestro-vagrantfile">📝 Creemos nuestro Vagrantfile<a href="http://iamdevops.site/blog/vagrant#-creemos-nuestro-vagrantfile" class="hash-link" aria-label="Enlace directo al 📝 Creemos nuestro Vagrantfile" title="Enlace directo al 📝 Creemos nuestro Vagrantfile" translate="no">​</a></h3>
 <p>El vagrantfile es nuestro archivo de configuración el cual levantara las infraestrucras que le solicitemos, en este caso
 realizaremos un laboratorio haciendo uso de <strong>docker</strong> y <strong>nginx</strong> para levantar una pagina estatica</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Vagrant.configure("2") do |config|</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># Crear el archivo HTML antes de levantar el contenedor</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">unless File.exist?("html/index.html")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Dir.mkdir("html") unless Dir.exist?("html")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    File.write("html/index.html", "&lt;h1&gt;Hola, soy Alejandro&lt;/h1&gt;\n")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    File.chmod(0755, "html")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    File.chmod(0644, "html/index.html")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">end</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">config.vm.box_version = "~&gt; 2025.06"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">config.vm.define "nginx_container" do |nginx|</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        nginx.vm.provider "docker" do |d|</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        d.image = "nginx:latest"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        d.name = "nginx-dev"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        d.ports = ["8080:80"] # Acceso vía localhost:8080</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        d.remains_running = true</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        d.volumes = ["#{Dir.pwd}/html:/usr/share/nginx/html:ro"]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        end</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    end</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">end</span><br></span></code></pre></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-cómo-lo-pruebo">🌐 ¿Cómo lo pruebo?<a href="http://iamdevops.site/blog/vagrant#-c%C3%B3mo-lo-pruebo" class="hash-link" aria-label="Enlace directo al 🌐 ¿Cómo lo pruebo?" title="Enlace directo al 🌐 ¿Cómo lo pruebo?">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-cómo-lo-pruebo">🌐 ¿Cómo lo pruebo?<a href="http://iamdevops.site/blog/vagrant#-c%C3%B3mo-lo-pruebo" class="hash-link" aria-label="Enlace directo al 🌐 ¿Cómo lo pruebo?" title="Enlace directo al 🌐 ¿Cómo lo pruebo?" translate="no">​</a></h3>
 <ol>
-<li>
+<li class="">
 <p>Asegúrate de tener <strong>Docker Desktop</strong> instalado y corriendo.</p>
 </li>
-<li>
+<li class="">
 <p>Clona este repositorio o copia los archivos en una carpeta.</p>
 </li>
-<li>
+<li class="">
 <p>Ejecuta:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">vagrant up --provider=docker</span><br></span></code></pre></div></div>
 </li>
-<li>
+<li class="">
 <p>Si quieres detener el docker puedes usar el siguiente comando</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">vagrant halt</span><br></span></code></pre></div></div>
 </li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-qué-aprendí-y-configuré">🔧 ¿Qué aprendí y configuré?<a href="http://iamdevops.site/blog/vagrant#-qu%C3%A9-aprend%C3%AD-y-configur%C3%A9" class="hash-link" aria-label="Enlace directo al 🔧 ¿Qué aprendí y configuré?" title="Enlace directo al 🔧 ¿Qué aprendí y configuré?">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-qué-aprendí-y-configuré">🔧 ¿Qué aprendí y configuré?<a href="http://iamdevops.site/blog/vagrant#-qu%C3%A9-aprend%C3%AD-y-configur%C3%A9" class="hash-link" aria-label="Enlace directo al 🔧 ¿Qué aprendí y configuré?" title="Enlace directo al 🔧 ¿Qué aprendí y configuré?" translate="no">​</a></h3>
 <p>✅ Usé Vagrant para definir y gestionar el entorno.<br>
 <!-- -->✅ utilice Docker (ideal para Macs con Apple Silicon).<br>
 <!-- -->✅ Automatizé la creación de un archivo <code>index.html</code> con un diseño sencillo y bonito.<br>
 <!-- -->✅ Monté ese archivo como volumen dentro de un contenedor NGINX.<br>
 <!-- -->✅ Configuré correctamente los permisos de archivos para evitar errores como <code>403 Forbidden</code>.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-mi-error">😫 Mi error<a href="http://iamdevops.site/blog/vagrant#-mi-error" class="hash-link" aria-label="Enlace directo al 😫 Mi error" title="Enlace directo al 😫 Mi error">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-mi-error">😫 Mi error<a href="http://iamdevops.site/blog/vagrant#-mi-error" class="hash-link" aria-label="Enlace directo al 😫 Mi error" title="Enlace directo al 😫 Mi error" translate="no">​</a></h2>
 <p>Ten encuenta que para manejar vagrant en Mac con chip con arquitectura ARM necesitas crear utilizar una confurtación difetente
 por esta razón tuve el siguiente erro.</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">    alejo@alejos-MacBook-Pro ubuntu-jummy64 % vagrant up</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Bringing machine 'default' up with 'virtualbox' provider...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Command: ["startvm", "54267685-348f-4553-8915-acbcd4a560b0", "--type", "headless"]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Stderr: VBoxManage: error: The VM session was aborted</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    VBoxManage: error: Details: code NS_ERROR_FAILURE (0x80004005), component SessionMachine, interface ISession</span><br></span></code></pre></div></div>
@@ -89,9 +89,9 @@ para solucionarlo solo deves  instalar <strong>paralles</strong> como proveedor 
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">    vagrant plugin install vagrant-parallels</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    config.vm.box = "generic/ubuntu2204-arm64"</span><br></span></code></pre></div></div>
 <p>Tambien tuve que usar una imagen que vieniera para la arquitectura <strong>ARM</strong></p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">    config.vm.box = "generic/ubuntu2204-arm64"</span><br></span></code></pre></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="gracias--por-llegar-hasta-este-punto">Gracias 🤩 por llegar hasta este punto<a href="http://iamdevops.site/blog/vagrant#gracias--por-llegar-hasta-este-punto" class="hash-link" aria-label="Enlace directo al Gracias 🤩 por llegar hasta este punto" title="Enlace directo al Gracias 🤩 por llegar hasta este punto">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="gracias--por-llegar-hasta-este-punto">Gracias 🤩 por llegar hasta este punto<a href="http://iamdevops.site/blog/vagrant#gracias--por-llegar-hasta-este-punto" class="hash-link" aria-label="Enlace directo al Gracias 🤩 por llegar hasta este punto" title="Enlace directo al Gracias 🤩 por llegar hasta este punto" translate="no">​</a></h3>
 <p>Aún quedan muchas cosas por explorar de <strong>vagrant</strong>, pero te agradezco por tomarte el tiempo de entrar a este blog. El código implementado
-lo puedes encontrar en mí git-hub <a href="https://github.com/alejo95/vagrant-nginx-lab" target="_blank" rel="noopener noreferrer">alejo95/vagrant-nginx-lab</a></p>]]></content:encoded>
+lo puedes encontrar en mí git-hub <a href="https://github.com/alejo95/vagrant-nginx-lab" target="_blank" rel="noopener noreferrer" class="">alejo95/vagrant-nginx-lab</a></p>]]></content:encoded>
             <category>Vagrant</category>
             <category>Automation</category>
         </item>
@@ -111,13 +111,13 @@ Pero hacer Rollback en una base de datos puede ser mucho más delicado y perjudi
 de manera segura y eficiente. En este blog veremos cómo usar <strong>Liquibase</strong> y cómo puede ayudarnos a mejorar nuestro flujo de
 trabajo y de esta forma mantener nuestra base de datos de una forma consistente.</p>
 <img src="http://iamdevops.site/img/blog/devops/databasedevops.png" alt="contenedor" width="600">
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ques-database-devops-">¿Ques Database DevOps? 👨‍💻<a href="http://iamdevops.site/blog/liquibase#ques-database-devops-" class="hash-link" aria-label="Enlace directo al ¿Ques Database DevOps? 👨‍💻" title="Enlace directo al ¿Ques Database DevOps? 👨‍💻">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ques-database-devops-">¿Ques Database DevOps? 👨‍💻<a href="http://iamdevops.site/blog/liquibase#ques-database-devops-" class="hash-link" aria-label="Enlace directo al ¿Ques Database DevOps? 👨‍💻" title="Enlace directo al ¿Ques Database DevOps? 👨‍💻" translate="no">​</a></h2>
 <p>Es traer las prácticas y principios implementados en el mundo del <strong>DevOps</strong> buscando garantizar que el código de las bases de
 los datos se incluyen en el mismo proceso que el código de desarrollo. Con esto buscamos solucionar el cuello de botella que se
 puede presentar al momento de generar los cambios en el código de la base de datos, ya que en muchos de los casos estos cambios
 tienen que ser validados por un <strong>DBA</strong>(data base administrador) y facilitándole el trabajo, ya que ellos se encargaran de
 enfocarse en temas respecto a la base de datos.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="porque-surge-esta-problematica-">¿Porque surge esta problematica? 😧<a href="http://iamdevops.site/blog/liquibase#porque-surge-esta-problematica-" class="hash-link" aria-label="Enlace directo al ¿Porque surge esta problematica? 😧" title="Enlace directo al ¿Porque surge esta problematica? 😧">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="porque-surge-esta-problematica-">¿Porque surge esta problematica? 😧<a href="http://iamdevops.site/blog/liquibase#porque-surge-esta-problematica-" class="hash-link" aria-label="Enlace directo al ¿Porque surge esta problematica? 😧" title="Enlace directo al ¿Porque surge esta problematica? 😧" translate="no">​</a></h2>
 <p>Esta problemática se da debido a que muchas veces los programadores realizan actualizaciones en el código fuente de las
 aplicaciones que algunas ocasiones implementa cambios en el código de la base de datos, estos cambios tenemos que llevarlos
 a cabo haciendo uso de SQL.</p>
@@ -128,57 +128,57 @@ convencional de DBA generando pausa entre cada paso (generando un cuello de bote
 suele ser lo ultimo en realizarse suele generar un retraso en el lanzamiento. Esto genera un problema, pues genera un retraso
 generando problemas pues la validación y revisión no son eficientes. Todo proceso de cambio en la base de datos es simplemente
 un obstáculo.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="una-solución-entre-muchas-">Una solución entre muchas 🔧<a href="http://iamdevops.site/blog/liquibase#una-soluci%C3%B3n-entre-muchas-" class="hash-link" aria-label="Enlace directo al Una solución entre muchas 🔧" title="Enlace directo al Una solución entre muchas 🔧">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="una-solución-entre-muchas-">Una solución entre muchas 🔧<a href="http://iamdevops.site/blog/liquibase#una-soluci%C3%B3n-entre-muchas-" class="hash-link" aria-label="Enlace directo al Una solución entre muchas 🔧" title="Enlace directo al Una solución entre muchas 🔧" translate="no">​</a></h2>
 <p>En este caso como hemos hablado desde un principio aquí es donde entra nuestra solución <strong>Liquidbase</strong> como una herramienta echa
 para quitar esas paradas innecesarias, donde el <strong>DBA</strong> debe revisar los cambios hasta la fase final, sin la necesidad de hacer
 las revisiones en etapas tempranas del proceso y así empaquetar todo el código.</p>
 <img src="http://iamdevops.site/img/blog/devops/unficacionvidadelsoftware.png" alt="contenedor" width="700">
-<p>Una solución DevOps de bases de datos como <a href="https://www.liquibase.com/how-liquibase-works" target="_blank" rel="noopener noreferrer">Liquibase</a>. Permite a los equipos
+<p>Una solución DevOps de bases de datos como <a href="https://www.liquibase.com/how-liquibase-works" target="_blank" rel="noopener noreferrer" class="">Liquibase</a>. Permite a los equipos
 automatizar y gestionar la gestión de cambios para optimizar este cuello de botella y acelerar los procesos de las
 aplicaciones. Esto es lo que hace que esta solución sea tan valiosa.</p>
 <p><strong>Liquibase</strong> Nos permite gestionar estas actualizaciones de una forma fácil y que igual forma nos permite realizar un Rollback
 de una forma fácil y rápida, ayudándonos a mantener la consistencia en la base datos, además nos permite llevar un controlo de
 versiones, la cual realizar de una forma inicial manualmente y en el futuro también nos permite automatizar este proceso.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="laboratorio-liquibase-">Laboratorio Liquibase 🧪<a href="http://iamdevops.site/blog/liquibase#laboratorio-liquibase-" class="hash-link" aria-label="Enlace directo al Laboratorio Liquibase 🧪" title="Enlace directo al Laboratorio Liquibase 🧪">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="laboratorio-liquibase-">Laboratorio Liquibase 🧪<a href="http://iamdevops.site/blog/liquibase#laboratorio-liquibase-" class="hash-link" aria-label="Enlace directo al Laboratorio Liquibase 🧪" title="Enlace directo al Laboratorio Liquibase 🧪" translate="no">​</a></h2>
 <p>Hoy realizare la implementaciónde liquidase si quieres implementarlodejare los paso para que lo sigas y tambiénpuedas
 implementarlo en tú máquina si quieres implementarlo a un <strong>CI/CD</strong> debemos realizar otros paso, en esta primer guia,
 encuentrasla implementación de liquibase donde el objetivo es aprender como liquibase gestiona cambios en las bases de datos de
 forma controlada usando archivos de tipo chagelog( YAML, XML, JSON o SQL). <strong>Vamos! 🥳</strong></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="️-requisitos-previos">⚙️ Requisitos previos<a href="http://iamdevops.site/blog/liquibase#%EF%B8%8F-requisitos-previos" class="hash-link" aria-label="Enlace directo al ⚙️ Requisitos previos" title="Enlace directo al ⚙️ Requisitos previos">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-requisitos-previos">⚙️ Requisitos previos<a href="http://iamdevops.site/blog/liquibase#%EF%B8%8F-requisitos-previos" class="hash-link" aria-label="Enlace directo al ⚙️ Requisitos previos" title="Enlace directo al ⚙️ Requisitos previos" translate="no">​</a></h3>
 <p>antes de comenzar debemos tener los siguiente recursos instalados en nuestro equipo 💻 en este caso realizamos la configuración
 en macOs, dejare una referencia para que instales en Linux.</p>
 <ol>
-<li><strong>Docker</strong>: lo usaremos para levantar nuestra base de datos de prueba y nuestro liquibase</li>
-<li><strong>Editor de codigo</strong>: En mi caso usare VS Code</li>
-<li><strong>Java JDK</strong> 11 o Superior  (opcional)</li>
-<li><strong>Liquibase(CLI)</strong> Herramienta a usar (opcional)</li>
+<li class=""><strong>Docker</strong>: lo usaremos para levantar nuestra base de datos de prueba y nuestro liquibase</li>
+<li class=""><strong>Editor de codigo</strong>: En mi caso usare VS Code</li>
+<li class=""><strong>Java JDK</strong> 11 o Superior  (opcional)</li>
+<li class=""><strong>Liquibase(CLI)</strong> Herramienta a usar (opcional)</li>
 </ol>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="instalar-docker-necesario">Instalar Docker (Necesario)<a href="http://iamdevops.site/blog/liquibase#instalar-docker-necesario" class="hash-link" aria-label="Enlace directo al Instalar Docker (Necesario)" title="Enlace directo al Instalar Docker (Necesario)">​</a></h3>
-<p>Para crear bases de datos de prueba sin instalar nada más en tu Mac Ve a <a href="https://docs.docker.com/desktop/mac/install/" target="_blank" rel="noopener noreferrer">https://docs.docker.com/desktop/mac/install/</a>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instalar-docker-necesario">Instalar Docker (Necesario)<a href="http://iamdevops.site/blog/liquibase#instalar-docker-necesario" class="hash-link" aria-label="Enlace directo al Instalar Docker (Necesario)" title="Enlace directo al Instalar Docker (Necesario)" translate="no">​</a></h3>
+<p>Para crear bases de datos de prueba sin instalar nada más en tu Mac Ve a <a href="https://docs.docker.com/desktop/mac/install/" target="_blank" rel="noopener noreferrer" class="">https://docs.docker.com/desktop/mac/install/</a>
 Descarga e instala Docker Desktop para Mac.</p>
 <p>Abre Docker Desktop y asegúrate que esté corriendo.</p>
 <p>Verifica desde Terminal:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">docker --version</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker compose version</span><br></span></code></pre></div></div>
 <img src="http://iamdevops.site/img/blog/devops/dockerinstall.png" alt="Terminal mostrando la versión de docker instalada, texto 
 visible: docker version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600">
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="instalar-homebrew-si-no-lo-tienes">Instalar Homebrew (si no lo tienes)<a href="http://iamdevops.site/blog/liquibase#instalar-homebrew-si-no-lo-tienes" class="hash-link" aria-label="Enlace directo al Instalar Homebrew (si no lo tienes)" title="Enlace directo al Instalar Homebrew (si no lo tienes)">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instalar-homebrew-si-no-lo-tienes">Instalar Homebrew (si no lo tienes)<a href="http://iamdevops.site/blog/liquibase#instalar-homebrew-si-no-lo-tienes" class="hash-link" aria-label="Enlace directo al Instalar Homebrew (si no lo tienes)" title="Enlace directo al Instalar Homebrew (si no lo tienes)" translate="no">​</a></h3>
 <p>Si no tienes Homebrew, instala con:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</span><br></span></code></pre></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="java-jdk-opcional">JAVA JDK (opcional)<a href="http://iamdevops.site/blog/liquibase#java-jdk-opcional" class="hash-link" aria-label="Enlace directo al JAVA JDK (opcional)" title="Enlace directo al JAVA JDK (opcional)">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="java-jdk-opcional">JAVA JDK (opcional)<a href="http://iamdevops.site/blog/liquibase#java-jdk-opcional" class="hash-link" aria-label="Enlace directo al JAVA JDK (opcional)" title="Enlace directo al JAVA JDK (opcional)" translate="no">​</a></h3>
 <p>Verificamos si tenemos intalado java</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">java -version</span><br></span></code></pre></div></div>
 <p>En caso de que lo tengas instalado continua al siguiente paso de instalación de liquibase</p>
 <ul>
-<li>
+<li class="">
 <p>Instalación</p>
 <p>Para instalarlo tendremos que usar el siguiente comando en caso de usar hombrew</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">brew install openjdk@17</span><br></span></code></pre></div></div>
 </li>
-<li>
+<li class="">
 <p>Añade a tu PATH (varia segun la versión estalada)</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">sudo ln -sfn $(brew --prefix openjdk@17)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">echo 'export PATH="/usr/local/opt/openjdk@17/bin:$PATH"' &gt;&gt; ~/.zshrc</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">source ~/.zshrc</span><br></span></code></pre></div></div>
 </li>
-<li>
+<li class="">
 <p>Volvemos a repetir la verficación del JDK</p>
 <p>Verificamos si tenemos instalado Java.</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">java -version</span><br></span></code></pre></div></div>
@@ -186,7 +186,7 @@ visible: docker version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono
 <img src="http://iamdevops.site/img/blog/devops/terminal_susses_jdk.png" alt="Terminal mostrando la versión de Java instalada, texto visible: openjdk version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600">
 </li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="instalemos-el-cli-de-liquibase-opcional">Instalemos el CLI de liquibase (Opcional)<a href="http://iamdevops.site/blog/liquibase#instalemos-el-cli-de-liquibase-opcional" class="hash-link" aria-label="Enlace directo al Instalemos el CLI de liquibase (Opcional)" title="Enlace directo al Instalemos el CLI de liquibase (Opcional)">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instalemos-el-cli-de-liquibase-opcional">Instalemos el CLI de liquibase (Opcional)<a href="http://iamdevops.site/blog/liquibase#instalemos-el-cli-de-liquibase-opcional" class="hash-link" aria-label="Enlace directo al Instalemos el CLI de liquibase (Opcional)" title="Enlace directo al Instalemos el CLI de liquibase (Opcional)" translate="no">​</a></h3>
 <p>La forma mas facil de inplementarlo es unsado brew en el caso de mac</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">brew install liquibase</span><br></span></code></pre></div></div>
 <p>verifica la instalación</p>
@@ -195,48 +195,48 @@ visible: docker version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono
 como la siguiente imagen todo estara correctamente y podremos seguir sin problema 😃.</p>
 <img src="http://iamdevops.site/img/blog/devops/liquibase_install.png" alt="Terminal mostrando la versión de liquibase instalada, texto 
 visible: openjdk version 17.0.2 2022-01-18, ambiente de desarrollo en macOS, tono informativo y neutral" width="600">
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="instalar-cliente-postgresql-opcional">Instalar cliente PostgreSQL (opcional)<a href="http://iamdevops.site/blog/liquibase#instalar-cliente-postgresql-opcional" class="hash-link" aria-label="Enlace directo al Instalar cliente PostgreSQL (opcional)" title="Enlace directo al Instalar cliente PostgreSQL (opcional)">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instalar-cliente-postgresql-opcional">Instalar cliente PostgreSQL (opcional)<a href="http://iamdevops.site/blog/liquibase#instalar-cliente-postgresql-opcional" class="hash-link" aria-label="Enlace directo al Instalar cliente PostgreSQL (opcional)" title="Enlace directo al Instalar cliente PostgreSQL (opcional)" translate="no">​</a></h3>
 <p>Para interactuar con la base de datos de uba forna más facil puede usar al igual que yo el cliente des Postgres:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">brew install postgresql</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Luego </span><br></span></code></pre></div></div>
 <p>prueba conectarte una vez este levantes el <strong>docker-compose</strong>:</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">psql -h localhost -U liquibase -d liquibase_demo</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Contraseña: liquibase</span><br></span></code></pre></div></div>
 <table><thead><tr><th>Opción</th><th>Significado</th></tr></thead><tbody><tr><td><code>psql</code></td><td>Cliente de línea de comandos de PostgreSQL</td></tr><tr><td><code>-h localhost</code></td><td>Host de la base de datos (en este caso, <code>localhost</code>)</td></tr><tr><td><code>-U liquibase</code></td><td>Usuario con el que se conecta (<code>liquibase</code>)</td></tr><tr><td><code>-d liquibase_demo</code></td><td>Base de datos a la que se conecta (<code>liquibase_demo</code>)</td></tr></tbody></table>
 <hr>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="iniciemos-con-nuestro-laboratorio-">Iniciemos con nuestro laboratorio 😃<a href="http://iamdevops.site/blog/liquibase#iniciemos-con-nuestro-laboratorio-" class="hash-link" aria-label="Enlace directo al Iniciemos con nuestro laboratorio 😃" title="Enlace directo al Iniciemos con nuestro laboratorio 😃">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="iniciemos-con-nuestro-laboratorio-">Iniciemos con nuestro laboratorio 😃<a href="http://iamdevops.site/blog/liquibase#iniciemos-con-nuestro-laboratorio-" class="hash-link" aria-label="Enlace directo al Iniciemos con nuestro laboratorio 😃" title="Enlace directo al Iniciemos con nuestro laboratorio 😃" translate="no">​</a></h3>
 <p>Genial!!, Si todo té salió bien, en este punto ya deberíamos tener instalados todo lo necesario para poder iniciar
 a colocar las primeras líneas de código para implementar nuestro laboratorio 🥳.</p>
 <p>para realizar nuestra prueba inicial implementaremos la siguiente estructura de carpetas</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="️-estructura-del-proyecto">🗂️ estructura del proyecto<a href="http://iamdevops.site/blog/liquibase#%EF%B8%8F-estructura-del-proyecto" class="hash-link" aria-label="Enlace directo al 🗂️ estructura del proyecto" title="Enlace directo al 🗂️ estructura del proyecto">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-estructura-del-proyecto">🗂️ estructura del proyecto<a href="http://iamdevops.site/blog/liquibase#%EF%B8%8F-estructura-del-proyecto" class="hash-link" aria-label="Enlace directo al 🗂️ estructura del proyecto" title="Enlace directo al 🗂️ estructura del proyecto" translate="no">​</a></h3>
 <p>esta estructuras es una estructura básica solamente realizada para la prueba, para realizar un proyecto a un nivel
 mas producción deberás realizar algunos cambios que tal vez dejaré en otro apartado, ya que lo que buscamos en este
 laboratorio es experimentar y entender como funciona <strong>liquibase</strong>.</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Tree</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">liquibase-lab/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── changelogs/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">│   ├── db.changelog-master.yaml</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── docker-compose.yml</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── liquibase.properties</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── README.md</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└── .gitignore (opcional)</span><br></span></code></pre></div></div>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-descripción-de-archivos-y-carpetas">📝 Descripción de Archivos y Carpetas<a href="http://iamdevops.site/blog/liquibase#-descripci%C3%B3n-de-archivos-y-carpetas" class="hash-link" aria-label="Enlace directo al 📝 Descripción de Archivos y Carpetas" title="Enlace directo al 📝 Descripción de Archivos y Carpetas">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-descripción-de-archivos-y-carpetas">📝 Descripción de Archivos y Carpetas<a href="http://iamdevops.site/blog/liquibase#-descripci%C3%B3n-de-archivos-y-carpetas" class="hash-link" aria-label="Enlace directo al 📝 Descripción de Archivos y Carpetas" title="Enlace directo al 📝 Descripción de Archivos y Carpetas" translate="no">​</a></h4>
 <table><thead><tr><th>Archivo/Carpeta</th><th>Descripción</th></tr></thead><tbody><tr><td><code>changelogs/</code></td><td>Carpeta que contiene todos los archivos de cambios (changelogs).</td></tr><tr><td><code>db.changelog-master.yaml</code></td><td>Changelog principal que actúa como punto de entrada e incluye otros.</td></tr><tr><td><code>001-*.yaml</code>, <code>002-*.yaml</code></td><td>Archivos con cambios individuales, ordenados por prefijo numérico.</td></tr><tr><td><code>docker-compose.yml</code></td><td>Archivo para levantar la base de datos PostgreSQL con Docker.</td></tr><tr><td><code>liquibase.properties</code></td><td>Archivo de configuración de Liquibase: conexión, changelog, credenciales.</td></tr><tr><td><code>README.md</code></td><td>Documentación y notas del laboratorio.</td></tr><tr><td><code>.gitignore</code></td><td>Opcional. Ignora archivos temporales, logs, etc., si usas Git.</td></tr></tbody></table>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-crea-rapidamente-la-estructura-desde-cero">🪄 Crea rapidamente la estructura desde cero<a href="http://iamdevops.site/blog/liquibase#-crea-rapidamente-la-estructura-desde-cero" class="hash-link" aria-label="Enlace directo al 🪄 Crea rapidamente la estructura desde cero" title="Enlace directo al 🪄 Crea rapidamente la estructura desde cero">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-crea-rapidamente-la-estructura-desde-cero">🪄 Crea rapidamente la estructura desde cero<a href="http://iamdevops.site/blog/liquibase#-crea-rapidamente-la-estructura-desde-cero" class="hash-link" aria-label="Enlace directo al 🪄 Crea rapidamente la estructura desde cero" title="Enlace directo al 🪄 Crea rapidamente la estructura desde cero" translate="no">​</a></h4>
 <p>Con el siguiente comando podrás crear toda la estructurá sin ningún problema desde tu terminal, estos también sirven en
 linux</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">&gt; $ mkdir liquibase-lab</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&gt; $ cd liquibase-lab</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&gt; $ mkdir changelogs</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">&gt; $ touch docker-compose.yml liquibase.properties changelogs/db.changelog-master.yaml README.md</span><br></span></code></pre></div></div>
 <p>Una vez ya tengas la estructura creada puedes abrir tu VS Code y utilizarlo para seguir con el siguiente paso</p>
 <img src="http://iamdevops.site/img/blog/devops/liquibasevscode.png" width="600">
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="️-cremos-nuestro-docker-compose">🏗️ Cremos nuestro Docker-compose<a href="http://iamdevops.site/blog/liquibase#%EF%B8%8F-cremos-nuestro-docker-compose" class="hash-link" aria-label="Enlace directo al 🏗️ Cremos nuestro Docker-compose" title="Enlace directo al 🏗️ Cremos nuestro Docker-compose">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="️-cremos-nuestro-docker-compose">🏗️ Cremos nuestro Docker-compose<a href="http://iamdevops.site/blog/liquibase#%EF%B8%8F-cremos-nuestro-docker-compose" class="hash-link" aria-label="Enlace directo al 🏗️ Cremos nuestro Docker-compose" title="Enlace directo al 🏗️ Cremos nuestro Docker-compose" translate="no">​</a></h2>
 <p>Ahora escribiremos el siguiente código que lleva la configuración de nuestro compose, junto con los diferentes
 volúmenes que nos ayudaran a mantener que persista nuestra data</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Docker-Compose</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">    services:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    db:  # Servicio de base de datos PostgreSQL</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        image: postgres:14  # Imagen oficial de PostgreSQL, versión 14</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        container_name: liquibase_db  # Nombre del contenedor para referencia fácil</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        environment:  # Variables de entorno para crear la base de datos inicial</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        POSTGRES_USER: liquibase      # Usuario con permisos</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        POSTGRES_PASSWORD: liquibase  # Contraseña del usuario</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        POSTGRES_DB: liquibase_demo   # Nombre de la base de datos a crear</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        ports:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        - "5432:5432"  # Expone el puerto de PostgreSQL al host local</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        networks:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        - liquibase-net  # Conecta este servicio a una red personalizada</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        healthcheck:  # Verifica que PostgreSQL esté listo antes de continuar</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        test: ["CMD", "pg_isready", "-U", "liquibase"]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        interval: 5s</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        timeout: 5s</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        retries: 5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    liquibase:  # Servicio para ejecutar comandos de Liquibase CLI</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        image: liquibase/liquibase:latest  # Imagen oficial de Liquibase</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        container_name: liquibase_cli  # Nombre del contenedor de Liquibase</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        depends_on:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        db:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            condition: service_healthy  # Espera a que la base de datos esté lista</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        volumes:  # Mapea archivos locales al contenedor</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        - ./changelogs:/liquibase/changelogs  # Cambios en la BD</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        - ./liquibase.properties:/liquibase/liquibase.properties  # Configuración</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        working_dir: /liquibase  # Carpeta por defecto donde ejecuta comandos</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        entrypoint: ["tail", "-f", "/dev/null"]  # Mantiene el contenedor en ejecución para uso interactivo</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        networks:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        - liquibase-net  # Se conecta a la misma red que la BD</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    networks:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    liquibase-net:  # Red personalizada para que los servicios se comuniquen por nombre</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="creemos-nuestro-liquibaseproperties">Creemos nuestro liquibase.properties<a href="http://iamdevops.site/blog/liquibase#creemos-nuestro-liquibaseproperties" class="hash-link" aria-label="Enlace directo al Creemos nuestro liquibase.properties" title="Enlace directo al Creemos nuestro liquibase.properties">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="creemos-nuestro-liquibaseproperties">Creemos nuestro liquibase.properties<a href="http://iamdevops.site/blog/liquibase#creemos-nuestro-liquibaseproperties" class="hash-link" aria-label="Enlace directo al Creemos nuestro liquibase.properties" title="Enlace directo al Creemos nuestro liquibase.properties" translate="no">​</a></h2>
 <p>Si seguiste la guía, hasta este punto en los archivos necesarios que creamos encontraras el <em><strong>liquibase.properties</strong></em>
 el cual es el archivo que contendrá la configuración de nuestro liquibase, es el encargado de decirle a liquibase <strong>como
 conectarse ala base de datos</strong> y donde encontrar los archivos de cambios(changelogs).</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">liquibase.properties</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># liquibase.properties</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">changeLogFile: changelogs/db.changelog-master.yaml</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">url: jdbc:postgresql://db:5432/liquibase_demo</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">username: liquibase</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">password: liquibase</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">driver: org.postgresql.Driver</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">logLevel: info</span><br></span></code></pre></div></div>
 <p>| OJO: en el url, el host es db, el nombre del servicio del contenedor.</p>
 <table><thead><tr><th>Propiedad</th><th>Descripción</th><th>Ejemplo</th></tr></thead><tbody><tr><td><code>changeLogFile</code></td><td>Ruta al archivo principal de cambios de base de datos (changelog).</td><td><code>changelogs/db.changelog.yaml</code></td></tr><tr><td><code>url</code></td><td>URL de conexión JDBC que indica el tipo de base de datos, host, puerto y nombre de la base.</td><td><code>jdbc:postgresql://db:5432/liquibase_demo</code></td></tr><tr><td><code>username</code></td><td>Usuario con permisos para ejecutar cambios en la base de datos.</td><td><code>liquibase</code></td></tr><tr><td><code>password</code></td><td>Contraseña del usuario de la base de datos.</td><td><code>liquibase</code></td></tr><tr><td><code>driver</code></td><td>Clase del driver JDBC correspondiente al motor de base de datos.</td><td><code>org.postgresql.Driver</code></td></tr></tbody></table>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-vamos-a-crear-nuestro-changelog">🧠 Vamos a crear nuestro changelog<a href="http://iamdevops.site/blog/liquibase#-vamos-a-crear-nuestro-changelog" class="hash-link" aria-label="Enlace directo al 🧠 Vamos a crear nuestro changelog" title="Enlace directo al 🧠 Vamos a crear nuestro changelog">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-vamos-a-crear-nuestro-changelog">🧠 Vamos a crear nuestro changelog<a href="http://iamdevops.site/blog/liquibase#-vamos-a-crear-nuestro-changelog" class="hash-link" aria-label="Enlace directo al 🧠 Vamos a crear nuestro changelog" title="Enlace directo al 🧠 Vamos a crear nuestro changelog" translate="no">​</a></h2>
 <p>¿Qué hace db.changelog-master.yaml?Es un archivo maestro que organiza los cambios en la base de datos. Su función principal es referenciar otros archivos de
 cambios (por orden y modularidad), o contener directamente las instrucciones (changeSets) que Liquibase aplicará.</p>
 <p>En este caso tenemos dos formas para poder crear nuestro <strong>changelog</strong> en este ejemplo dejaré las referencias a las dos formas, para que entiendas que podemos
 hacer.</p>
 <ul>
-<li>
+<li class="">
 <p>opción 1
 En este caso se implementa un solo archivo maestro que contendra todos los <strong>changeSets</strong></p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">databaseChangeLog</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">databaseChangeLog:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- changeSet:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    id: 001</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    author: alejo</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    changes:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        - createTable:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            tableName: users</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            columns:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            - column:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                name: id</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                type: UUID</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                constraints:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                    primaryKey: true</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            - column:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                name: name</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                type: VARCHAR(100)</span><br></span></code></pre></div></div>
@@ -244,7 +244,7 @@ En este caso se implementa un solo archivo maestro que contendra todos los <stro
 <img src="http://iamdevops.site/img/blog/devops/changelogmaster.png" width="600">
 <p>| ⚠️ Esto es útil en proyectos pequeños o cuando prefieres tener todo en un solo archivo lo cual puede generar al gunos problemas a largo plazo</p>
 </li>
-<li>
+<li class="">
 <p>opción 2
 En este caso se implementa un archivo que contendrá todos los modelos de (changeSets), en el que tendremos las rutas de los <strong>changeSets</strong></p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">databaseChangeLog-master</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># changelogs/db.changelog-master.yaml</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">databaseChangeLog:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- include:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    file: changelogs/001-init-schema.yaml</span><br></span></code></pre></div></div>
@@ -255,7 +255,7 @@ En este caso se implementa un archivo que contendrá todos los modelos de (chang
 realizar algún cambio</p>
 </li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vamos-a-correr-nuestro-poyecto">Vamos a correr nuestro poyecto<a href="http://iamdevops.site/blog/liquibase#vamos-a-correr-nuestro-poyecto" class="hash-link" aria-label="Enlace directo al Vamos a correr nuestro poyecto" title="Enlace directo al Vamos a correr nuestro poyecto">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="vamos-a-correr-nuestro-poyecto">Vamos a correr nuestro poyecto<a href="http://iamdevops.site/blog/liquibase#vamos-a-correr-nuestro-poyecto" class="hash-link" aria-label="Enlace directo al Vamos a correr nuestro poyecto" title="Enlace directo al Vamos a correr nuestro poyecto" translate="no">​</a></h3>
 <p>Perfecto si llegaste hasta aquí ya podemos correr los comandos de nuestro 🐳 <strong>docker-compose</strong> para correr el proyecto</p>
 <p>✅ 1. Levantar los servicios en segundo plano
 Esto crea y arranca los contenedores:</p>
@@ -266,7 +266,7 @@ Liquibase depende de que la base de datos esté lista. Asegúrate de que el serv
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">docker compose ps</span><br></span></code></pre></div></div>
 <p>veras algo como esto</p>
 <img src="http://iamdevops.site/img/blog/devops/liquivasetreeprod.png" width="600">
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-cómo-sabe-liquibase-qué-ya-corrió">🧠 ¿Cómo sabe Liquibase qué ya corrió?<a href="http://iamdevops.site/blog/liquibase#-c%C3%B3mo-sabe-liquibase-qu%C3%A9-ya-corri%C3%B3" class="hash-link" aria-label="Enlace directo al 🧠 ¿Cómo sabe Liquibase qué ya corrió?" title="Enlace directo al 🧠 ¿Cómo sabe Liquibase qué ya corrió?">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-cómo-sabe-liquibase-qué-ya-corrió">🧠 ¿Cómo sabe Liquibase qué ya corrió?<a href="http://iamdevops.site/blog/liquibase#-c%C3%B3mo-sabe-liquibase-qu%C3%A9-ya-corri%C3%B3" class="hash-link" aria-label="Enlace directo al 🧠 ¿Cómo sabe Liquibase qué ya corrió?" title="Enlace directo al 🧠 ¿Cómo sabe Liquibase qué ya corrió?" translate="no">​</a></h3>
 <p>Liquibase registra los changeSets ejecutados en una tabla llamada DATABASECHANGELOG. Así evita repetir cambios y permite auditar qué se aplicó, cuándo y por quién.</p>
 <img src="http://iamdevops.site/img/blog/devops/liquibaserun.png" width="600">
 <p>En este punto ya tenemos nuestros servicios corriendo, y con ya podremos ejecutar</p>
@@ -274,7 +274,7 @@ Liquibase depende de que la base de datos esté lista. Asegúrate de que el serv
 <p>Si todo te sale bien, deberás ver algo como se ve en la imagen.</p>
 <img src="http://iamdevops.site/img/blog/devops/primerejecucion.png" width="600">
 <p>| Esto ejecutará todos los changeSets del archivo db.changelog-master.yaml y aplicará los cambios en la base de datos PostgreSQL.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="-por-qué-se-crea-automáticamente">🧠 ¿Por qué se crea automáticamente?<a href="http://iamdevops.site/blog/liquibase#-por-qu%C3%A9-se-crea-autom%C3%A1ticamente" class="hash-link" aria-label="Enlace directo al 🧠 ¿Por qué se crea automáticamente?" title="Enlace directo al 🧠 ¿Por qué se crea automáticamente?">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="-por-qué-se-crea-automáticamente">🧠 ¿Por qué se crea automáticamente?<a href="http://iamdevops.site/blog/liquibase#-por-qu%C3%A9-se-crea-autom%C3%A1ticamente" class="hash-link" aria-label="Enlace directo al 🧠 ¿Por qué se crea automáticamente?" title="Enlace directo al 🧠 ¿Por qué se crea automáticamente?" translate="no">​</a></h3>
 <p>La base de datos se crea automáticamente porque se lo estás indicando al contenedor de PostgreSQL con POSTGRES_DB al inicio.</p>
 <img src="http://iamdevops.site/img/blog/devops/conectiondb.png" width="600">
 <p>y en nuestra base de datos <strong>Postgres</strong> podremos ver lo siguiente</p>
@@ -284,7 +284,7 @@ Liquibase depende de que la base de datos esté lista. Asegúrate de que el serv
 <p>Genial hasta este punto ya tenemos nuestro proyecto creado y corriendo, ahora realizaremos una actualización a la tabla <code>users</code> que creamos
 donde crearemos un <code>changeSet</code></p>
 <ul>
-<li>Creemos otro archivo dentro de nuestra carpeta <code>changelogs</code> con el nombre <code>002-create-users-table.yaml</code></li>
+<li class="">Creemos otro archivo dentro de nuestra carpeta <code>changelogs</code> con el nombre <code>002-create-users-table.yaml</code></li>
 </ul>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">databaseChangeLog:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- changeSet:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    id: 002</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    author: alejo</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    changes:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        - addColumn:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            tableName: users</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            columns:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            - column:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                name: birthdate</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                type: DATE</span><br></span></code></pre></div></div>
 <p>|Cada changeSet es único por id + author. No repitas estos valores.</p>
@@ -294,26 +294,26 @@ donde crearemos un <code>changeSet</code></p>
 <p>al ejecutar deberá salir lo que se ve en la siguiente imagen</p>
 <img src="http://iamdevops.site/img/blog/devops/runliquibasechange.png" width="600">
 <p>Para comprobar el cambio te puedes conectar ala base de datos y validar que se crearon los campos como los definimos</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cómo-funciona-el-rollback">¿Cómo funciona el rollback?<a href="http://iamdevops.site/blog/liquibase#c%C3%B3mo-funciona-el-rollback" class="hash-link" aria-label="Enlace directo al ¿Cómo funciona el rollback?" title="Enlace directo al ¿Cómo funciona el rollback?">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cómo-funciona-el-rollback">¿Cómo funciona el rollback?<a href="http://iamdevops.site/blog/liquibase#c%C3%B3mo-funciona-el-rollback" class="hash-link" aria-label="Enlace directo al ¿Cómo funciona el rollback?" title="Enlace directo al ¿Cómo funciona el rollback?" translate="no">​</a></h3>
 <p>Liquibase puede revertir cambios de varias maneras, pero solo si sabe cómo hacerlo. Esto es posible si:</p>
 <p>El changeSet tiene rollback automático (por ejemplo, createTable se puede revertir con dropTable).
 Tú defines explícitamente el rollback en tu changeSet.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="como-podemos-rollback">Como podemos rollback<a href="http://iamdevops.site/blog/liquibase#como-podemos-rollback" class="hash-link" aria-label="Enlace directo al Como podemos rollback" title="Enlace directo al Como podemos rollback">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="como-podemos-rollback">Como podemos rollback<a href="http://iamdevops.site/blog/liquibase#como-podemos-rollback" class="hash-link" aria-label="Enlace directo al Como podemos rollback" title="Enlace directo al Como podemos rollback" translate="no">​</a></h3>
 <p>Liquibase permite revertir usando distintos comandos:</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-ejemplo-de-rollback">🔁 Ejemplo de rollback<a href="http://iamdevops.site/blog/liquibase#-ejemplo-de-rollback" class="hash-link" aria-label="Enlace directo al 🔁 Ejemplo de rollback" title="Enlace directo al 🔁 Ejemplo de rollback">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-ejemplo-de-rollback">🔁 Ejemplo de rollback<a href="http://iamdevops.site/blog/liquibase#-ejemplo-de-rollback" class="hash-link" aria-label="Enlace directo al 🔁 Ejemplo de rollback" title="Enlace directo al 🔁 Ejemplo de rollback" translate="no">​</a></h4>
 <ul>
-<li>Agregamos a nuestro changelog nuestra actualización</li>
+<li class="">Agregamos a nuestro changelog nuestra actualización</li>
 </ul>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">databaseChangeLog:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">- changeSet:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    id: 003</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    author: alejo</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    changes:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        - addColumn:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            tableName: users</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            columns:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            - column:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                name: age</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                type: INT</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    rollback:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        - dropColumn:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            columnName: age</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            tableName: users</span><br></span></code></pre></div></div>
 <p>Este archivo:</p>
 <ul>
-<li>
+<li class="">
 <p>Agrega una columna age a la tabla users.</p>
 </li>
-<li>
+<li class="">
 <p>Define que el rollback elimina esa columna.</p>
 </li>
-<li>
+<li class="">
 <p>Actualizamos nuestr archivo 📘 <code>db.changelog-master.yaml</code></p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">databaseChangeLog:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    - include:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        file: changelogs/001-create-table-user.yaml</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    - include:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        file: changelogs/002-insert-users.yaml</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    - include:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        file: changelogs/003-add-column-age.yaml</span><br></span></code></pre></div></div>
 </li>
@@ -325,29 +325,29 @@ Tú defines explícitamente el rollback en tu changeSet.</p>
 <p>Como sé que todo té salió bien deberá salirte en tu consola algo como esto y en tu tabla debió aparecer la columna <code>ege</code></p>
 <img src="http://iamdevops.site/img/blog/devops/addege.png" width="600">
 <p>Para realizar el rollback tienes varias opciones, aquí dejaré dos que puedes usar sin problema</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-1-rollback-de-un-changeset-específico-desde-003">🔁 1. Rollback de un changeSet específico (desde 003)<a href="http://iamdevops.site/blog/liquibase#-1-rollback-de-un-changeset-espec%C3%ADfico-desde-003" class="hash-link" aria-label="Enlace directo al 🔁 1. Rollback de un changeSet específico (desde 003)" title="Enlace directo al 🔁 1. Rollback de un changeSet específico (desde 003)">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-1-rollback-de-un-changeset-específico-desde-003">🔁 1. Rollback de un changeSet específico (desde 003)<a href="http://iamdevops.site/blog/liquibase#-1-rollback-de-un-changeset-espec%C3%ADfico-desde-003" class="hash-link" aria-label="Enlace directo al 🔁 1. Rollback de un changeSet específico (desde 003)" title="Enlace directo al 🔁 1. Rollback de un changeSet específico (desde 003)" translate="no">​</a></h4>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">docker compose exec liquibase liquibase rollbackCount 1</span><br></span></code></pre></div></div>
 <p>Este revierte el último cambio (003), usando el bloque rollback.</p>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="-2-rollback-por-id">🔁 2. Rollback por ID<a href="http://iamdevops.site/blog/liquibase#-2-rollback-por-id" class="hash-link" aria-label="Enlace directo al 🔁 2. Rollback por ID" title="Enlace directo al 🔁 2. Rollback por ID">​</a></h4>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="-2-rollback-por-id">🔁 2. Rollback por ID<a href="http://iamdevops.site/blog/liquibase#-2-rollback-por-id" class="hash-link" aria-label="Enlace directo al 🔁 2. Rollback por ID" title="Enlace directo al 🔁 2. Rollback por ID" translate="no">​</a></h4>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">    docker compose exec liquibase liquibase liquibase rollbackToDate "2025-06-11T20:00:00"</span><br></span></code></pre></div></div>
 <p>Este revierte todos los cambios hasta (pero no incluyendo) el changeSet con id: 002.</p>
 <p>Si se aplica el rollback volveremos a la versión 002 de una forma fácil.</p>
 <img src="http://iamdevops.site/img/blog/devops/rollbacksucces.png" width="600">
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tabla-comandos-">Tabla comandos 🎮<a href="http://iamdevops.site/blog/liquibase#tabla-comandos-" class="hash-link" aria-label="Enlace directo al Tabla comandos 🎮" title="Enlace directo al Tabla comandos 🎮">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="tabla-comandos-">Tabla comandos 🎮<a href="http://iamdevops.site/blog/liquibase#tabla-comandos-" class="hash-link" aria-label="Enlace directo al Tabla comandos 🎮" title="Enlace directo al Tabla comandos 🎮" translate="no">​</a></h3>
 <p>Aquí encontrarás una serie de comandos que puedes ejecutar para que sigas probando las otras funcionalidades que tiene liquibase.
 Te invito a probar y testear todo lo que quieras.</p>
 <p>Puedes agregar <code>exec -it</code> para ver hacer la terminal interactiva</p>
 <table><thead><tr><th>Comando</th><th>¿Para qué sirve?</th></tr></thead><tbody><tr><td><code>docker compose run liquibase update</code></td><td>Aplica todos los <code>changeSet</code> pendientes definidos en el changelog maestro.</td></tr><tr><td><code>docker compose run liquibase status</code></td><td>Muestra qué cambios (changeSets) aún no se han aplicado a la base de datos.</td></tr><tr><td><code>docker compose run liquibase history</code></td><td>Lista todos los <code>changeSets</code> ya aplicados con detalles (fecha, autor, id).</td></tr><tr><td><code>docker compose run liquibase rollbackCount 1</code></td><td>Revierte el último cambio aplicado (puedes cambiar <code>1</code> por otro número).</td></tr><tr><td><code>docker compose run liquibase rollbackToDate 2024-01-01</code></td><td>Revierte todos los cambios hechos después de una fecha específica.</td></tr><tr><td><code>docker compose run liquibase validate</code></td><td>Valida el archivo changelog, revisa errores de sintaxis o duplicados.</td></tr><tr><td><code>docker compose run liquibase clearCheckSums</code></td><td>Limpia los checksums para forzar revalidación de cambios. Útil si editaste sets.</td></tr><tr><td><code>docker compose run liquibase changelogSync</code></td><td>Marca todos los cambios como aplicados sin ejecutarlos (¡útil en producción!).</td></tr></tbody></table>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="errores">Errores<a href="http://iamdevops.site/blog/liquibase#errores" class="hash-link" aria-label="Enlace directo al Errores" title="Enlace directo al Errores">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="errores">Errores<a href="http://iamdevops.site/blog/liquibase#errores" class="hash-link" aria-label="Enlace directo al Errores" title="Enlace directo al Errores" translate="no">​</a></h2>
 <p>Como siempre cometemos errores, durante la primera configuración implementan mal la conexión a la base de datos
 debido a que estaba apuntando al local host, el cual hace que apunte dentro de su propio contenedor, por eso no lo encontraba
 entonces esto se lo corregí  el parámetro url.</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Error</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># liquibase.properties</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Connection could not be created to jdbc:postgresql://localhost:5432/liquibase_demo</span><br></span></code></pre></div></div>
 <p>| Estás diciendo que se conecte a localhost (jdbc:postgresql://localhost:5432)</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="gracias--por-llegar-hasta-este-punto">Gracias 🤩 por llegar hasta este punto<a href="http://iamdevops.site/blog/liquibase#gracias--por-llegar-hasta-este-punto" class="hash-link" aria-label="Enlace directo al Gracias 🤩 por llegar hasta este punto" title="Enlace directo al Gracias 🤩 por llegar hasta este punto">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="gracias--por-llegar-hasta-este-punto">Gracias 🤩 por llegar hasta este punto<a href="http://iamdevops.site/blog/liquibase#gracias--por-llegar-hasta-este-punto" class="hash-link" aria-label="Enlace directo al Gracias 🤩 por llegar hasta este punto" title="Enlace directo al Gracias 🤩 por llegar hasta este punto" translate="no">​</a></h3>
 <p>Aún quedan muchas cosas por explorar de <strong>liquibase</strong>, pero te agradezco por tomarte el tiempo de entrar a este blog. El código implementado
-lo puedes encontrar en mí git-hub <a href="https://github.com/alejo95/liquibase-lab" target="_blank" rel="noopener noreferrer">alejo95/Liquibase-lab</a></p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="mi-punto-de-vista">Mi punto de vista<a href="http://iamdevops.site/blog/liquibase#mi-punto-de-vista" class="hash-link" aria-label="Enlace directo al Mi punto de vista" title="Enlace directo al Mi punto de vista">​</a></h3>
+lo puedes encontrar en mí git-hub <a href="https://github.com/alejo95/liquibase-lab" target="_blank" rel="noopener noreferrer" class="">alejo95/Liquibase-lab</a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="mi-punto-de-vista">Mi punto de vista<a href="http://iamdevops.site/blog/liquibase#mi-punto-de-vista" class="hash-link" aria-label="Enlace directo al Mi punto de vista" title="Enlace directo al Mi punto de vista" translate="no">​</a></h3>
 <p>En realidad, es genial este tipo de herramientas que facilitan la actualización de las bases de datos usando prácticas
 del mundo <strong>DevOps</strong>, para mí fue una experiencia genial, ya que me permite entender de una forma fácil la implementación
 de actualizaciones rápidas a la base de datos, aparte de eso, cuenta con muchas cualidades que ayudan a esta herramienta mejore
@@ -370,21 +370,21 @@ poco confuso, ya que muchas personas hablan de que es un servidor web, un balanc
 inverso y más, claro es porque tiene todas estas funcionalidades, así que en este blog exploraremos juntos cómo
 funciona y realizaremos algunas pruebas para ver sus diferentes usos.</p>
 <img src="http://iamdevops.site/img/blog/nginx/nginx.png" alt="contenedor" width="600">
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="qué-es-nginx-">¿Qué es Nginx? 🫣<a href="http://iamdevops.site/blog/entendiendo_nginx#qu%C3%A9-es-nginx-" class="hash-link" aria-label="Enlace directo al ¿Qué es Nginx? 🫣" title="Enlace directo al ¿Qué es Nginx? 🫣">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="qué-es-nginx-">¿Qué es Nginx? 🫣<a href="http://iamdevops.site/blog/entendiendo_nginx#qu%C3%A9-es-nginx-" class="hash-link" aria-label="Enlace directo al ¿Qué es Nginx? 🫣" title="Enlace directo al ¿Qué es Nginx? 🫣" translate="no">​</a></h2>
 <p>En principio es un software de código abierto que funciona principalmente como servidor web, que tal y como hablamos
 en un principio tiene diferentes funcionalidades, ya que fue creado para mejorar el rendimiento y la estabilidad de
 las aplicaciones web, en especial cuando hablamos de entornos de alta demanda, o sea cuando tenemos una aplicación que
 tienen muchos peticiones.ndo hablamos de entornos de alta demanda, osea cuando tenemos una aplicación que tienen
 muchos peticiones.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="funcionalidaes-de-nginx-">Funcionalidaes de Nginx 🧰<a href="http://iamdevops.site/blog/entendiendo_nginx#funcionalidaes-de-nginx-" class="hash-link" aria-label="Enlace directo al Funcionalidaes de Nginx 🧰" title="Enlace directo al Funcionalidaes de Nginx 🧰">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="funcionalidaes-de-nginx-">Funcionalidaes de Nginx 🧰<a href="http://iamdevops.site/blog/entendiendo_nginx#funcionalidaes-de-nginx-" class="hash-link" aria-label="Enlace directo al Funcionalidaes de Nginx 🧰" title="Enlace directo al Funcionalidaes de Nginx 🧰" translate="no">​</a></h3>
 <p>Nginx es un servidor web que puede acturar como:</p>
 <ul>
-<li>Servidor web startico: sirve para manejar archivos como html, css y imagenes.</li>
-<li>Poxy inverso: reenvia peticiones a otros setvidores (como Node Js, Python).</li>
-<li>Balancedor de cargas: distribuye el trafico entre los servidores para evitar sobre cargas.</li>
-<li>servidor de cache: guarda copias temporales para acelear las respuestas.</li>
+<li class="">Servidor web startico: sirve para manejar archivos como html, css y imagenes.</li>
+<li class="">Poxy inverso: reenvia peticiones a otros setvidores (como Node Js, Python).</li>
+<li class="">Balancedor de cargas: distribuye el trafico entre los servidores para evitar sobre cargas.</li>
+<li class="">servidor de cache: guarda copias temporales para acelear las respuestas.</li>
 </ul>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="instalación-en-ubuntu-">Instalación en Ubuntu 👨‍💻<a href="http://iamdevops.site/blog/entendiendo_nginx#instalaci%C3%B3n-en-ubuntu-" class="hash-link" aria-label="Enlace directo al Instalación en Ubuntu 👨‍💻" title="Enlace directo al Instalación en Ubuntu 👨‍💻">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instalación-en-ubuntu-">Instalación en Ubuntu 👨‍💻<a href="http://iamdevops.site/blog/entendiendo_nginx#instalaci%C3%B3n-en-ubuntu-" class="hash-link" aria-label="Enlace directo al Instalación en Ubuntu 👨‍💻" title="Enlace directo al Instalación en Ubuntu 👨‍💻" translate="no">​</a></h3>
 <p>En este caso realizaremos la instalación en Bubuntu, para que puedas realizar algunas pruebas tambien
 tendras el codigo disponible para que puedas utilizarlo en tu.</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC"> Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">sudo apt update           #  actualizat linux</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo apt install nginx    #  instalar nginx</span><br></span></code></pre></div></div>
@@ -394,45 +394,45 @@ tendras el codigo disponible para que puedas utilizarlo en tu.</p>
 <img src="http://iamdevops.site/img/blog/nginx/nginx_status.png" alt="contenedor" width="800">
 <p>de esta forma podremos saber si nuestro servido Nginx fue instalado de una forma correcta y esta funcionando
 desde este punto podremos las diferente carracteristicas de Nginx</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="estructura-de-nginx-️">Estructura de Nginx 🏗️<a href="http://iamdevops.site/blog/entendiendo_nginx#estructura-de-nginx-%EF%B8%8F" class="hash-link" aria-label="Enlace directo al Estructura de Nginx 🏗️" title="Enlace directo al Estructura de Nginx 🏗️">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="estructura-de-nginx-️">Estructura de Nginx 🏗️<a href="http://iamdevops.site/blog/entendiendo_nginx#estructura-de-nginx-%EF%B8%8F" class="hash-link" aria-label="Enlace directo al Estructura de Nginx 🏗️" title="Enlace directo al Estructura de Nginx 🏗️" translate="no">​</a></h3>
 <p>la estructura de Nginx es la siguiente que se genera automaticamente al instalar</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC"> Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">/etc/nginx/</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── nginx.conf             # Configuración principal</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── sites-available/       # Configs de sitios disponibles</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">├── sites-enabled/         # Enlaces a sitios activos</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">└── conf.d/                #Configs adicionales (opcional)</span><br></span></code></pre></div></div>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="implemetando-nginx-como-servidor-web-️">Implemetando Nginx como servidor web 🖥️<a href="http://iamdevops.site/blog/entendiendo_nginx#implemetando-nginx-como-servidor-web-%EF%B8%8F" class="hash-link" aria-label="Enlace directo al Implemetando Nginx como servidor web 🖥️" title="Enlace directo al Implemetando Nginx como servidor web 🖥️">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="implemetando-nginx-como-servidor-web-️">Implemetando Nginx como servidor web 🖥️<a href="http://iamdevops.site/blog/entendiendo_nginx#implemetando-nginx-como-servidor-web-%EF%B8%8F" class="hash-link" aria-label="Enlace directo al Implemetando Nginx como servidor web 🖥️" title="Enlace directo al Implemetando Nginx como servidor web 🖥️" translate="no">​</a></h3>
 <p>La primera implementación que realizaremos es crear una pagina simple, sigue los pasos y podras crear
 tu primer servidor web con Nginx en un servidor de linux.</p>
 <ol>
-<li>
+<li class="">
 <p>Crearemos una capeta en nuestro servidor 📂</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC"> Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">sudo mkdir -p /var/www/miweb</span><br></span></code></pre></div></div>
 <ul>
-<li><code>-p</code> crea carpetas intermedias si no existen.</li>
-<li><code>/var/www/</code> es el lugar típico donde se alojan los sitios web.</li>
+<li class=""><code>-p</code> crea carpetas intermedias si no existen.</li>
+<li class=""><code>/var/www/</code> es el lugar típico donde se alojan los sitios web.</li>
 </ul>
 <p>este comando nos creara una carpeta en la ruta que le indicamos</p>
 </li>
-<li>
+<li class="">
 <p>Es hora de crear nuestra super pagina 🔨
 <code>bash title=" Bash"  echo "&lt;h1&gt;Hola Bienvenidos a I am Devops &lt;/h1&gt;" | sudo tee /var/www/miweb/index.html </code>
 Esto nos creara un archivo index.html con un mensaje.
 Puedes editarlo después con un editor como nano, vim o Visual Studio Code.
 en caso de que estes en un servidor de linux o uno de sus derivados es mas factible usar nano o vim</p>
 </li>
-<li>
+<li class="">
 <p>Configuración de nuestro sitio ⚙️</p>
 <p>Nginx usa un archivo de configuración que nos permite saber cómo manejar los archivos
 ya que podemos tener alojado mas de una <em>web estatica</em> dentro de nuestro servidor para crear nuestro achivo de confiración,</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC"> Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">sudo nano /etc/nginx/sites-available/miweb</span><br></span></code></pre></div></div>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC"> site-avalible</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">server {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    listen 80;                       # Escucha en el puerto 80 (HTTP)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    server_name localhost;           # Nombre del servidor (puede ser dominio o IP)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    root /var/www/miweb;             # Ruta al contenido del sitio</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    index index.html;                # Archivo que se abre por defecto</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    location / {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        try_files $uri $uri/ =404;   # Busca el archivo, si no existe, da error 404</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
 </li>
-<li>
+<li class="">
 <p>Habilitando nuestro sitio 🔓</p>
 <p>para poder habilitar nuestro sitio es necesrio vincular nueso <code>site-available/</code> a nuestro <code>site-enabled</code>
 para realizar ejecutaremos el siguiente comando para que se vincule</p>
 <p>la ruta que debemos buscar si queremos encontrar estos archivos puede <code>/etc/nginx/sites-available/miweb</code> que es donde
 tendras a disponibles todos los archivos de nginx.</p>
 <ul>
-<li><strong>sites-available</strong> : es el lugar donde estan configurados todos los sitios que se quieren habilitar.</li>
-<li><strong>sites-enabled</strong> : es donde le damos luz verde para poder salir.</li>
+<li class=""><strong>sites-available</strong> : es el lugar donde estan configurados todos los sitios que se quieren habilitar.</li>
+<li class=""><strong>sites-enabled</strong> : es donde le damos luz verde para poder salir.</li>
 </ul>
 <p>en primer lugar iremos a <code>sites-available</code> y crearemos un archivo con el nombre de nuesto site</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"> vim /etc/nginx/sites-available/miweb</span><br></span></code></pre></div></div>
@@ -443,7 +443,7 @@ este caso es para un servidor en local, en un futuro aprenderemos como hacer par
 carpeta <code>sites-enabled</code></p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">sudo ln -s /etc/nginx/sites-available/miweb /etc/nginx/sites-enabled/</span><br></span></code></pre></div></div>
 </li>
-<li>
+<li class="">
 <p>validación de la configuracón 🥳
 para este corrierndo corriendo el comando de test que trae nginx</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">sudo nginx -t</span><br></span></code></pre></div></div>
@@ -451,13 +451,13 @@ para este corrierndo corriendo el comando de test que trae nginx</p>
 <img src="http://iamdevops.site/img/blog/nginx/nginx_config.png" alt="contenedor" width="600">
 </li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="los-errores-">Los errores 😅<a href="http://iamdevops.site/blog/entendiendo_nginx#los-errores-" class="hash-link" aria-label="Enlace directo al Los errores 😅" title="Enlace directo al Los errores 😅">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="los-errores-">Los errores 😅<a href="http://iamdevops.site/blog/entendiendo_nginx#los-errores-" class="hash-link" aria-label="Enlace directo al Los errores 😅" title="Enlace directo al Los errores 😅" translate="no">​</a></h2>
 <p>Claramente todos cometemos errores y no estamos excentos de ello, por eso dejo este espacio
 ya que cometi algunos errores, donde me ha tocado inciar de 0.</p>
 <p>Para eliminar totalmente nginx usamos lo siguiente</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockTitle_OeMC">Bash</div><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">sudo apt remove --purge nginx nginx-common -y ---   # Eliminamos totalmente nginx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo apt autoremove -y</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">sudo rm -rf /etc/nginx /var/www/miweb               # Eliminamos los archivos creados</span><br></span></code></pre></div></div>
 <p>de aqui solo queda volver a instalar <em>Ngnx</em> y volver a inciar nuestra configuración de cero.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="novemos-en-la-2-parte-de-este-blog-">Novemos en la 2 parte de este blog 🧐<a href="http://iamdevops.site/blog/entendiendo_nginx#novemos-en-la-2-parte-de-este-blog-" class="hash-link" aria-label="Enlace directo al Novemos en la 2 parte de este blog 🧐" title="Enlace directo al Novemos en la 2 parte de este blog 🧐">​</a></h2>]]></content:encoded>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="novemos-en-la-2-parte-de-este-blog-">Novemos en la 2 parte de este blog 🧐<a href="http://iamdevops.site/blog/entendiendo_nginx#novemos-en-la-2-parte-de-este-blog-" class="hash-link" aria-label="Enlace directo al Novemos en la 2 parte de este blog 🧐" title="Enlace directo al Novemos en la 2 parte de este blog 🧐" translate="no">​</a></h2>]]></content:encoded>
             <category>Nginx</category>
             <category>Redes</category>
         </item>
@@ -470,29 +470,29 @@ ya que cometi algunos errores, donde me ha tocado inciar de 0.</p>
             <content:encoded><![CDATA[<p>Hola y bienvenidos a este blog, el cual está orientado a entender como podemos manejar nuestros flujo
 de trabajo en git, haciendolo un poco mas claro y facil de entender en caso de tener algun problema
 en <strong>producción</strong> 💣 que es lo que no queremos que pase.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-manejo-de-commits">1. Manejo de commits<a href="http://iamdevops.site/blog/manejo-del-repositorio#1-manejo-de-commits" class="hash-link" aria-label="Enlace directo al 1. Manejo de commits" title="Enlace directo al 1. Manejo de commits">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-manejo-de-commits">1. Manejo de commits<a href="http://iamdevops.site/blog/manejo-del-repositorio#1-manejo-de-commits" class="hash-link" aria-label="Enlace directo al 1. Manejo de commits" title="Enlace directo al 1. Manejo de commits" translate="no">​</a></h2>
 <p>Al momento que generamos un commit es muy normal agregar el comentario sin una referencia las cuales nos
 indiquen que estamos realizando en nuestro commit, para esto es recomendable usar banderas que nos permitan
 entender que hicimos en nuestros commits para esto hacemos uso de las siguientes <strong>Acciones</strong> o <strong>banderas</strong>:</p>
 <ul>
-<li>
+<li class="">
 <p><strong>[Acción]</strong>: identifica el tipo de commit</p>
 <ul>
-<li><code>feature</code> -  Se introduce una nueva característica con los cambios</li>
-<li><code>refactor</code> – Código refactorizado que no corrige un error ni agrega una característica</li>
-<li><code>docs</code> – Actualizaciones de la documentación, como el README u otros archivos de rebajas</li>
-<li><code>style</code> – Cambios que no afectan el significado del código, probablemente relacionados con el formato del código, como espacios en blanco, punto y coma faltantes, etc.</li>
-<li><code>test</code> – Incluyendo pruebas nuevas o corrigiendo pruebas anteriores</li>
-<li><code>perf</code> – Mejoras de rendimiento</li>
-<li><code>ci</code> – Relacionados con la integración continua</li>
-<li><code>build</code> – Cambios que afectan al sistema de compilación o dependencias externas</li>
-<li><code>revert</code> – revierte una confirmación anterior</li>
+<li class=""><code>feature</code> -  Se introduce una nueva característica con los cambios</li>
+<li class=""><code>refactor</code> – Código refactorizado que no corrige un error ni agrega una característica</li>
+<li class=""><code>docs</code> – Actualizaciones de la documentación, como el README u otros archivos de rebajas</li>
+<li class=""><code>style</code> – Cambios que no afectan el significado del código, probablemente relacionados con el formato del código, como espacios en blanco, punto y coma faltantes, etc.</li>
+<li class=""><code>test</code> – Incluyendo pruebas nuevas o corrigiendo pruebas anteriores</li>
+<li class=""><code>perf</code> – Mejoras de rendimiento</li>
+<li class=""><code>ci</code> – Relacionados con la integración continua</li>
+<li class=""><code>build</code> – Cambios que afectan al sistema de compilación o dependencias externas</li>
+<li class=""><code>revert</code> – revierte una confirmación anterior</li>
 </ul>
 </li>
-<li>
+<li class="">
 <p><strong>Cuerpo</strong>: Entre 50 y 150 caracteres resaltando <strong>¿qué?</strong> y <strong>¿por qué?</strong>.</p>
 </li>
-<li>
+<li class="">
 <p><strong>Idioma</strong>: Inglés.</p>
 </li>
 </ul>
@@ -502,37 +502,37 @@ entender que hicimos en nuestros commits para esto hacemos uso de las siguientes
 <em>(Comienza con mayúscula y sin punto final.)</em></p>
 </blockquote>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="12-nomenclatura-de-ramas-branch">1.2. Nomenclatura de ramas (branch)<a href="http://iamdevops.site/blog/manejo-del-repositorio#12-nomenclatura-de-ramas-branch" class="hash-link" aria-label="Enlace directo al 1.2. Nomenclatura de ramas (branch)" title="Enlace directo al 1.2. Nomenclatura de ramas (branch)">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="12-nomenclatura-de-ramas-branch">1.2. Nomenclatura de ramas (branch)<a href="http://iamdevops.site/blog/manejo-del-repositorio#12-nomenclatura-de-ramas-branch" class="hash-link" aria-label="Enlace directo al 1.2. Nomenclatura de ramas (branch)" title="Enlace directo al 1.2. Nomenclatura de ramas (branch)" translate="no">​</a></h2>
 <p>Con la nomenclatura la idea es siempre buscar identificar las ramas donde estamos trabajando y así llevar
 un flujo de versiones saludable, que sea fácil de entender, en este ejemplo usaremos una nomenclatura basada
 en el flujo de trabajo de Git Flow.</p>
 <p>Siguiendo Git Flow te encontrarás con las siguientes ramas:</p>
 <ul>
-<li><strong>master</strong>: versiones estables en producción (<code>vX.Y.Z</code>).</li>
-<li><strong>develop</strong>: integración de nuevas features.</li>
-<li><strong>feature/</strong>*: desarrollo de características (desde <code>develop</code>).</li>
-<li><strong>release/</strong>*: preparación de la próxima versión (desde <code>develop</code>).</li>
-<li><strong>hotfix/</strong>*: correcciones urgentes (desde <code>master</code>).</li>
+<li class=""><strong>master</strong>: versiones estables en producción (<code>vX.Y.Z</code>).</li>
+<li class=""><strong>develop</strong>: integración de nuevas features.</li>
+<li class=""><strong>feature/</strong>*: desarrollo de características (desde <code>develop</code>).</li>
+<li class=""><strong>release/</strong>*: preparación de la próxima versión (desde <code>develop</code>).</li>
+<li class=""><strong>hotfix/</strong>*: correcciones urgentes (desde <code>master</code>).</li>
 </ul>
 <p><img decoding="async" loading="lazy" alt="Git Flow Diagram" src="http://iamdevops.site/assets/images/Deploymentflow-156ebe264a91c435f1b109b0cadae3d2.png" width="1901" height="1575" class="img_ev3q"></p>
 <hr>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hoja-de-trucos-comandos">Hoja de trucos (Comandos)<a href="http://iamdevops.site/blog/manejo-del-repositorio#hoja-de-trucos-comandos" class="hash-link" aria-label="Enlace directo al Hoja de trucos (Comandos)" title="Enlace directo al Hoja de trucos (Comandos)">​</a></h3>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="hoja-de-trucos-comandos">Hoja de trucos (Comandos)<a href="http://iamdevops.site/blog/manejo-del-repositorio#hoja-de-trucos-comandos" class="hash-link" aria-label="Enlace directo al Hoja de trucos (Comandos)" title="Enlace directo al Hoja de trucos (Comandos)" translate="no">​</a></h3>
 <p>Esta hoja de trucos tiene los <strong>comandos</strong> mas utilizados dentro del flujo de trabajo 🧑🏼‍💻, dentro de mi
 consideración son los que mas usaras durante tu carrera como programor o algunas de sus ramas.</p>
 <p>aqui les dejo 👌</p>
 <hr>
 <table><thead><tr><th>Operación</th><th>Comando</th></tr></thead><tbody><tr><td>Clonar repositorio</td><td><code>git clone ssh://usuario@dominio.com/repo.git</code></td></tr><tr><td>Crear repo local</td><td><code>git init</code></td></tr><tr><td>Estado de archivos</td><td><code>git status</code></td></tr><tr><td>Ver diferencias</td><td><code>git diff</code></td></tr><tr><td>Añadir todos los cambios</td><td><code>git add .</code></td></tr><tr><td>Commit con mensaje</td><td><code>git commit -m "Mensaje descriptivo"</code></td></tr><tr><td>Modificar último commit</td><td><code>git commit --amend</code></td></tr></tbody></table>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ramas-y-etiquetas">Ramas y etiquetas<a href="http://iamdevops.site/blog/manejo-del-repositorio#ramas-y-etiquetas" class="hash-link" aria-label="Enlace directo al Ramas y etiquetas" title="Enlace directo al Ramas y etiquetas">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="ramas-y-etiquetas">Ramas y etiquetas<a href="http://iamdevops.site/blog/manejo-del-repositorio#ramas-y-etiquetas" class="hash-link" aria-label="Enlace directo al Ramas y etiquetas" title="Enlace directo al Ramas y etiquetas" translate="no">​</a></h2>
 <table><thead><tr><th>Operación</th><th>Comando</th></tr></thead><tbody><tr><td>Listar ramas</td><td><code>git branch</code></td></tr><tr><td>Crear nueva rama</td><td><code>git branch &lt;nombre&gt;</code></td></tr><tr><td>Cambiar de rama</td><td><code>git checkout &lt;nombre&gt;</code></td></tr><tr><td>Etiquetar versión</td><td><code>git tag v1.2.3</code></td></tr></tbody></table>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="actualizar-y-publicar">Actualizar y publicar<a href="http://iamdevops.site/blog/manejo-del-repositorio#actualizar-y-publicar" class="hash-link" aria-label="Enlace directo al Actualizar y publicar" title="Enlace directo al Actualizar y publicar">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="actualizar-y-publicar">Actualizar y publicar<a href="http://iamdevops.site/blog/manejo-del-repositorio#actualizar-y-publicar" class="hash-link" aria-label="Enlace directo al Actualizar y publicar" title="Enlace directo al Actualizar y publicar" translate="no">​</a></h2>
 <table><thead><tr><th>Operación</th><th>Comando</th></tr></thead><tbody><tr><td>Descargar cambios sin merge</td><td><code>git fetch</code></td></tr><tr><td>Descargar y merge</td><td><code>git pull origin &lt;branch&gt;</code></td></tr><tr><td>Enviar cambios a remoto</td><td><code>git push origin &lt;branch&gt;</code></td></tr><tr><td>Enviar etiquetas</td><td><code>git push --tags</code></td></tr></tbody></table>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fusionar-y-rebase">Fusionar y rebase<a href="http://iamdevops.site/blog/manejo-del-repositorio#fusionar-y-rebase" class="hash-link" aria-label="Enlace directo al Fusionar y rebase" title="Enlace directo al Fusionar y rebase">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="fusionar-y-rebase">Fusionar y rebase<a href="http://iamdevops.site/blog/manejo-del-repositorio#fusionar-y-rebase" class="hash-link" aria-label="Enlace directo al Fusionar y rebase" title="Enlace directo al Fusionar y rebase" translate="no">​</a></h2>
 <table><thead><tr><th>Operación</th><th>Comando</th></tr></thead><tbody><tr><td>Merge</td><td><code>git merge &lt;branch&gt;</code></td></tr><tr><td>Rebase</td><td><code>git rebase &lt;branch&gt;</code></td></tr><tr><td>Abortar rebase</td><td><code>git rebase --abort</code></td></tr><tr><td>Continuar rebase</td><td><code>git rebase --continue</code></td></tr></tbody></table>
 <hr>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="deshacer">Deshacer<a href="http://iamdevops.site/blog/manejo-del-repositorio#deshacer" class="hash-link" aria-label="Enlace directo al Deshacer" title="Enlace directo al Deshacer">​</a></h2>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="deshacer">Deshacer<a href="http://iamdevops.site/blog/manejo-del-repositorio#deshacer" class="hash-link" aria-label="Enlace directo al Deshacer" title="Enlace directo al Deshacer" translate="no">​</a></h2>
 <table><thead><tr><th>Operación</th><th>Comando</th></tr></thead><tbody><tr><td>Reset total (descarta todo)</td><td><code>git reset --hard HEAD</code></td></tr><tr><td>Descartar cambios en un archivo</td><td><code>git checkout HEAD &lt;file&gt;</code></td></tr><tr><td>Revertir un commit</td><td><code>git revert &lt;commit&gt;</code></td></tr><tr><td>Reset suave (preserva cambios staged)</td><td><code>git reset &lt;commit&gt;</code></td></tr></tbody></table>
 <hr>]]></content:encoded>
             <category>Git</category>
